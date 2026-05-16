@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projet KART à hélice de Darren DE OLIVEIRA -- DA SILVA.">
+  <title>KART à hélice | Darren DE OLIVEIRA -- DA SILVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Accueil du portfolio de Darren">
+      <span class="brand-mark">DD</span>
+      <span class="brand-text">Darren</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../index.html#competences">Compétences</a>
+      <a href="../projets.html">Projets</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="../index.html#contact">Me contacter</a>
+  </header>
+
+  <main class="page-main">
+    <section class="section page-hero project-detail-hero">
+      <div class="section-container">
+        <a class="back-link reveal" href="../projets.html">Retour aux projets</a>
+        <p class="eyebrow reveal">Projet BUT GEII</p>
+        <h1 class="reveal">KART à hélice</h1>
+        <p class="project-subtitle reveal">Projet réalisé en première année de BUT Génie électrique et informatique industrielle.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-container detail-grid">
+        <article class="detail-content reveal">
+          <h2>Présentation du projet</h2>
+          <p>L’objectif du projet était de travailler sur la partie électronique d’un KART à hélice dont la structure mécanique était déjà réalisée. Le système reposait sur deux cartes électroniques : une carte émetteur et une carte récepteur.</p>
+
+          <h2>Objectif</h2>
+          <p>La carte émetteur avait pour rôle d’envoyer des informations à partir d’un microcontrôleur, notamment sous forme de TRAME NEC. Ces données étaient ensuite transmises à la carte récepteur, qui les interprétait afin de permettre le pilotage du KART à hélice.</p>
+
+          <h2>Mon rôle</h2>
+          <p>Dans ce projet, je me suis principalement occupé de la carte émetteur, en particulier des parties traitement et énergie.</p>
+          <p>Pour la partie traitement, j’ai étudié le fonctionnement du microcontrôleur ATmega328P, ses différents ports, ainsi que les montages associés. J’ai également appris à mieux comprendre le rôle des liaisons RX/TX dans la communication entre les composants.</p>
+          <p>Pour la partie énergie, j’ai travaillé sur le dimensionnement d’une batterie LiPo 2S. J’ai réalisé des calculs afin de déterminer si l’utilisation d’un régulateur linéaire 5 V était nécessaire pour alimenter correctement la carte.</p>
+          <p>J’ai aussi participé à la partie informatique liée à la carte récepteur, notamment en concevant une partie du code permettant de traiter les informations reçues, à l’aide des bibliothèques NEC mises à disposition.</p>
+
+          <h2>Principe du projet</h2>
+          <p>Le système fonctionnait avec une carte émetteur et une carte récepteur. La carte émetteur transmettait des informations sous forme de TRAME NEC, tandis que la carte récepteur interprétait ces informations afin de piloter le KART à hélice.</p>
+
+          <h2>Résultat final</h2>
+          <p>À la fin du projet, une petite course a été organisée dans le cadre du BUT GEII afin de tester les différents KART à hélice réalisés. Après vérification des exigences du projet, notre KART a bien fonctionné durant la course.</p>
+          <p>Pendant la phase de vérification, nous avons rencontré certains problèmes techniques, notamment au niveau du code de la carte émetteur. Ces difficultés nous ont permis d’analyser les erreurs, de mieux comprendre le fonctionnement de la communication entre les cartes et d’améliorer progressivement le système.</p>
+        </article>
+
+        <aside class="detail-sidebar">
+          <section class="glass-card reveal">
+            <h2>Outils, logiciels et composants utilisés</h2>
+            <div class="tag-list">
+              <span>Arduino IDE</span>
+              <span>Oscilloscope</span>
+              <span>Multimètre</span>
+              <span>Fer à souder</span>
+              <span>Proteus ISIS</span>
+              <span>Proteus ARES</span>
+              <span>Microcontrôleur ATmega328P</span>
+              <span>Batterie LiPo 2S</span>
+              <span>Régulateur linéaire 5 V étudié selon les besoins de la carte</span>
+            </div>
+          </section>
+
+          <section class="glass-card reveal">
+            <h2>Compétences développées</h2>
+            <ul class="clean-list">
+              <li>Compréhension d’un système électronique composé de cartes émetteur et récepteur</li>
+              <li>Étude d’un microcontrôleur ATmega328P</li>
+              <li>Utilisation des liaisons RX/TX</li>
+              <li>Dimensionnement d’une alimentation avec batterie LiPo 2S</li>
+              <li>Réflexion sur l’utilisation d’un régulateur 5 V</li>
+              <li>Réalisation de schémas électriques</li>
+              <li>Routage d’une carte électronique</li>
+              <li>Programmation d’une carte récepteur</li>
+              <li>Traitement de TRAMES NEC</li>
+            </ul>
+          </section>
+
+          <section class="glass-card reveal">
+            <h2>Visuels à ajouter plus tard</h2>
+            <div class="placeholder-grid small">
+              <span>Schémas Proteus ISIS</span>
+              <span>Routage ARES</span>
+              <span>Photos des cartes électroniques</span>
+              <span>Captures du code Arduino</span>
+              <span>Photos du KART</span>
+              <span>Vidéo de la course</span>
+              <span>Synoptique carte émetteur</span>
+              <span>Synoptique carte récepteur</span>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-container footer-inner">
+      <strong>Darren DE OLIVEIRA -- DA SILVA</strong>
+      <nav aria-label="Navigation secondaire">
+        <a href="../projets.html">Tous les projets</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | UI/UX &amp; Framer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&amp;family=Space+Grotesk:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+/* Using Space Grotesk as a web-safe fallback that closely mimics the geometric, futuristic feel of Eurostile */
+--font-heading: 'Eurostile', 'Space Grotesk', sans-serif;
+--font-body: 'Montserrat', sans-serif;
+}
+body {
+font-family: var(--font-body);
+background-color: #050505;
+}
+h1, h2, h3, h4, h5, h6, .heading-font {
+font-family: var(--font-heading);
+}
+/* Custom scrollbar */A
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #050505;
+}
+::-webkit-scrollbar-thumb {
+background: #222;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #333;
+}
+/* Custom FAQ Accordion */
+details > summary {
+list-style: none;
+}
+details > summary::-webkit-details-marker {
+display: none;
+}
+/* Subtle glow utilities */
+.glow-bg {
+background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.03) 0%, transparent 70%);
+}
+iconify-icon {
+stroke-width: 1.5;
+}
+</style><!-- aura-ga4-start -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M6V79H761');
+</script>
+<!-- aura-ga4-end -->
+</head>
+<body class="text-zinc-400 font-light antialiased selection:bg-white/10 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-[#050505]/70 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="heading-font text-lg text-white tracking-tighter font-medium">UXFR.</a>
+            <div class="hidden md:flex items-center gap-8 text-sm">
+                <a href="#work" class="hover:text-white transition-colors">Work</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center text-xs heading-font tracking-tight text-black bg-white px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors">
+                Let's Talk
+            </a>
+            <button class="md:hidden text-white">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <main class="relative">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-0 left-0 w-full h-[100vh] glow-bg pointer-events-none z-0"></div>
+
+        <!-- 1. Hero Section -->
+        <section class="relative z-10 min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="flex flex-col items-start text-left order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs mb-8">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Available for freelance
+                    </div>
+                    <h1 class="heading-font text-5xl md:text-6xl lg:text-7xl text-white tracking-tight font-medium leading-[1.1] mb-6">
+                        Crafting digital <br class="hidden md:block">
+                        <span class="text-zinc-500">futures.</span>
+                    </h1>
+                    <p class="text-base md:text-lg max-w-md mb-10 leading-relaxed text-zinc-400">
+                        I am a specialized UI/UX designer and Framer developer building next-generation interfaces with extreme precision and minimalist aesthetics.
+                    </p>
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <a href="#work" class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm heading-font tracking-tight hover:bg-zinc-200 transition-colors">
+                            View Projects
+                            <iconify-icon icon="solar:arrow-right-linear" width="16" height="16"></iconify-icon>
+                        </a>
+                        <a href="#about" class="flex-1 sm:flex-none flex items-center justify-center px-6 py-3 rounded-full text-sm heading-font tracking-tight text-white border border-white/10 hover:bg-white/5 transition-colors">
+                            About Me
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#050505] via-transparent to-transparent z-10"></div>
+                    <div class="w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden border border-white/5 relative bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Portrait" class="w-full h-full object-cover opacity-80 mix-blend-luminosity grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Projects Section -->
+        <section id="work" class="py-24 relative z-10">
+            <div class="max-w-7xl mx-auto px-6 mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl text-white tracking-tight font-medium">Selected Work</h2>
+                <p class="mt-4 text-sm max-w-xl">A collection of interfaces and experiences designed and developed for forward-thinking companies.</p>
+            </div>
+
+            <div class="flex flex-col gap-8 md:gap-16 max-w-7xl mx-auto px-6">
+                <!-- Project 1 -->
+                <div class="min-h-[85vh] rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden flex flex-col group relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]/90 z-10"></div>
+                    <div class="flex-1 w-full h-full relative overflow-hidden bg-[#0a0a0a] p-8 md:p-16 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" alt="Project 1" class="w-full h-full object-cover rounded-xl border border-white/10 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 z-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-widest uppercase mb-2 text-zinc-500 font-medium">Fintech / Web App</p>
+                            <h3 class="heading-font text-3xl md:text-5xl text-white tracking-tight font-medium mb-4">Nova Finance</h3>
+                            <p class="max-w-md text-sm md:text-base text-zinc-400">A completely reimagined dashboard for tracking crypto assets with predictive AI analytics.</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 border border-white/10 bg-black/50 backdrop-blur-md text-white px-6 py-3 rounded-full text-sm heading-font tracking-tight hover:bg-white/10 transition-colors whitespace-nowrap">
+                            View Full Project
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="16" height="16"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="min-h-[85vh] rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden flex flex-col group relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]/90 z-10"></div>
+                    <div class="flex-1 w-full h-full relative overflow-hidden bg-[#0a0a0a] p-8 md:p-16 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" alt="Project 2" class="w-full h-full object-cover rounded-xl border border-white/10 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 z-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-widest uppercase mb-2 text-zinc-500 font-medium">SaaS / Dashboard</p>
+                            <h3 class="heading-font text-3xl md:text-5xl text-white tracking-tight font-medium mb-4">Aura Metrics</h3>
+                            <p class="max-w-md text-sm md:text-base text-zinc-400">Minimalist analytics platform designed to reduce cognitive load for data scientists.</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 border border-white/10 bg-black/50 backdrop-blur-md text-white px-6 py-3 rounded-full text-sm heading-font tracking-tight hover:bg-white/10 transition-colors whitespace-nowrap">
+                            View Full Project
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="16" height="16"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="min-h-[85vh] rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden flex flex-col group relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]/90 z-10"></div>
+                    <div class="flex-1 w-full h-full relative overflow-hidden bg-[#0a0a0a] p-8 md:p-16 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" alt="Project 3" class="w-full h-full object-cover rounded-xl border border-white/10 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 z-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-widest uppercase mb-2 text-zinc-500 font-medium">E-Commerce / Experience</p>
+                            <h3 class="heading-font text-3xl md:text-5xl text-white tracking-tight font-medium mb-4">Lumina Store</h3>
+                            <p class="max-w-md text-sm md:text-base text-zinc-400">High-end fashion e-commerce experience built entirely in Framer with complex scroll interactions.</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 border border-white/10 bg-black/50 backdrop-blur-md text-white px-6 py-3 rounded-full text-sm heading-font tracking-tight hover:bg-white/10 transition-colors whitespace-nowrap">
+                            View Full Project
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="16" height="16"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="min-h-[85vh] rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden flex flex-col group relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]/90 z-10"></div>
+                    <div class="flex-1 w-full h-full relative overflow-hidden bg-[#0a0a0a] p-8 md:p-16 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" alt="Project 4" class="w-full h-full object-cover rounded-xl border border-white/10 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 z-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div>
+                            <p class="text-xs tracking-widest uppercase mb-2 text-zinc-500 font-medium">AI / Platform</p>
+                            <h3 class="heading-font text-3xl md:text-5xl text-white tracking-tight font-medium mb-4">Nexus Core</h3>
+                            <p class="max-w-md text-sm md:text-base text-zinc-400">Interface design for an enterprise-level LLM training environment.</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 border border-white/10 bg-black/50 backdrop-blur-md text-white px-6 py-3 rounded-full text-sm heading-font tracking-tight hover:bg-white/10 transition-colors whitespace-nowrap">
+                            View Full Project
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="16" height="16"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services -->
+        <section id="services" class="py-24 border-y border-white/5 bg-[#080808]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16">
+                    <h2 class="heading-font text-3xl md:text-4xl text-white tracking-tight font-medium">Core Capabilities</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="p-8 rounded-2xl border border-white/5 bg-black hover:bg-white/[0.02] transition-colors group">
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:pallete-2-linear" width="24" height="24"></iconify-icon>
+                        </div>
+                        <h3 class="heading-font text-xl text-white tracking-tight font-medium mb-3">Branding</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">Developing cohesive visual identities that resonate with your target audience and establish a strong market presence.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="p-8 rounded-2xl border border-white/5 bg-black hover:bg-white/[0.02] transition-colors group">
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:pen-linear" width="24" height="24"></iconify-icon>
+                        </div>
+                        <h3 class="heading-font text-xl text-white tracking-tight font-medium mb-3">Design</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">Crafting intuitive and aesthetically pleasing user interfaces backed by solid user experience research and wireframing.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="p-8 rounded-2xl border border-white/5 bg-black hover:bg-white/[0.02] transition-colors group">
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:code-square-linear" width="24" height="24"></iconify-icon>
+                        </div>
+                        <h3 class="heading-font text-xl text-white tracking-tight font-medium mb-3">Development</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed">Translating designs into pixel-perfect, responsive, and highly animated Framer websites ready for production.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Benefits (Bento) -->
+        <section class="py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16">
+                    <h2 class="heading-font text-3xl md:text-4xl text-white tracking-tight font-medium mb-4">The Advantage</h2>
+                    <p class="text-sm max-w-xl">Why working with a specialized freelancer brings more value to your product.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                    <!-- Item 1 -->
+                    <div class="md:col-span-2 md:row-span-2 p-8 rounded-3xl border border-white/5 bg-gradient-to-br from-[#111] to-black flex flex-col justify-end relative overflow-hidden group">
+                        <div class="absolute top-8 right-8 text-white/20 group-hover:text-white/40 transition-colors">
+                            <iconify-icon icon="solar:hand-shake-linear" width="48" height="48"></iconify-icon>
+                        </div>
+                        <h3 class="heading-font text-2xl md:text-3xl text-white tracking-tight font-medium">I build partnership,<br>not just a project.</h3>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="md:col-span-2 p-8 rounded-3xl border border-white/5 bg-[#0a0a0a] flex flex-col justify-center">
+                        <h3 class="heading-font text-xl md:text-2xl text-white tracking-tight font-medium mb-2">Design that makes sense and looks stunning</h3>
+                        <p class="text-xs text-zinc-500">Balancing function and form perfectly.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="md:col-span-1 p-8 rounded-3xl border border-white/5 bg-[#0a0a0a] flex flex-col justify-center items-center text-center">
+                        <span class="text-4xl text-white heading-font font-medium mb-2">48h</span>
+                        <h3 class="text-sm font-medium tracking-wide text-zinc-400">Turnaround</h3>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="md:col-span-1 p-8 rounded-3xl border border-white/5 bg-[#0a0a0a] flex flex-col justify-center">
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white mb-4">
+                            <iconify-icon icon="solar:maximize-linear" width="16" height="16"></iconify-icon>
+                        </div>
+                        <h3 class="heading-font text-lg text-white tracking-tight font-medium">Flexible and scalable</h3>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="md:col-span-4 p-8 rounded-3xl border border-white/5 bg-gradient-to-r from-[#0a0a0a] to-[#111] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <h3 class="heading-font text-2xl text-white tracking-tight font-medium">Clients and the satisfaction rate</h3>
+                        <div class="flex items-center gap-8">
+                            <div class="text-center">
+                                <span class="block text-3xl text-white heading-font font-medium mb-1">40+</span>
+                                <span class="text-xs text-zinc-500 uppercase tracking-widest">Clients</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-3xl text-white heading-font font-medium mb-1">99%</span>
+                                <span class="text-xs text-zinc-500 uppercase tracking-widest">Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About Me -->
+        <section id="about" class="py-24 bg-[#080808] border-y border-white/5 relative overflow-hidden">
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-5">
+                    <div class="aspect-square rounded-full overflow-hidden border border-white/10 bg-zinc-900 max-w-md mx-auto lg:mx-0 p-2">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="About Me" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 flex flex-col items-start">
+                    <h2 class="heading-font text-3xl md:text-5xl text-white tracking-tight font-medium mb-6">Hello, I'm Alex.</h2>
+                    <p class="text-base text-zinc-400 mb-6 leading-relaxed">
+                        With over half a decade of experience bridging the gap between design and engineering, I specialize in creating digital products that are not only visually striking but technically robust. My workflow is rooted in minimalism, logic, and a deep understanding of user behavior.
+                    </p>
+                    <p class="text-base text-zinc-400 mb-10 leading-relaxed">
+                        Currently operating independently, partnering with startups and established brands globally to elevate their digital presence through strategic UI/UX and seamless Framer development.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-6 mb-10">
+                        <div class="flex items-center gap-2 text-sm">
+                            <iconify-icon icon="solar:map-point-linear" width="18" height="18" class="text-white"></iconify-icon>
+                            Berlin, Germany
+                        </div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <iconify-icon icon="solar:letter-linear" width="18" height="18" class="text-white"></iconify-icon>
+                            hello@uxfr.studio
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <a href="#contact" class="flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm heading-font tracking-tight hover:bg-zinc-200 transition-colors">
+                            Know More
+                        </a>
+                        <div class="flex items-center gap-3 ml-4">
+                            <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                                <iconify-icon icon="solar:hashtag-linear" width="18" height="18"></iconify-icon>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                                <iconify-icon icon="solar:link-circle-linear" width="18" height="18"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Testimonials -->
+        <section class="py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="heading-font text-3xl md:text-4xl text-white tracking-tight font-medium">Client Feedback</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="p-8 rounded-2xl border border-white/5 bg-[#0a0a0a] flex flex-col">
+                        <div class="flex text-white mb-6">
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-8 flex-1">"The attention to detail and ability to translate our complex requirements into a sleek, functional interface was outstanding. The Framer build was flawless."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-zinc-800"></div>
+                            <div>
+                                <h4 class="text-sm text-white font-medium">Sarah Jenkins</h4>
+                                <p class="text-xs text-zinc-500">CEO, TechFlow</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="p-8 rounded-2xl border border-white/5 bg-[#0a0a0a] flex flex-col">
+                        <div class="flex text-white mb-6">
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-8 flex-1">"Delivered exactly what was promised within the 48-hour timeframe for the initial concepts. The final product elevated our brand significantly."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-zinc-800"></div>
+                            <div>
+                                <h4 class="text-sm text-white font-medium">David Chen</h4>
+                                <p class="text-xs text-zinc-500">Founder, Aura</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="p-8 rounded-2xl border border-white/5 bg-[#0a0a0a] flex flex-col md:hidden lg:flex">
+                        <div class="flex text-white mb-6">
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-8 flex-1">"A true partner rather than just a contractor. Brought invaluable product insights that went far beyond pure UI design."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-zinc-800"></div>
+                            <div>
+                                <h4 class="text-sm text-white font-medium">Elena Rostova</h4>
+                                <p class="text-xs text-zinc-500">VP Product, Nexus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Pricing -->
+        <section id="pricing" class="py-24 bg-[#080808] border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="heading-font text-3xl md:text-4xl text-white tracking-tight font-medium mb-4">Transparent Pricing</h2>
+                    <p class="text-sm max-w-xl mx-auto">Simple, straightforward models tailored to your project needs.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Tier 1 -->
+                    <div class="p-8 rounded-3xl border border-white/5 bg-[#0a0a0a] flex flex-col">
+                        <h3 class="text-sm tracking-widest uppercase text-zinc-500 font-medium mb-2">Project Based</h3>
+                        <div class="flex items-baseline gap-2 mb-6">
+                            <span class="text-4xl heading-font text-white font-medium tracking-tight">Custom</span>
+                        </div>
+                        <p class="text-sm text-zinc-400 mb-8 border-b border-white/5 pb-8">Ideal for end-to-end website builds or specific design scopes with defined deliverables.</p>
+                        <ul class="flex flex-col gap-4 mb-10 flex-1">
+                            <li class="flex items-start gap-3 text-sm">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                UI/UX Design System
+                            </li>
+                            <li class="flex items-start gap-3 text-sm">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                Full Framer Development
+                            </li>
+                            <li class="flex items-start gap-3 text-sm">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                Responsive across devices
+                            </li>
+                            <li class="flex items-start gap-3 text-sm">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                SEO &amp; Performance setup
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 rounded-full border border-white/10 text-white text-sm heading-font tracking-tight hover:bg-white/5 transition-colors">
+                            Get a Quote
+                        </button>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="p-8 rounded-3xl border border-white/10 bg-gradient-to-b from-[#111] to-[#050505] flex flex-col relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-white text-black text-xs font-medium px-3 py-1 rounded-bl-xl">Popular</div>
+                        <h3 class="text-sm tracking-widest uppercase text-zinc-500 font-medium mb-2">Retainer</h3>
+                        <div class="flex items-baseline gap-2 mb-6">
+                            <span class="text-4xl heading-font text-white font-medium tracking-tight">$4,500</span>
+                            <span class="text-sm text-zinc-500">/mo</span>
+                        </div>
+                        <p class="text-sm text-zinc-400 mb-8 border-b border-white/5 pb-8">Dedicated monthly design and development support for continuous growth.</p>
+                        <ul class="flex flex-col gap-4 mb-10 flex-1">
+                            <li class="flex items-start gap-3 text-sm text-white">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                Pause or cancel anytime
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-white">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                Unlimited requests
+                            </li>
+                            <li class="flex items-start gap-3 text-sm">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                48-hour delivery on tasks
+                            </li>
+                            <li class="flex items-start gap-3 text-sm">
+                                <iconify-icon icon="solar:check-circle-linear" width="18" height="18" class="text-white mt-0.5"></iconify-icon>
+                                Direct Slack communication
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 rounded-full bg-white text-black text-sm heading-font tracking-tight hover:bg-zinc-200 transition-colors">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FAQ -->
+        <section class="py-32">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="mb-12">
+                    <h2 class="heading-font text-3xl md:text-4xl text-white tracking-tight font-medium">Frequently Asked Questions</h2>
+                </div>
+                
+                <div class="flex flex-col border-t border-white/5">
+                    <!-- FAQ 1 -->
+                    <details class="group py-6 border-b border-white/5">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white text-lg hover:text-zinc-300 transition-colors">
+                            <span class="heading-font tracking-tight">What is the typical turnaround time?</span>
+                            <span class="transition group-open:rotate-180 text-zinc-500">
+                                <iconify-icon icon="solar:alt-arrow-down-linear" width="20" height="20"></iconify-icon>
+                            </span>
+                        </summary>
+                        <p class="text-zinc-400 mt-4 text-sm leading-relaxed pr-8 group-open:animate-fadeIn">
+                            For smaller tasks and standard design requests under the retainer, the turnaround is typically 48 hours. Full project timelines vary based on scope but generally range from 2 to 6 weeks.
+                        </p>
+                    </details>
+                    
+                    <!-- FAQ 2 -->
+                    <details class="group py-6 border-b border-white/5">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white text-lg hover:text-zinc-300 transition-colors">
+                            <span class="heading-font tracking-tight">Do you work with other platforms besides Framer?</span>
+                            <span class="transition group-open:rotate-180 text-zinc-500">
+                                <iconify-icon icon="solar:alt-arrow-down-linear" width="20" height="20"></iconify-icon>
+                            </span>
+                        </summary>
+                        <p class="text-zinc-400 mt-4 text-sm leading-relaxed pr-8">
+                            While Framer is my primary tool for development due to its speed and high-fidelity output, I also design in Figma and can hand off assets for standard React/Next.js development teams if required.
+                        </p>
+                    </details>
+
+                    <!-- FAQ 3 -->
+                    <details class="group py-6 border-b border-white/5">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-white text-lg hover:text-zinc-300 transition-colors">
+                            <span class="heading-font tracking-tight">How does the retainer model work?</span>
+                            <span class="transition group-open:rotate-180 text-zinc-500">
+                                <iconify-icon icon="solar:alt-arrow-down-linear" width="20" height="20"></iconify-icon>
+                            </span>
+                        </summary>
+                        <p class="text-zinc-400 mt-4 text-sm leading-relaxed pr-8">
+                            The retainer acts as an ongoing subscription where you can submit unlimited design or Framer requests. I work on them sequentially, delivering updates every 48 hours until you are completely satisfied.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Footer -->
+        <footer id="contact" class="pt-24 pb-12 border-t border-white/5 bg-[#050505]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-20">
+                    <div>
+                        <h2 class="heading-font text-4xl md:text-6xl text-white tracking-tight font-medium mb-6">Let's build<br>something <span class="text-zinc-600">iconic.</span></h2>
+                        <a href="mailto:hello@uxfr.studio" class="inline-flex items-center gap-2 text-white border-b border-white/20 pb-1 hover:border-white transition-colors text-lg">
+                            hello@uxfr.studio
+                            <iconify-icon icon="solar:arrow-right-up-linear" width="18" height="18"></iconify-icon>
+                        </a>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 transition-colors">
+                            <iconify-icon icon="solar:letter-linear" width="20" height="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 transition-colors">
+                            <iconify-icon icon="solar:link-circle-linear" width="20" height="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 transition-colors">
+                            <iconify-icon icon="solar:hashtag-linear" width="20" height="20"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5 text-xs text-zinc-500">
+                    <p>© 2024 UXFR. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-white transition-colors">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+</body></html>

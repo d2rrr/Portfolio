@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Liste des projets réalisés par Darren DE OLIVEIRA -- DA SILVA.">
+  <title>Mes projets | Darren DE OLIVEIRA -- DA SILVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Accueil du portfolio de Darren">
+      <span class="brand-mark">DD</span>
+      <span class="brand-text">Darren</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="projets.html">Projets</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="index.html#contact">Me contacter</a>
+  </header>
+
+  <main class="page-main">
+    <section class="section page-hero">
+      <div class="section-container">
+        <a class="back-link reveal" href="index.html">Retour à l’accueil</a>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Mes projets</h1>
+          <p>Cette page regroupe les projets réalisés dans le cadre de mon BUT Génie électrique et informatique industrielle ainsi que ceux réalisés dans le cadre de mon double diplôme universitaire Technologie au service de la santé.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-container stacked-content">
+        <div class="category-block reveal">
+          <div class="category-heading">
+            <p class="eyebrow">Catégorie 1</p>
+            <h2>Projets BUT GEII</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-media"><span>Image à ajouter</span></div>
+              <div class="project-body">
+                <span class="project-number">Projet 01</span>
+                <h3>KART à hélice</h3>
+                <p class="project-type">Projet BUT GEII</p>
+                <p>Conception et étude de la partie électronique d’un KART à hélice, avec une carte émetteur, une carte récepteur et une communication par TRAME NEC.</p>
+                <a class="btn btn-secondary btn-small" href="projets/kart-helice.html">Voir le projet</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media"><span>Image à ajouter</span></div>
+              <div class="project-body">
+                <span class="project-number">Projet 02</span>
+                <h3>Thermomètre de bain pour bébé</h3>
+                <p class="project-type">Projet BUT GEII</p>
+                <p>Conception d’une carte électronique permettant d’indiquer si la température de l’eau d’un bain pour bébé est froide, idéale ou chaude à l’aide de LEDs.</p>
+                <a class="btn btn-secondary btn-small" href="projets/thermometre-bain.html">Voir le projet</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="category-block reveal">
+          <div class="category-heading">
+            <p class="eyebrow">Catégorie 2</p>
+            <h2>Projets DU TSS</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-media"><span>Image à ajouter</span></div>
+              <div class="project-body">
+                <span class="project-number">Projet 03</span>
+                <h3>Prothèse de main</h3>
+                <p class="project-type">Projet DU TSS</p>
+                <p>Projet de commande d’une prothèse de main à partir de capteurs EMG, permettant de faire bouger différents doigts selon les contractions musculaires détectées.</p>
+                <a class="btn btn-secondary btn-small" href="projets/prothese-main.html">Voir le projet</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media"><span>Image à ajouter</span></div>
+              <div class="project-body">
+                <span class="project-number">Projet 04</span>
+                <h3>PyroGuard</h3>
+                <p class="project-type">Projet DU TSS</p>
+                <p>Projet en cours visant à détecter les départs de feu en forêt grâce à des boîtiers connectés, des capteurs environnementaux, un serveur MQTT et une interface dashboard.</p>
+                <a class="btn btn-secondary btn-small" href="projets/pyroguard.html">Voir le projet</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-container footer-inner">
+      <div>
+        <strong>Darren DE OLIVEIRA -- DA SILVA</strong>
+        <p>Étudiant en BUT GEII · Bordeaux, France</p>
+      </div>
+      <nav aria-label="Navigation secondaire">
+        <a href="a-propos.html">À propos</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="section-container footer-bottom">
+      <span>© 2026 Darren DE OLIVEIRA -- DA SILVA.</span>
+      <span>Portfolio étudiant.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
