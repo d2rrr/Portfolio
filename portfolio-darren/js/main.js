@@ -1,5 +1,11 @@
+function initPortfolio() {
+document.body.classList.add("js-enabled");
+
+try {
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
@@ -26,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (!target) return;
 
     event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
   });
 });
 
@@ -34,7 +40,6 @@ const modalButtons = document.querySelectorAll("[data-modal-target]");
 const modals = document.querySelectorAll(".modal");
 let activeModal = null;
 let lastFocusedElement = null;
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function openModal(modal) {
   if (!modal) return;
@@ -79,9 +84,14 @@ document.addEventListener("keydown", (event) => {
 });
 
 const revealElements = document.querySelectorAll(".reveal");
+const revealDelayStep = isSmallScreen ? 45 : 80;
 
 revealElements.forEach((element, index) => {
-  element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 4) * 80}ms`);
+  element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 4) * revealDelayStep}ms`);
+});
+
+document.querySelectorAll(".project-grid .project-card.reveal").forEach((element, index) => {
+  element.style.setProperty("--reveal-delay", `${index * (isSmallScreen ? 55 : 110)}ms`);
 });
 
 if (prefersReducedMotion) {
@@ -101,6 +111,47 @@ if (prefersReducedMotion) {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }
 
+const homeAnimationElements = document.querySelectorAll(".reveal-section, .reveal-card");
+console.log("Animations accueil chargées :", homeAnimationElements.length);
+
+if (homeAnimationElements.length) {
+  if (prefersReducedMotion) {
+    homeAnimationElements.forEach((element) => element.classList.add("is-visible"));
+  } else if ("IntersectionObserver" in window) {
+    const homeObserver = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("Animation déclenchée :", entry.target);
+            entry.target.classList.add("is-visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -60px 0px",
+      }
+    );
+
+    homeAnimationElements.forEach((element) => {
+      homeObserver.observe(element);
+    });
+
+    document.querySelectorAll(".reveal-card").forEach((element, index) => {
+      element.style.transitionDelay = `${Math.min(index * 120, 360)}ms`;
+    });
+  } else {
+    homeAnimationElements.forEach((element) => element.classList.add("is-visible"));
+  }
+}
+
+window.requestAnimationFrame(() => {
+  window.requestAnimationFrame(() => {
+    document.body.classList.add("animations-ready");
+  });
+});
+
 const typewriter = document.querySelector("[data-typewriter]");
 
 if (typewriter) {
@@ -114,17 +165,19 @@ if (typewriter) {
     target.textContent = "";
 
     let characterIndex = 0;
+    const typewriterSpeed = isSmallScreen ? 34 : 42;
+    const typewriterStartDelay = isSmallScreen ? 620 : 940;
     const typeNextCharacter = () => {
       target.textContent = typewriterText.slice(0, characterIndex + 1);
       characterIndex += 1;
 
       if (characterIndex < typewriterText.length) {
-        window.setTimeout(typeNextCharacter, 42);
+        window.setTimeout(typeNextCharacter, typewriterSpeed);
       }
     };
 
     window.requestAnimationFrame(() => {
-      window.setTimeout(typeNextCharacter, 260);
+      window.setTimeout(typeNextCharacter, typewriterStartDelay);
     });
   }
 }
@@ -140,4 +193,15 @@ if (contactForm) {
       note.textContent = "Formulaire statique pour l’instant : aucun message n’est envoyé.";
     }
   });
+}
+} catch (error) {
+  document.body.classList.remove("js-enabled", "animations-ready");
+  console.error("Portfolio animations failed to initialize.", error);
+}
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPortfolio);
+} else {
+  initPortfolio();
 }

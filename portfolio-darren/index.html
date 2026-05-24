@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
   <div class="ambient-bg" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -35,28 +35,24 @@
 
   <main>
     <section class="hero-section" id="accueil">
-      <div class="section-container hero-grid">
+      <div class="section-container hero-grid hero-animate">
         <div class="hero-content reveal">
-          <p class="eyebrow">Portfolio</p>
-          <h1 class="hero-name">
+          <p class="eyebrow anim-item">Portfolio</p>
+          <h1 class="hero-name anim-item">
             <span>Darren</span>
             <span>DE OLIVEIRA -- DA SILVA</span>
           </h1>
-          <p class="hero-title typewriter" data-typewriter="Étudiant en BUT Génie électrique et informatique industrielle">
+          <p class="hero-title typewriter anim-item" data-typewriter="Étudiant en BUT Génie électrique et informatique industrielle">
             <span>Étudiant en BUT Génie électrique et informatique industrielle</span>
           </p>
-          <div class="hero-text">
-            <p>Bonjour, je suis Darren DE OLIVEIRA -- DA SILVA, étudiant en première année de BUT Génie électrique et informatique industrielle à l’IUT de Bordeaux, site de Gradignan.</p>
-            <p>Curieux, investi et dynamique, je développe mes compétences dans les domaines de l’électricité, de l’électronique, de l’automatisme et de l’informatique industrielle à travers des projets concrets.</p>
-          </div>
-          <p class="hero-tagline">Construire, comprendre et améliorer des systèmes techniques à travers des projets concrets.</p>
-          <div class="hero-actions">
+          <p class="hero-tagline anim-item">Transformer des idées techniques en projets concrets.</p>
+          <div class="hero-actions anim-item">
             <a class="btn btn-primary" href="#projets">Voir mes projets</a>
             <a class="btn btn-secondary" href="#contact">Me contacter</a>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
+        <div class="hero-visual reveal anim-item">
           <div class="hero-photo">
             <span>Photo ou visuel personnel à ajouter</span>
           </div>
@@ -68,7 +64,7 @@
       </div>
     </section>
 
-    <section class="section about-preview-section" id="a-propos">
+    <section class="section about-preview-section reveal-section" id="a-propos">
       <div class="section-container about-preview-grid">
         <div class="about-visual reveal">
           <div class="visual-placeholder">Visuels à ajouter plus tard</div>
@@ -76,32 +72,32 @@
         <div class="about-preview-copy reveal">
           <p class="eyebrow">À propos</p>
           <h2>À propos</h2>
-          <p class="lead">Un parcours technique en construction, entre génie électrique, informatique industrielle et technologies appliquées à la santé.</p>
-          <p>Je suis étudiant en première année de BUT Génie électrique et informatique industrielle à l’IUT de Bordeaux, site de Gradignan. Curieux, investi et dynamique, j’aime comprendre le fonctionnement des systèmes techniques et travailler sur des projets concrets.</p>
+          <p class="lead">Un parcours en construction porté par la curiosité et l’envie de progresser.</p>
+          <p>Étudiant en BUT GEII à l’IUT de Bordeaux, je développe mes compétences à travers des projets techniques concrets. Le football et les voyages font aussi partie de ce qui me construit au quotidien.</p>
           <a class="btn btn-primary" href="a-propos.html">En savoir plus</a>
         </div>
       </div>
     </section>
 
-    <section class="section skills-section" id="competences">
+    <section class="section skills-section reveal-section" id="competences">
       <div class="section-container">
         <div class="section-heading reveal">
           <p class="eyebrow">Compétences</p>
           <h2>Compétences</h2>
-          <p>Des compétences développées progressivement dans le cadre du BUT GEII, des travaux pratiques et des projets techniques.</p>
+          <p>Des compétences techniques et personnelles que je développe au fil de ma formation et de mes projets.</p>
         </div>
 
         <div class="skills-block reveal">
           <h3>Compétences BUT GEII</h3>
           <div class="card-grid two-columns">
-            <article class="info-card">
-              <span class="card-index">01</span>
+            <article class="info-card reveal-card">
+              <span class="card-index">GEII</span>
               <h4>Concevoir</h4>
               <p>Concevoir des solutions techniques en lien avec l’électricité, l’électronique et l’informatique industrielle.</p>
               <p>Cette compétence regroupe la capacité à analyser un besoin, proposer une solution adaptée, choisir des composants, réaliser des schémas et participer à la conception d’un système technique.</p>
             </article>
-            <article class="info-card">
-              <span class="card-index">02</span>
+            <article class="info-card reveal-card">
+              <span class="card-index">GEII</span>
               <h4>Vérifier</h4>
               <p>Vérifier le bon fonctionnement d’un système ou d’une carte électronique.</p>
               <p>Cette compétence consiste à réaliser des mesures, tester des composants, contrôler le fonctionnement d’un montage et valider que le système respecte les exigences attendues.</p>
@@ -112,14 +108,14 @@
         <div class="skills-block reveal">
           <h3>Compétences techniques personnelles</h3>
           <div class="card-grid two-columns compact-grid">
-            <article class="info-card centered-card">
-              <span class="card-index">03</span>
+            <article class="info-card centered-card reveal-card">
+              <span class="card-index">Tech</span>
               <h4>Programmation</h4>
               <p>J’utilise différents langages et environnements de programmation pour développer des solutions techniques adaptées aux projets.</p>
               <button class="btn btn-secondary" type="button" data-modal-target="modal-programmation">En savoir plus</button>
             </article>
-            <article class="info-card centered-card">
-              <span class="card-index">04</span>
+            <article class="info-card centered-card reveal-card">
+              <span class="card-index">Tech</span>
               <h4>Outils logiciels</h4>
               <p>J’utilise plusieurs logiciels techniques pour concevoir, simuler, modéliser et documenter mes projets.</p>
               <button class="btn btn-secondary" type="button" data-modal-target="modal-outils">En savoir plus</button>
@@ -129,7 +125,7 @@
       </div>
     </section>
 
-    <section class="section projects-section" id="projets">
+    <section class="section projects-section reveal-section" id="projets">
       <div class="section-container">
         <div class="projects-heading reveal">
           <div>
@@ -138,15 +134,10 @@
           </div>
           <a class="btn btn-secondary" href="projets.html">Voir tous les projets</a>
         </div>
-        <p class="section-intro reveal">Au cours de ma formation en BUT Génie électrique et informatique industrielle et de mon double diplôme Technologie au service de la santé, j’ai eu l’occasion de travailler sur plusieurs projets techniques. Ces projets m’ont permis de développer mes compétences en électronique, automatisme, programmation, communication entre systèmes et conception de solutions appliquées à des besoins concrets.</p>
-
-        <div class="project-groups reveal">
-          <span>Projets BUT GEII</span>
-          <span>Projets DU TSS</span>
-        </div>
+        <p class="section-intro reveal">Chaque projet présente une idée, une démarche technique et une réalisation qui reflète mon évolution.</p>
 
         <div class="project-grid">
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-card">
             <div class="project-image">
               <img src="assets/image KAH/Icone Projet KAH.png" alt="Projet KART à hélice">
             </div>
@@ -159,7 +150,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-card">
             <div class="project-image">
               <img src="assets/image TDB/Icone Projet TDB.png" alt="Projet thermomètre de bain pour bébé">
             </div>
@@ -172,7 +163,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-card">
             <div class="project-media"><span>Image à ajouter</span></div>
             <div class="project-body">
               <span class="project-number">Projet 03</span>
@@ -183,7 +174,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-card">
             <div class="project-image">
               <img src="assets/image PYROGUARD/Icone Projet Pyroguard.png" alt="Projet PyroGuard">
             </div>
@@ -199,29 +190,29 @@
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
+    <section class="section contact-section reveal-section" id="contact">
       <div class="section-container contact-grid">
         <div class="contact-copy reveal">
           <p class="eyebrow">Contact</p>
           <h2>Me contacter</h2>
           <p>Vous pouvez me contacter pour échanger autour de mes projets, de ma formation ou de mon parcours.</p>
           <div class="contact-list">
-            <p>
+            <p class="reveal-card">
               <img class="contact-icon" src="assets/icone contact/logo geolocalisation.png" alt="" aria-hidden="true">
               <strong>Localisation</strong>
               <span>Bordeaux, France</span>
             </p>
-            <p>
+            <p class="reveal-card">
               <img class="contact-icon" src="assets/icone contact/logo email.png" alt="" aria-hidden="true">
               <strong>Mail personnel</strong>
               <a href="mailto:dasilvadarren@outlook.fr">dasilvadarren@outlook.fr</a>
             </p>
-            <p>
+            <p class="reveal-card">
               <img class="contact-icon" src="assets/icone contact/logo email.png" alt="" aria-hidden="true">
               <strong>Mail universitaire</strong>
               <a href="mailto:darren.de-oliveira-da-silva@etu.u-bordeaux.fr">darren.de-oliveira-da-silva@etu.u-bordeaux.fr</a>
             </p>
-            <div class="contact-socials">
+            <div class="contact-socials reveal-card">
               <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn à compléter">
                 <img src="assets/icone contact/logo likenkedin.png" alt="LinkedIn">
               </a>
