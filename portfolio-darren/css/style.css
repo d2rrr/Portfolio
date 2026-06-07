@@ -4211,131 +4211,6 @@ ul {
   align-items: start;
 }
 
-.kart-project-page .project-slider {
-  display: grid;
-  grid-template-columns: 44px minmax(0, 980px) 44px;
-  gap: 14px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-inline: auto;
-}
-
-.kart-project-page .slider-viewport {
-  min-width: 0;
-  overflow: hidden;
-}
-
-.kart-project-page .slider-track {
-  display: flex;
-  align-items: stretch;
-  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
-}
-
-.kart-project-page .slider-track > .kah-step-card {
-  flex: 0 0 100%;
-  width: 100%;
-  min-width: 0;
-}
-
-.kart-project-page .kah-conception-slider .slider-track {
-  align-items: flex-start;
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card {
-  align-self: flex-start;
-  height: auto;
-  gap: 12px;
-  padding: clamp(18px, 2.3vw, 26px);
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card[aria-hidden="true"] {
-  height: 0;
-  overflow: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) {
-  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.68fr);
-  column-gap: clamp(18px, 3vw, 32px);
-  align-items: center;
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) h3 {
-  grid-column: 1 / -1;
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) .kah-text-flow {
-  grid-column: 1;
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) .kah-figure {
-  grid-column: 2;
-  align-self: center;
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) .kah-image-frame-treatment {
-  width: min(100%, 760px);
-}
-
-.kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(3) .kah-placeholder-compact {
-  min-height: 56px;
-  padding: 10px 12px;
-}
-
-.kart-project-page .kah-conception-slider .kah-figure {
-  align-self: start;
-}
-
-.kart-project-page .kah-conception-slider .kah-media-grid {
-  margin-top: 2px;
-}
-
-.kart-project-page .slider-arrow {
-  display: inline-flex;
-  width: 42px;
-  height: 42px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  background: rgba(5, 8, 11, 0.68);
-  color: rgba(246, 247, 248, 0.92);
-  cursor: pointer;
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  line-height: 1;
-  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease, color 220ms ease, opacity 220ms ease;
-  backdrop-filter: blur(14px);
-}
-
-.kart-project-page .slider-arrow:hover,
-.kart-project-page .slider-arrow:focus-visible {
-  outline: none;
-  border-color: rgba(125, 240, 196, 0.5);
-  background: rgba(15, 24, 28, 0.82);
-  color: #ffffff;
-  box-shadow: 0 0 22px rgba(125, 240, 196, 0.2);
-}
-
-.kart-project-page .slider-arrow:disabled {
-  cursor: default;
-  opacity: 0.36;
-  box-shadow: none;
-}
-
-.kart-project-page .slider-arrow:disabled:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(5, 8, 11, 0.68);
-  color: rgba(246, 247, 248, 0.92);
-}
-
 .kart-project-page .kah-step-card {
   display: grid;
   align-content: start;
@@ -4538,40 +4413,8 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .kart-project-page .project-slider {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "viewport viewport"
-      "prev next";
-    gap: 14px 12px;
-  }
-
-  .kart-project-page .slider-viewport {
-    grid-area: viewport;
-  }
-
-  .kart-project-page .slider-prev {
-    grid-area: prev;
-    justify-self: end;
-  }
-
-  .kart-project-page .slider-next {
-    grid-area: next;
-    justify-self: start;
-  }
-
   .kart-project-page .kah-figure-centered {
     width: 100%;
-  }
-
-  .kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) {
-    grid-template-columns: 1fr;
-  }
-
-  .kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) h3,
-  .kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) .kah-text-flow,
-  .kart-project-page .kah-conception-slider .slider-track > .kah-step-card:nth-child(2) .kah-figure {
-    grid-column: auto;
   }
 
   .kart-project-page .kah-image-frame-portrait {
@@ -4580,12 +4423,6 @@ ul {
 
   .kart-project-page .kah-placeholder-media {
     min-height: 104px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .kart-project-page .slider-track {
-    transition: none;
   }
 }
 
@@ -6629,6 +6466,697 @@ ul {
   }
 }
 
+/* KART à hélice final override: cards and pop-ups. */
+.kart-project-page .kart-hero-content {
+  width: min(calc(100% - 40px), 1180px);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link,
+.kart-project-page .kart-hero-content .eyebrow,
+.kart-project-page .kart-hero-content h1,
+.kart-project-page .kart-hero-content .project-subtitle {
+  margin-left: 0;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link {
+  margin-bottom: 20px;
+}
+
+.kart-project-page .kart-hero-content h1 {
+  max-width: 780px;
+}
+
+.kart-project-page .kart-hero-content .project-subtitle {
+  max-width: 1120px;
+}
+
+@media (min-width: 980px) {
+  .kart-project-page .kart-hero-content .project-subtitle {
+    white-space: nowrap;
+  }
+}
+
+.kart-project-page .kah-card-grid {
+  display: grid;
+  gap: clamp(14px, 1.8vw, 20px);
+  align-items: stretch;
+}
+
+.kart-project-page .kah-conception-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kart-project-page .kah-two-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card {
+  display: grid;
+  min-height: 238px;
+  align-content: start;
+  gap: 14px;
+  padding: clamp(18px, 2vw, 24px);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.034));
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 240, 196, 0.36);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
+}
+
+.kart-project-page .kah-card-grid .kah-step-card h3 {
+  margin: 0;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+}
+
+.kart-project-page .kah-card-grid .kah-step-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.kart-project-page .kah-card-icon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(125, 240, 196, 0.24);
+  border-radius: 14px;
+  background: rgba(125, 240, 196, 0.075);
+  font-size: 1.18rem;
+}
+
+.kart-project-page .kah-card-grid .kah-tags {
+  margin-top: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-tags span {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+}
+
+.kart-project-page .kah-card-grid .btn {
+  justify-self: start;
+  margin-top: 2px;
+}
+
+.kah-modal .kah-modal-panel {
+  width: min(980px, calc(100vw - 34px));
+  padding: clamp(22px, 3vw, 36px);
+  text-align: left;
+}
+
+.kah-modal .kah-modal-panel h2 {
+  margin: 8px 48px 18px 0;
+  font-size: clamp(1.52rem, 2.55vw, 2.18rem);
+}
+
+.kah-modal .kah-modal-panel .eyebrow {
+  margin: 0;
+}
+
+.kah-modal .kah-modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.86fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: center;
+}
+
+.kah-modal .kah-modal-body-text {
+  grid-template-columns: 1fr;
+}
+
+.kah-modal .kah-modal-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.kah-modal .kah-modal-intro {
+  margin: 0;
+  color: rgba(246, 247, 248, 0.82);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.kah-modal .kah-modal-points {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 16px;
+}
+
+.kah-modal .kah-modal-points h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.kah-modal .kah-modal-points ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.kah-modal .kah-modal-points li {
+  color: rgba(246, 247, 248, 0.76);
+  line-height: 1.48;
+}
+
+.kah-modal .kah-modal-media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.kah-modal .kah-image-frame {
+  min-height: 0;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.026);
+}
+
+.kah-modal .kah-image-frame-board,
+.kah-modal .kah-image-frame-schematic {
+  aspect-ratio: 4 / 3;
+}
+
+.kah-modal .kah-image-frame-energy {
+  width: min(100%, 720px);
+}
+
+.kah-modal .kah-image-frame-treatment {
+  width: min(100%, 430px);
+  justify-self: center;
+}
+
+.kah-modal .kah-figure {
+  align-self: start;
+}
+
+.kah-modal .kah-figure figcaption {
+  margin-top: 2px;
+  color: rgba(246, 247, 248, 0.78);
+}
+
+.kah-modal .kah-figure-centered {
+  grid-column: auto;
+  width: 100%;
+}
+
+@media (max-width: 1180px) {
+  .kart-project-page .kah-conception-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .kart-project-page .kart-hero-content {
+    width: min(calc(100% - 28px), 1180px);
+  }
+
+  .kart-project-page .kah-conception-grid,
+  .kart-project-page .kah-two-card-grid,
+  .kah-modal .kah-modal-body,
+  .kah-modal .kah-media-grid-duo,
+  .kah-modal .kah-fabrication-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kart-project-page .kah-card-grid .kah-step-card {
+    min-height: 0;
+  }
+
+  .kart-project-page .kah-card-grid .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kah-modal {
+    padding: 12px;
+  }
+
+  .kah-modal .kah-modal-panel {
+    width: min(100%, calc(100vw - 24px));
+    max-height: calc(100vh - 24px);
+    padding: 20px 16px;
+  }
+
+  .kah-modal .kah-modal-panel h2 {
+    margin-right: 48px;
+  }
+
+  .kah-modal .kah-modal-points {
+    padding: 14px;
+  }
+}
+
+/* KART à hélice final pass: compact cards and skill-style pop-ups. */
+.kart-project-page .kart-hero-content {
+  width: min(calc(100% - 40px), 1180px);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link,
+.kart-project-page .kart-hero-content .eyebrow,
+.kart-project-page .kart-hero-content h1,
+.kart-project-page .kart-hero-content .project-subtitle {
+  margin-left: 0;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link {
+  margin-bottom: 20px;
+}
+
+.kart-project-page .kart-hero-content h1 {
+  max-width: 780px;
+}
+
+.kart-project-page .kart-hero-content .project-subtitle {
+  max-width: 1120px;
+}
+
+@media (min-width: 980px) {
+  .kart-project-page .kart-hero-content .project-subtitle {
+    white-space: nowrap;
+  }
+}
+
+.kart-project-page .kah-card-grid {
+  display: grid;
+  gap: clamp(14px, 1.8vw, 20px);
+  align-items: stretch;
+}
+
+.kart-project-page .kah-conception-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kart-project-page .kah-two-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card {
+  display: grid;
+  min-height: 238px;
+  align-content: start;
+  gap: 14px;
+  padding: clamp(18px, 2vw, 24px);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.034));
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 240, 196, 0.36);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
+}
+
+.kart-project-page .kah-card-grid .kah-step-card h3 {
+  margin: 0;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+}
+
+.kart-project-page .kah-card-grid .kah-step-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.kart-project-page .kah-card-icon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(125, 240, 196, 0.24);
+  border-radius: 14px;
+  background: rgba(125, 240, 196, 0.075);
+  font-size: 1.18rem;
+}
+
+.kart-project-page .kah-card-grid .kah-tags {
+  margin-top: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-tags span {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+}
+
+.kart-project-page .kah-card-grid .btn {
+  justify-self: start;
+  margin-top: 2px;
+}
+
+.kah-modal .kah-modal-panel {
+  width: min(980px, calc(100vw - 34px));
+  padding: clamp(22px, 3vw, 36px);
+  text-align: left;
+}
+
+.kah-modal .kah-modal-panel h2 {
+  margin: 8px 48px 18px 0;
+  font-size: clamp(1.52rem, 2.55vw, 2.18rem);
+}
+
+.kah-modal .kah-modal-panel .eyebrow {
+  margin: 0;
+}
+
+.kah-modal .kah-modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.86fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: center;
+}
+
+.kah-modal .kah-modal-body-text {
+  grid-template-columns: 1fr;
+}
+
+.kah-modal .kah-modal-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.kah-modal .kah-modal-intro {
+  margin: 0;
+  color: rgba(246, 247, 248, 0.82);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.kah-modal .kah-modal-points {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 16px;
+}
+
+.kah-modal .kah-modal-points h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.kah-modal .kah-modal-points ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.kah-modal .kah-modal-points li {
+  color: rgba(246, 247, 248, 0.76);
+  line-height: 1.48;
+}
+
+.kah-modal .kah-modal-media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.kah-modal .kah-image-frame {
+  min-height: 0;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.026);
+}
+
+.kah-modal .kah-image-frame-board,
+.kah-modal .kah-image-frame-schematic {
+  aspect-ratio: 4 / 3;
+}
+
+.kah-modal .kah-image-frame-energy {
+  width: min(100%, 720px);
+}
+
+.kah-modal .kah-image-frame-treatment {
+  width: min(100%, 430px);
+  justify-self: center;
+}
+
+.kah-modal .kah-figure {
+  align-self: start;
+}
+
+.kah-modal .kah-figure figcaption {
+  margin-top: 2px;
+  color: rgba(246, 247, 248, 0.78);
+}
+
+.kah-modal .kah-figure-centered {
+  grid-column: auto;
+  width: 100%;
+}
+
+@media (max-width: 1180px) {
+  .kart-project-page .kah-conception-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .kart-project-page .kart-hero-content {
+    width: min(calc(100% - 28px), 1180px);
+  }
+
+  .kart-project-page .kah-conception-grid,
+  .kart-project-page .kah-two-card-grid,
+  .kah-modal .kah-modal-body,
+  .kah-modal .kah-media-grid-duo,
+  .kah-modal .kah-fabrication-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kart-project-page .kah-card-grid .kah-step-card {
+    min-height: 0;
+  }
+
+  .kart-project-page .kah-card-grid .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kah-modal {
+    padding: 12px;
+  }
+
+  .kah-modal .kah-modal-panel {
+    width: min(100%, calc(100vw - 24px));
+    max-height: calc(100vh - 24px);
+    padding: 20px 16px;
+  }
+
+  .kah-modal .kah-modal-panel h2 {
+    margin-right: 48px;
+  }
+
+  .kah-modal .kah-modal-points {
+    padding: 14px;
+  }
+}
+
+/* KART à hélice: card-based technical sections and modals. */
+.kart-project-page .kart-hero-content {
+  width: min(calc(100% - 40px), 1180px);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link,
+.kart-project-page .kart-hero-content .eyebrow,
+.kart-project-page .kart-hero-content h1,
+.kart-project-page .kart-hero-content .project-subtitle {
+  margin-left: 0;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link {
+  margin-bottom: 22px;
+}
+
+.kart-project-page .kart-hero-content h1 {
+  max-width: 760px;
+}
+
+.kart-project-page .kart-hero-content .project-subtitle {
+  max-width: 1120px;
+}
+
+@media (min-width: 980px) {
+  .kart-project-page .kart-hero-content .project-subtitle {
+    white-space: nowrap;
+  }
+}
+
+.kart-project-page .kah-card-grid {
+  display: grid;
+  gap: clamp(14px, 1.8vw, 20px);
+  align-items: stretch;
+}
+
+.kart-project-page .kah-conception-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kart-project-page .kah-two-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card {
+  min-height: 260px;
+  padding: clamp(18px, 2vw, 24px);
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 240, 196, 0.34);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.038));
+}
+
+.kart-project-page .kah-card-grid .kah-step-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.kart-project-page .kah-card-icon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(125, 240, 196, 0.24);
+  border-radius: 14px;
+  background: rgba(125, 240, 196, 0.075);
+  font-size: 1.18rem;
+}
+
+.kart-project-page .kah-card-grid .kah-tags {
+  margin-top: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-tags span {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 0.76rem;
+}
+
+.kart-project-page .kah-card-grid .btn {
+  justify-self: start;
+  margin-top: 2px;
+}
+
+.kah-modal .kah-modal-panel {
+  width: min(1040px, calc(100vw - 34px));
+  padding: clamp(22px, 3vw, 38px);
+  text-align: left;
+}
+
+.kah-modal .kah-modal-panel h2 {
+  margin: 8px 48px 22px 0;
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+}
+
+.kah-modal .kah-modal-panel .eyebrow {
+  margin: 0;
+}
+
+.kah-modal .kah-modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.84fr);
+  gap: clamp(18px, 3vw, 34px);
+  align-items: center;
+}
+
+.kah-modal .kah-modal-body-text {
+  grid-template-columns: 1fr;
+}
+
+.kah-modal .kah-text-flow p {
+  color: rgba(246, 247, 248, 0.78);
+  line-height: 1.68;
+}
+
+.kah-modal .kah-modal-media-grid {
+  margin-top: 26px;
+}
+
+.kah-modal .kah-image-frame {
+  background: rgba(255, 255, 255, 0.028);
+}
+
+.kah-modal .kah-figure figcaption {
+  margin-top: 2px;
+}
+
+@media (max-width: 1180px) {
+  .kart-project-page .kah-conception-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .kart-project-page .kart-hero-content {
+    width: min(calc(100% - 28px), 1180px);
+  }
+
+  .kart-project-page .kah-conception-grid,
+  .kart-project-page .kah-two-card-grid,
+  .kah-modal .kah-modal-body,
+  .kah-modal .kah-media-grid-duo,
+  .kah-modal .kah-fabrication-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kart-project-page .kah-card-grid .kah-step-card {
+    min-height: 0;
+  }
+
+  .kart-project-page .kah-card-grid .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kah-modal {
+    padding: 12px;
+  }
+
+  .kah-modal .kah-modal-panel {
+    width: min(100%, calc(100vw - 24px));
+    max-height: calc(100vh - 24px);
+    padding: 20px 16px;
+  }
+
+  .kah-modal .kah-modal-panel h2 {
+    margin-right: 48px;
+  }
+
+  .kah-modal .kah-figure-centered {
+    width: 100%;
+  }
+}
+
 /* KART final layout cleanup: this block intentionally comes last. */
 .kart-project-page .kart-intro-frame {
   min-height: 0;
@@ -7789,5 +8317,665 @@ ul {
   .kart-bottom-nav,
   .kart-bottom-nav .btn {
     width: 100%;
+  }
+}
+
+/* KART à hélice effective final override. */
+.kart-project-page .kart-hero-content {
+  width: min(calc(100% - 40px), 1180px);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link,
+.kart-project-page .kart-hero-content .eyebrow,
+.kart-project-page .kart-hero-content h1,
+.kart-project-page .kart-hero-content .project-subtitle {
+  margin-left: 0;
+  text-align: left;
+}
+
+.kart-project-page .kart-hero-content .back-link {
+  margin-bottom: 20px;
+}
+
+.kart-project-page .kart-hero-content h1 {
+  max-width: 780px;
+}
+
+.kart-project-page .kart-hero-content .project-subtitle {
+  max-width: 1120px;
+}
+
+@media (min-width: 980px) {
+  .kart-project-page .kart-hero-content .project-subtitle {
+    white-space: nowrap;
+  }
+}
+
+.kart-project-page .kah-card-grid {
+  display: grid;
+  gap: clamp(14px, 1.8vw, 20px);
+  align-items: stretch;
+}
+
+.kart-project-page .kah-conception-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kart-project-page .kah-two-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-step-card {
+  display: grid;
+  min-height: 238px;
+  align-content: start;
+  gap: 14px;
+  padding: clamp(18px, 2vw, 24px);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.034));
+}
+
+.kart-project-page .kah-card-grid .kah-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 240, 196, 0.36);
+}
+
+.kart-project-page .kah-card-grid .kah-step-card h3 {
+  margin: 0;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+}
+
+.kart-project-page .kah-card-grid .kah-step-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.kart-project-page .kah-card-grid .kah-tags {
+  margin-top: auto;
+}
+
+.kart-project-page .kah-card-grid .kah-tags span {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+}
+
+.kart-project-page .kah-card-grid .btn {
+  justify-self: start;
+  margin-top: 2px;
+}
+
+.kah-modal .kah-modal-panel {
+  width: min(980px, calc(100vw - 34px));
+  padding: clamp(22px, 3vw, 36px);
+  text-align: left;
+}
+
+.kah-modal .kah-modal-panel h2 {
+  margin: 8px 48px 18px 0;
+  font-size: clamp(1.52rem, 2.55vw, 2.18rem);
+}
+
+.kah-modal .kah-modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.86fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: center;
+}
+
+.kah-modal .kah-modal-body-text {
+  grid-template-columns: 1fr;
+}
+
+.kah-modal .kah-modal-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.kah-modal .kah-modal-intro {
+  margin: 0;
+  color: rgba(246, 247, 248, 0.82);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.kah-modal .kah-modal-points {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 16px;
+}
+
+.kah-modal .kah-modal-points h3 {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+}
+
+.kah-modal .kah-modal-points ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.kah-modal .kah-modal-points li {
+  color: rgba(246, 247, 248, 0.76);
+  line-height: 1.48;
+}
+
+.kah-modal .kah-modal-media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 14px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.kah-modal .kah-image-frame {
+  min-height: 0;
+  border-color: rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.032)),
+    rgba(8, 10, 13, 0.76);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.kah-modal .kah-image-frame-board,
+.kah-modal .kah-image-frame-schematic {
+  aspect-ratio: 4 / 3;
+}
+
+.kah-modal .kah-figure-centered {
+  grid-column: auto;
+  width: 100%;
+}
+
+/* KART project cards: copied from validated skills cards. */
+.kart-project-page .kah-card-grid {
+  display: grid;
+  gap: clamp(18px, 2.4vw, 24px);
+  align-items: stretch;
+}
+
+.kart-project-page .kah-conception-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kart-project-page .kah-two-card-grid {
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.kart-project-page .kah-project-card {
+  position: relative;
+  display: flex;
+  width: auto;
+  min-height: 430px;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 30px 24px 24px;
+  border-color: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.034)),
+    radial-gradient(circle at 18% 0%, rgba(125, 240, 196, 0.07), transparent 32%);
+  box-shadow:
+    0 22px 56px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform-style: preserve-3d;
+  transition: border-color 260ms ease, background 260ms ease, box-shadow 260ms ease, transform 260ms ease;
+}
+
+.kart-project-page .kah-project-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 18px 0;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(125, 240, 196, 0.12);
+  opacity: 0;
+  filter: blur(24px);
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+.kart-project-page .kah-card-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  flex: 0 0 46px;
+  aspect-ratio: 1 / 1;
+  place-items: center;
+  border: 1px solid rgba(125, 240, 196, 0.28);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(125, 240, 196, 0.12), rgba(156, 188, 255, 0.06));
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.kart-project-page .kah-card-icon img {
+  width: 23px;
+  height: 23px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(18%) saturate(747%) hue-rotate(102deg) brightness(101%) contrast(91%);
+}
+
+.kart-project-page .kah-project-card h3 {
+  min-height: 0;
+  margin: 28px 0 16px;
+  font-size: 1.12rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.kart-project-page .kah-project-card h3.kah-title-nowrap {
+  font-size: clamp(0.92rem, 1.05vw, 1.08rem);
+  white-space: nowrap;
+}
+
+.kart-project-page .kah-project-card p {
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.64;
+}
+
+.kart-project-page .kah-project-card .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.kart-project-page .kah-project-card .skill-tags span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(246, 247, 248, 0.82);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding: 6px 10px;
+}
+
+.kart-project-page .kah-project-card .btn {
+  width: fit-content;
+  margin-top: 26px;
+}
+
+.kart-project-page .kah-project-card:hover {
+  border-color: rgba(125, 240, 196, 0.48);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045)),
+    radial-gradient(circle at 18% 0%, rgba(125, 240, 196, 0.12), transparent 34%);
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.44),
+    0 0 0 1px rgba(156, 188, 255, 0.12),
+    0 0 30px rgba(125, 240, 196, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(-6px);
+}
+
+.kart-project-page .kah-project-card:hover::after {
+  opacity: 1;
+}
+
+/* KART project pop-ups: copied from validated skills pop-ups. */
+.kah-modal .kah-modal-panel {
+  width: min(1040px, 94vw);
+  padding: clamp(34px, 4.8vw, 54px);
+  text-align: left;
+  border-color: rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(180deg, rgba(16, 21, 29, 0.98), rgba(8, 10, 13, 0.98)),
+    radial-gradient(circle at 10% 0%, rgba(125, 240, 196, 0.08), transparent 32%);
+}
+
+.kah-modal .kah-modal-body,
+.kah-modal .kah-modal-body-text {
+  display: block;
+}
+
+.kah-modal .kah-detail-header {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 22px;
+  padding-right: 42px;
+}
+
+.kah-modal .kah-detail-header .skill-detail-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.kah-modal .kah-detail-header .skill-detail-icon img {
+  width: 23px;
+  height: 23px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(18%) saturate(747%) hue-rotate(102deg) brightness(101%) contrast(91%);
+}
+
+.kah-modal .kah-detail-header h2 {
+  margin-bottom: 0;
+  letter-spacing: 0;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.kah-modal .kah-modal-intro {
+  max-width: none;
+  margin: 0;
+  border-left: 3px solid rgba(125, 240, 196, 0.64);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.78;
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.kah-modal .kah-modal-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.kah-modal .kah-modal-media-single {
+  grid-template-columns: minmax(0, min(100%, 720px));
+}
+
+.kah-modal .kah-modal-media-grid .kah-figure {
+  justify-self: center;
+  width: 100%;
+}
+
+.kah-modal .kah-modal-media-single .kah-figure {
+  width: min(100%, 720px);
+}
+
+.kah-modal .kah-image-frame {
+  min-height: 0;
+  border-color: rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.032)),
+    rgba(8, 10, 13, 0.76);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.kah-modal .kah-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kah-modal .kah-image-frame-board,
+.kah-modal .kah-image-frame-schematic {
+  aspect-ratio: 4 / 3;
+}
+
+.kah-modal .kah-figure figcaption {
+  color: rgba(246, 247, 248, 0.82);
+}
+
+.kah-modal .kah-modal-tools,
+.kah-modal .kah-modal-mobilisation {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.kah-modal .kah-modal-tools h3,
+.kah-modal .kah-modal-mobilisation h3 {
+  margin: 0 0 18px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.kah-modal .kah-modal-tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.kah-modal .kah-modal-tool-grid .skill-tool {
+  min-width: 150px;
+  min-height: 58px;
+}
+
+#kah-modal-informatique .kah-modal-panel {
+  width: min(95vw, 1200px);
+  padding: clamp(28px, 3.6vw, 46px);
+}
+
+#kah-modal-informatique .kah-code-section {
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+#kah-modal-informatique .kah-code-section h3 {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#kah-modal-informatique .kah-code-block {
+  width: min(100%, 1080px);
+  max-height: none;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: visible;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(5, 8, 12, 0.92);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 18px 40px rgba(0, 0, 0, 0.18);
+  color: rgba(246, 247, 248, 0.92);
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: clamp(0.78rem, 1.08vw, 0.94rem);
+  line-height: 1.66;
+  padding: clamp(18px, 2.5vw, 26px);
+  scrollbar-color: rgba(125, 240, 196, 0.55) rgba(255, 255, 255, 0.08);
+  scrollbar-width: thin;
+}
+
+#kah-modal-informatique .kah-code-block::-webkit-scrollbar {
+  height: 8px;
+}
+
+#kah-modal-informatique .kah-code-block::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.055);
+  border-radius: 999px;
+}
+
+#kah-modal-informatique .kah-code-block::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(125, 240, 196, 0.42);
+}
+
+#kah-modal-informatique .kah-code-block code {
+  display: block;
+  min-width: max-content;
+  white-space: pre;
+}
+
+#kah-modal-informatique .code-comment {
+  color: #8ea0aa;
+}
+
+#kah-modal-informatique .code-keyword {
+  color: #00a5b5;
+}
+
+#kah-modal-informatique .code-function {
+  color: #e85d3f;
+}
+
+#kah-modal-informatique .code-variable {
+  color: #d7e3ea;
+}
+
+#kah-modal-informatique .code-return {
+  color: #c6a80f;
+}
+
+#kah-modal-informatique .code-number {
+  color: #4f86d9;
+}
+
+.kah-modal .kah-modal-mobilisation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kah-modal .kah-modal-mobilisation li {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.032)),
+    rgba(8, 10, 13, 0.76);
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+#kah-modal-traitement .kah-modal-panel {
+  padding: clamp(28px, 3.6vw, 42px);
+}
+
+#kah-modal-traitement .kah-detail-header {
+  margin-bottom: 16px;
+}
+
+#kah-modal-traitement .kah-modal-intro {
+  padding: 14px 18px;
+  line-height: 1.64;
+}
+
+#kah-modal-traitement .kah-modal-media-grid {
+  margin-top: 22px;
+  padding-top: 20px;
+}
+
+#kah-modal-traitement .kah-image-frame-treatment {
+  width: min(100%, 360px);
+}
+
+#kah-modal-traitement .kah-modal-tools,
+#kah-modal-traitement .kah-modal-mobilisation {
+  margin-top: 22px;
+  padding-top: 20px;
+}
+
+#kah-modal-traitement .kah-modal-tools h3,
+#kah-modal-traitement .kah-modal-mobilisation h3 {
+  margin-bottom: 12px;
+}
+
+#kah-modal-traitement .kah-modal-tool-grid .skill-tool {
+  min-height: 52px;
+}
+
+@media (max-width: 1180px) {
+  .kart-project-page .kah-conception-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .kart-project-page .kah-conception-grid,
+  .kart-project-page .kah-two-card-grid,
+  .kah-modal .kah-media-grid-duo,
+  .kah-modal .kah-fabrication-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kart-project-page .kah-project-card {
+    min-height: 0;
+  }
+
+  .kart-project-page .kah-project-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kah-modal .kah-modal-panel {
+    width: min(100%, calc(100vw - 24px));
+    max-height: calc(100vh - 24px);
+    padding: 26px 18px;
+  }
+
+  .kah-modal .kah-detail-header {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding-right: 42px;
+  }
+
+  #kah-modal-informatique .kah-modal-panel {
+    width: min(100%, calc(100vw - 24px));
+    padding: 24px 16px;
+  }
+
+  #kah-modal-informatique .kah-code-section {
+    margin-top: 24px;
+    padding-top: 22px;
+  }
+
+  #kah-modal-informatique .kah-code-block {
+    max-height: 52vh;
+    overflow-y: auto;
+    font-size: 0.72rem;
+    padding: 14px;
+  }
+
+  .kah-modal .kah-modal-mobilisation li {
+    width: 100%;
+    justify-content: center;
   }
 }

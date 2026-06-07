@@ -59,16 +59,16 @@
               <figcaption>Image principale du projet</figcaption>
             </figure>
             <div class="kah-text-flow">
-              <p>Le projet KAH a pour objectif de concevoir l’électronique d’un KART à hélice piloté à distance.</p>
-              <p>À partir du cahier des charges de Toy Corporation, le système est organisé autour de deux cartes : une carte récepteur installée sur le KART et une carte émetteur intégrée à la manette.</p>
+              <p>Le projet KAH consiste à concevoir l’électronique d’un KART à hélice piloté à distance.</p>
+              <p>À partir du cahier des charges de Toy Corporation, le système repose sur deux cartes : une carte récepteur installée sur le KART et une carte émetteur intégrée à la manette.</p>
               <div class="kah-soft-grid">
                 <article class="kah-soft-block">
                   <h3>📡 Carte récepteur</h3>
-                  <p>Installée sur le KART, elle reçoit les commandes de l’utilisateur puis les transforme en actions concrètes comme l’avancement, la direction et l’activation du klaxon.</p>
+                  <p>Installée sur le KART, elle reçoit les commandes et les transforme en actions : avancement, direction et klaxon.</p>
                 </article>
                 <article class="kah-soft-block">
                   <h3>🎮 Carte émetteur</h3>
-                  <p>Intégrée à la manette, elle joue le rôle d’interface homme-machine et permet de piloter le KART simplement grâce aux commandes disponibles.</p>
+                  <p>Intégrée à la manette, elle sert d’interface homme-machine pour piloter simplement le KART.</p>
                 </article>
               </div>
             </div>
@@ -86,10 +86,9 @@
           </div>
           <div class="kah-organisation-layout">
             <div class="kah-text-flow">
-              <p>Ce projet a été réalisé en équipe de huit personnes.</p>
-              <p>Pour organiser le travail de manière efficace, nous avons été répartis en deux groupes de quatre. Un premier groupe s’est concentré sur la partie émetteur, tandis que l’autre groupe a travaillé sur la partie récepteur.</p>
-              <p>Cette répartition nous a permis d’avancer en parallèle sur les deux grandes parties du système. Chaque groupe avait des objectifs précis à respecter, depuis la conception jusqu’aux vérifications finales.</p>
-              <p>Le projet intégrait également une partie informatique, avec de la programmation à réaliser sur les cartes électroniques. Cette organisation a donc été importante pour répartir les tâches, suivre l’avancement du projet et assurer la cohérence entre les différentes étapes.</p>
+              <p>Ce projet a été réalisé en équipe de huit personnes, réparties en deux groupes de quatre.</p>
+              <p>Un groupe s’est concentré sur la carte émetteur, l’autre sur la carte récepteur. Cette organisation nous a permis d’avancer en parallèle, de la conception aux vérifications finales.</p>
+              <p>Le projet intégrait aussi une partie informatique avec de la programmation sur les cartes électroniques. La répartition des tâches a donc été essentielle pour suivre l’avancement et garder une bonne cohérence entre les étapes.</p>
               <div class="kah-facts" aria-label="Synthèse de l'organisation">
                 <span>👥 Équipe : 8 personnes</span>
                 <span>🔀 Répartition : 2 groupes de 4</span>
@@ -115,11 +114,10 @@
           <p class="eyebrow">Contribution</p>
           <h2 id="role-title">👨‍💻 Mon rôle dans le projet</h2>
           <div class="kah-text-flow">
-            <p>J’ai contribué aux différentes phases de réalisation du projet, de la conception jusqu’aux vérifications finales.</p>
-            <p>Lors de la phase de conception, j’ai travaillé sur la carte émetteur en prenant en charge les fonctions liées au traitement de l’information et à la gestion de l’énergie. Cette étape avait pour objectif d’assurer le bon fonctionnement de la carte et la transmission des commandes.</p>
-            <p>Pour la partie informatique, je suis intervenu sur la carte récepteur afin d’intégrer les fonctions permettant d’acquérir et de traiter la trame infrarouge envoyée par l’émetteur.</p>
-            <p>Lors de la phase de fabrication, j’ai participé à la réalisation des deux cartes électroniques du système.</p>
-            <p>Enfin, pendant la phase de vérification électronique, j’ai contribué aux tests des fonctions traitement et énergie de la carte récepteur. Ces vérifications avaient pour objectif de contrôler la bonne réception des informations et le bon fonctionnement des différentes parties de la carte.</p>
+            <p>J’ai participé aux différentes phases du projet, de la conception jusqu’aux vérifications finales.</p>
+            <p>En conception, j’ai travaillé sur la carte émetteur, notamment sur le traitement de l’information et la gestion de l’énergie afin d’assurer la transmission des commandes.</p>
+            <p>Pour la partie informatique, je suis intervenu sur la carte récepteur afin d’acquérir et traiter la trame infrarouge envoyée par l’émetteur.</p>
+            <p>J’ai aussi participé à la fabrication des deux cartes électroniques, puis aux tests des fonctions traitement et énergie du récepteur.</p>
           </div>
           <div class="kah-tags" aria-label="Contributions à compléter">
             <span>Carte émetteur</span>
@@ -138,96 +136,39 @@
           <h2 id="conception-title">Conception</h2>
         </div>
 
-        <div class="project-slider kah-conception-slider" data-project-slider>
-          <button class="slider-arrow slider-prev" type="button" aria-label="Carte précédente">
-            <span aria-hidden="true">&lsaquo;</span>
-          </button>
-          <div class="slider-viewport">
-            <div class="slider-track">
-          <article class="kah-panel kah-step-card reveal">
-            <h3>⚡ Bloc énergie</h3>
-            <div class="kah-text-flow">
-              <p>Le bloc énergie avait pour objectif d’assurer l’alimentation de la carte émetteur en respectant le cahier des charges.</p>
-              <p>L’exigence principale était de garantir au minimum 1 heure d’autonomie. Pour cela, j’ai étudié la consommation de la carte en ajoutant une marge de sécurité.</p>
-              <p>Avec le plus petit accumulateur disponible, l’autonomie estimée était d’environ 5 heures, ce qui répondait largement au besoin du projet.</p>
-              <p>Nous avons aussi ajouté un système de régulation afin de fournir une alimentation stable aux composants, ainsi qu’un interrupteur permettant de mettre la carte sous tension ou de l’arrêter simplement.</p>
-              <p>Cette conception a permis d’obtenir une alimentation fiable, stable et adaptée à l’émetteur.</p>
-            </div>
-            <figure class="kah-figure">
-              <div class="kah-image-frame kah-image-frame-energy">
-                <img src="../assets/image KAH/bloc energie.PNG" alt="Bloc énergie de la carte émetteur">
-              </div>
-              <figcaption>Bloc énergie</figcaption>
-            </figure>
+        <div class="kah-card-grid kah-conception-grid">
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/spark-icon.svg" alt=""></span>
+            <h3>Bloc énergie</h3>
+            <p>Alimentation de la carte émetteur, autonomie estimée et régulation stable.</p>
+            <div class="skill-tags kah-tags"><span>Autonomie</span><span>Régulation</span><span>Émetteur</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-energie">En savoir plus</button>
           </article>
 
-          <article class="kah-panel kah-step-card reveal">
-            <h3>🧠 Bloc traitement</h3>
-            <div class="kah-text-flow">
-              <p>Le bloc traitement correspond à la partie de la carte émetteur qui permet de gérer les informations provenant de l’interface homme-machine.</p>
-              <p>Dans cette partie, nous avons intégré un microcontrôleur. Son rôle est de récupérer les actions de l’utilisateur sur la manette, comme les commandes liées au déplacement ou aux fonctions du KART, puis de préparer ces informations pour qu’elles puissent être envoyées au récepteur.</p>
-              <p>Pour assurer son bon fonctionnement, nous avons ajouté les éléments nécessaires autour du microcontrôleur. Certains permettent au système de fonctionner de manière stable, d’autres assurent un démarrage fiable de la carte, et d’autres encore servent à stabiliser son alimentation.</p>
-              <p>Nous avons aussi prévu des connecteurs permettant de transférer le programme vers le microcontrôleur. Cette partie est importante, car elle permet de mettre à jour le programme de la carte et de tester son fonctionnement pendant le développement.</p>
-              <p>Ce travail de conception a permis de construire une base électronique fiable pour traiter les commandes de l’utilisateur avant leur transmission par infrarouge.</p>
-            </div>
-            <figure class="kah-figure">
-              <div class="kah-image-frame kah-image-frame-treatment">
-                <img src="../assets/image KAH/bloc traitement.PNG" alt="Bloc traitement de la carte émetteur">
-              </div>
-              <figcaption>Bloc traitement</figcaption>
-            </figure>
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/technology-icon.svg" alt=""></span>
+            <h3>Bloc traitement</h3>
+            <p>Gestion des commandes de la manette avant leur transmission au récepteur.</p>
+            <div class="skill-tags kah-tags"><span>Microcontrôleur</span><span>IHM</span><span>Émetteur</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-traitement">En savoir plus</button>
           </article>
 
-          <article class="kah-panel kah-step-card reveal">
-            <h3>💻 Informatique récepteur</h3>
-            <div class="kah-text-flow">
-              <p>Pour la partie informatique du récepteur, j’ai travaillé sur les fonctions de traitement permettant d’analyser les informations reçues par le KART.</p>
-              <p>Le récepteur reçoit une trame infrarouge, c’est-à-dire un message envoyé par l’émetteur. Avant d’utiliser ce message, le programme doit vérifier qu’il est bien valide. J’ai donc intégré une fonction de sécurité permettant de contrôler la trame reçue afin d’éviter que le KART réagisse à une mauvaise information.</p>
-              <p>Une fois la trame validée, le programme doit récupérer les différentes informations qu’elle contient. Certaines données permettent d’identifier le numéro d’équipe afin de s’assurer que le KART répond uniquement à la bonne commande. Une autre information indique l’état du klaxon.</p>
-              <p>La trame contient aussi les données nécessaires pour piloter le KART. Le programme extrait donc l’information liée à la direction pour commander le servomoteur, ainsi que l’information liée à la vitesse pour contrôler le moteur.</p>
-              <p>Pour réaliser ce traitement, j’ai utilisé des opérations sur les bits afin d’isoler chaque information présente dans la trame. Cette partie m’a permis de mieux comprendre comment un message infrarouge peut être décodé puis transformé en actions concrètes sur un système embarqué.</p>
-            </div>
-            <div class="kah-placeholder kah-placeholder-compact">
-              <span>Schéma à ajouter</span>
-            </div>
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/code-svgrepo-com.svg" alt=""></span>
+            <h3 class="kah-title-nowrap">Informatique récepteur</h3>
+            <p>Décodage de la trame infrarouge pour piloter les actions du KART.</p>
+            <div class="skill-tags kah-tags"><span>Trame infrarouge</span><span>Bits</span><span>Programmation</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-informatique">En savoir plus</button>
           </article>
 
-          <article class="kah-panel kah-step-card reveal">
-            <h3>🛠️ Schéma final et routage</h3>
-            <div class="kah-text-flow">
-              <p>Après la phase de conception, chaque membre de l’équipe a travaillé sur les exigences qui lui étaient attribuées. Les différents blocs étudiés ont ensuite été regroupés afin de construire le schéma électrique final sur Proteus ISIS.</p>
-              <p>Pour notre partie, nous avons finalisé le schéma de la carte émetteur en intégrant les différents éléments nécessaires à son fonctionnement. Cette étape permettait de vérifier la cohérence du montage avant de passer à la réalisation de la carte.</p>
-              <p>Une fois le schéma validé, nous avons réalisé le routage de la carte sous Proteus ARES. Le routage consistait à organiser les composants sur la carte et à créer les connexions entre eux afin d’obtenir un circuit prêt à être fabriqué.</p>
-              <p>Cette étape a permis de passer de la conception théorique à une carte électronique concrète, prête pour la phase de fabrication.</p>
-            </div>
-            <div class="kah-media-grid kah-media-grid-duo">
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-schematic">
-                  <img src="../assets/image KAH/isis KAH.PNG" alt="Schéma final de la carte émetteur">
-                </div>
-                <figcaption>Schéma final</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-schematic">
-                  <img src="../assets/image KAH/ares KAH.jpg" alt="Routage ARES du projet KART à hélice">
-                </div>
-                <figcaption>Routage ARES</figcaption>
-              </figure>
-            </div>
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/tools-svgrepo-com.svg" alt=""></span>
+            <h3 class="kah-title-nowrap">Schéma final et routage</h3>
+            <p>Regroupement des blocs, schéma sous ISIS puis routage sous ARES.</p>
+            <div class="skill-tags kah-tags"><span>Proteus</span><span>PCB</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-routage">En savoir plus</button>
           </article>
-            </div>
-          </div>
-          <button class="slider-arrow slider-next" type="button" aria-label="Carte suivante">
-            <span aria-hidden="true">&rsaquo;</span>
-          </button>
         </div>
-
-        <article class="kah-document-card reveal">
-          <h3>Dossier de conception</h3>
-          <div class="kah-placeholder kah-placeholder-document">
-            <span>PDF du dossier de conception à ajouter</span>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -238,92 +179,23 @@
           <h2 id="fabrication-title">Fabrication</h2>
         </div>
 
-        <div class="project-slider kah-fabrication-slider" data-project-slider>
-          <button class="slider-arrow slider-prev" type="button" aria-label="Carte précédente">
-            <span aria-hidden="true">&lsaquo;</span>
-          </button>
-          <div class="slider-viewport">
-            <div class="slider-track">
-          <article class="kah-panel kah-step-card reveal">
-            <h3>🏗️ Carte émetteur</h3>
-            <div class="kah-text-flow">
-              <p>Après la finalisation du schéma et du routage sous Proteus ARES, nous sommes passés à la fabrication de la carte émetteur.</p>
-              <p>La première étape a consisté à imprimer le typon et les différents plans nécessaires à la réalisation de la carte. Nous avons ensuite préparé le circuit imprimé avant de passer à la phase d’insolation, qui permet de faire apparaître le tracé des pistes sur la plaque.</p>
-              <p>Une fois cette étape réalisée, la carte a été gravée afin de retirer le cuivre inutile et de conserver uniquement les pistes du circuit. Après le nettoyage, nous avons vérifié la continuité des pistes à l’aide d’un ohmmètre pour nous assurer qu’il n’y avait pas de coupure ou de court-circuit.</p>
-              <p>Nous avons ensuite percé la carte afin de pouvoir y placer les composants. La dernière étape a été la soudure, suivie d’un contrôle final pour vérifier le sens des composants, leurs valeurs et la qualité des connexions.</p>
-              <p>Cette fabrication a permis d’obtenir une carte émetteur prête à être testée et intégrée dans la manette de commande.</p>
-            </div>
-            <div class="kah-media-grid kah-fabrication-grid">
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-board">
-                  <img src="../assets/image KAH/typon dessus.PNG" alt="Typon dessus de la carte émetteur">
-                </div>
-                <figcaption>Typon dessus émetteur</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-board">
-                  <img src="../assets/image KAH/typon dessous.PNG" alt="Typon dessous de la carte émetteur">
-                </div>
-                <figcaption>Typon dessous émetteur</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-board">
-                  <img src="../assets/image KAH/carte emtt dessus.png" alt="Carte émetteur réelle vue de dessus">
-                </div>
-                <figcaption>Carte émetteur réelle — dessus</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-board kah-image-align-top kah-image-align-higher">
-                  <img src="../assets/image KAH/carte emtt dessous.png" alt="Carte émetteur réelle vue de dessous">
-                </div>
-                <figcaption>Carte émetteur réelle — dessous</figcaption>
-              </figure>
-            </div>
+        <div class="kah-card-grid kah-two-card-grid">
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/controller-svgrepo-com.svg" alt=""></span>
+            <h3>Carte émetteur</h3>
+            <p>Fabrication du PCB émetteur à partir du schéma et du routage validés.</p>
+            <div class="skill-tags kah-tags"><span>Typon</span><span>Gravure</span><span>Soudure</span><span>Contrôle</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-carte-emetteur">En savoir plus</button>
           </article>
 
-          <article class="kah-panel kah-step-card reveal">
-            <h3>🏗️ Carte récepteur</h3>
-            <div class="kah-text-flow">
-              <p>La fabrication de la carte récepteur a suivi les mêmes grandes étapes, mais avec une attention particulière portée à son rôle dans le fonctionnement du KART.</p>
-              <p>À partir du routage réalisé sur Proteus ARES, nous avons imprimé le typon de la carte afin de préparer la réalisation du circuit imprimé. La plaque a ensuite été insolée pour transférer le tracé des pistes sur le cuivre.</p>
-              <p>Après cette étape, nous avons procédé à la gravure de la carte. Cette phase permet de retirer les zones de cuivre non utilisées et de conserver uniquement les liaisons nécessaires au circuit. La carte a ensuite été nettoyée puis contrôlée à l’ohmmètre afin de vérifier que les pistes étaient correctement réalisées.</p>
-              <p>Une fois les vérifications effectuées, nous avons percé la carte pour pouvoir insérer les composants. Nous avons ensuite réalisé les soudures avant d’effectuer un contrôle final sur l’implantation, le sens des composants et la qualité du montage.</p>
-              <p>Cette étape a permis de transformer le schéma du récepteur en une carte physique fonctionnelle, prête à être utilisée dans le KART.</p>
-            </div>
-            <div class="kah-media-grid kah-fabrication-grid">
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-board">
-                  <img src="../assets/image KAH/typon dessus rcpt.PNG" alt="Typon dessus de la carte récepteur">
-                </div>
-                <figcaption>Typon dessus récepteur</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-image-frame kah-image-frame-board">
-                  <img src="../assets/image KAH/typon dessous rcpt.PNG" alt="Typon dessous de la carte récepteur">
-                </div>
-                <figcaption>Typon dessous récepteur</figcaption>
-              </figure>
-              <figure class="kah-figure kah-figure-centered">
-                <div class="kah-image-frame kah-image-frame-board kah-image-align-top">
-                  <img src="../assets/image KAH/carte rcpt.png" alt="Carte récepteur réelle">
-                </div>
-                <figcaption>Carte récepteur réelle</figcaption>
-              </figure>
-            </div>
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/antenna-svgrepo-com.svg" alt=""></span>
+            <h3>Carte récepteur</h3>
+            <p>Réalisation de la carte installée sur le KART, avec contrôle des pistes et du montage.</p>
+            <div class="skill-tags kah-tags"><span>Typon</span><span>Gravure</span><span>Soudure</span><span>Continuité</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-carte-recepteur">En savoir plus</button>
           </article>
-            </div>
-          </div>
-          <button class="slider-arrow slider-next" type="button" aria-label="Carte suivante">
-            <span aria-hidden="true">&rsaquo;</span>
-          </button>
         </div>
-
-        <article class="kah-document-card reveal">
-          <h3>Dossier de fabrication</h3>
-          <div class="kah-placeholder kah-placeholder-document">
-            <span>PDF du dossier de fabrication à ajouter</span>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -334,74 +206,23 @@
           <h2 id="verification-title">Vérification</h2>
         </div>
 
-        <div class="project-slider kah-verification-slider" data-project-slider>
-          <button class="slider-arrow slider-prev" type="button" aria-label="Carte précédente">
-            <span aria-hidden="true">&lsaquo;</span>
-          </button>
-          <div class="slider-viewport">
-            <div class="slider-track">
-          <article class="kah-panel kah-step-card reveal">
-            <h3>✅ Traitement récepteur</h3>
-            <div class="kah-text-flow">
-              <p>Après la fabrication de la carte récepteur, nous avons vérifié que les fonctions de traitement respectaient bien les exigences du cahier des charges.</p>
-              <p>Nous avons d’abord testé la sécurité de la communication. Le récepteur devait réagir uniquement lorsqu’il recevait une trame valide. En cas de mauvaise trame, aucune action ne devait être déclenchée.</p>
-              <p>Nous avons ensuite vérifié les principales commandes du KART : la vitesse du moteur, la direction du servomoteur, le fonctionnement du klaxon et l’allumage de la LED de connexion.</p>
-              <p>Pour cela, nous avons utilisé une alimentation de laboratoire et un oscilloscope afin d’observer les signaux envoyés aux différents éléments du KART.</p>
-              <p>Cette étape a permis de confirmer que le récepteur interprétait correctement les informations reçues et que les actions du KART correspondaient aux commandes envoyées.</p>
-            </div>
-            <div class="kah-media-grid kah-verification-grid">
-              <figure class="kah-figure">
-                <div class="kah-placeholder kah-placeholder-media"></div>
-                <figcaption>Photo test 1 à ajouter</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-placeholder kah-placeholder-media"></div>
-                <figcaption>Photo test 2 à ajouter</figcaption>
-              </figure>
-              <figure class="kah-figure kah-figure-centered">
-                <div class="kah-placeholder kah-placeholder-media"></div>
-                <figcaption>Mesure / capture à ajouter</figcaption>
-              </figure>
-            </div>
+        <div class="kah-card-grid kah-two-card-grid">
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/technology-icon.svg" alt=""></span>
+            <h3>Traitement récepteur</h3>
+            <p>Validation de la communication, des commandes et des signaux envoyés au KART.</p>
+            <div class="skill-tags kah-tags"><span>Trame valide</span><span>Commandes</span><span>Oscilloscope</span><span>Signaux</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-verif-traitement">En savoir plus</button>
           </article>
 
-          <article class="kah-panel kah-step-card reveal">
-            <h3>🔋 Énergie récepteur</h3>
-            <div class="kah-text-flow">
-              <p>Pour la partie énergie du récepteur, l’objectif était de vérifier que le KART respectait l’autonomie minimale demandée par le cahier des charges.</p>
-              <p>L’exigence imposait un fonctionnement d’au moins 15 minutes avec une batterie de type LiPo 2S.</p>
-              <p>Pour réaliser cette vérification, nous avons utilisé une alimentation de laboratoire afin de simuler la batterie du KART. Nous avons ensuite mesuré la consommation du système lorsque le moteur fonctionnait à mi-puissance.</p>
-              <p>À partir de cette mesure, nous avons pu estimer l’autonomie réelle du KART. Le résultat obtenu était d’environ 40 minutes, ce qui est largement supérieur aux 15 minutes demandées.</p>
-              <p>Cette vérification a donc permis de valider la partie énergie du récepteur par rapport aux exigences du cahier des charges.</p>
-            </div>
-            <div class="kah-media-grid kah-verification-grid">
-              <figure class="kah-figure">
-                <div class="kah-placeholder kah-placeholder-media"></div>
-                <figcaption>Photo test 1 à ajouter</figcaption>
-              </figure>
-              <figure class="kah-figure">
-                <div class="kah-placeholder kah-placeholder-media"></div>
-                <figcaption>Photo test 2 à ajouter</figcaption>
-              </figure>
-              <figure class="kah-figure kah-figure-centered">
-                <div class="kah-placeholder kah-placeholder-media"></div>
-                <figcaption>Mesure / capture à ajouter</figcaption>
-              </figure>
-            </div>
+          <article class="info-card skill-card kah-project-card reveal">
+            <span class="skill-icon kah-card-icon" aria-hidden="true"><img src="../assets/icone svg/spark-icon.svg" alt=""></span>
+            <h3>Énergie récepteur</h3>
+            <p>Mesure de consommation et estimation de l’autonomie avec une batterie LiPo 2S.</p>
+            <div class="skill-tags kah-tags"><span>Autonomie</span><span>LiPo 2S</span><span>Consommation</span><span>Mesure</span></div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="kah-modal-verif-energie">En savoir plus</button>
           </article>
-            </div>
-          </div>
-          <button class="slider-arrow slider-next" type="button" aria-label="Carte suivante">
-            <span aria-hidden="true">&rsaquo;</span>
-          </button>
         </div>
-
-        <article class="kah-document-card reveal">
-          <h3>Dossier de vérification</h3>
-          <div class="kah-placeholder kah-placeholder-document">
-            <span>PDF du dossier de vérification à ajouter</span>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -412,10 +233,10 @@
             <p class="eyebrow">Final</p>
             <h2 id="resultat-title">🏁 Résultat final</h2>
             <div class="kah-text-flow">
-              <p>Ce projet nous a permis de relier l’électronique et l’informatique autour d’un système embarqué concret.</p>
-              <p>À travers la conception, la fabrication, la programmation et les vérifications, nous avons compris comment une carte émetteur peut envoyer des commandes et comment une carte récepteur peut les traiter pour piloter un système réel.</p>
-              <p>Après le travail réalisé par les huit membres du groupe, nous avons obtenu un KART fonctionnel, accompagné de son émetteur de commande, répondant aux exigences du cahier des charges.</p>
-              <p>Le KART a ensuite pu être testé lors d’une course organisée dans le cadre du projet, ce qui a permis de valider le fonctionnement global du système dans une situation concrète.</p>
+              <p>Le projet a permis de relier électronique et informatique autour d’un système embarqué concret.</p>
+              <p>La conception, la fabrication, la programmation et les vérifications nous ont montré comment une carte émetteur envoie des commandes et comment une carte récepteur les traite pour piloter un système réel.</p>
+              <p>Le groupe a obtenu un KART fonctionnel avec son émetteur de commande, répondant aux exigences du cahier des charges.</p>
+              <p>Le KART a ensuite été testé lors d’une course organisée dans le cadre du projet, ce qui a validé le fonctionnement global en situation concrète.</p>
             </div>
           </article>
 
@@ -452,6 +273,334 @@
       </nav>
     </div>
   </footer>
+
+  <div class="modal kah-modal" id="kah-modal-energie" role="dialog" aria-modal="true" aria-labelledby="kah-modal-energie-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/spark-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Conception</p>
+          <h2 id="kah-modal-energie-title">Bloc énergie</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">J’ai travaillé sur l’alimentation de la carte émetteur afin de respecter le cahier des charges. L’objectif était d’assurer au moins 1 heure d’autonomie, en estimant la consommation avec une marge de sécurité. Avec le plus petit accumulateur disponible, l’autonomie estimée atteignait environ 5 heures. Un régulateur et un interrupteur ont aussi été ajoutés pour obtenir une alimentation stable et simple à utiliser.</p>
+      <div class="kah-media-grid kah-modal-media-grid kah-modal-media-single">
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-energy">
+            <img src="../assets/image KAH/bloc energie.PNG" alt="Bloc énergie de la carte émetteur">
+          </div>
+          <figcaption>Bloc énergie</figcaption>
+        </figure>
+      </div>
+      <section class="kah-modal-tools" aria-labelledby="kah-modal-energie-tools">
+        <h3 id="kah-modal-energie-tools">Outils</h3>
+        <div class="kah-modal-tool-grid">
+          <span class="skill-tool"><img src="../assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+        </div>
+      </section>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-energie-mobilisation">
+        <h3 id="kah-modal-energie-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Dimensionnement d’autonomie</li>
+          <li>Régulation de tension</li>
+          <li>Choix de l’accumulateur</li>
+          <li>Alimentation stable</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-traitement" role="dialog" aria-modal="true" aria-labelledby="kah-modal-traitement-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/technology-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Conception</p>
+          <h2 id="kah-modal-traitement-title">Bloc traitement</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">J’ai participé à la conception du bloc traitement de la carte émetteur. Cette partie récupère les actions de la manette, prépare les informations avant leur transmission, puis s’appuie sur des composants autour du microcontrôleur pour stabiliser le fonctionnement, le démarrage et l’alimentation.</p>
+      <div class="kah-media-grid kah-modal-media-grid kah-modal-media-single">
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-treatment">
+            <img src="../assets/image KAH/bloc traitement.PNG" alt="Bloc traitement de la carte émetteur">
+          </div>
+          <figcaption>Bloc traitement</figcaption>
+        </figure>
+      </div>
+      <section class="kah-modal-tools" aria-labelledby="kah-modal-traitement-tools">
+        <h3 id="kah-modal-traitement-tools">Outils</h3>
+        <div class="kah-modal-tool-grid">
+          <span class="skill-tool"><img src="../assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+        </div>
+      </section>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-traitement-mobilisation">
+        <h3 id="kah-modal-traitement-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Microcontrôleur</li>
+          <li>Interface homme-machine</li>
+          <li>Connecteurs de programmation</li>
+          <li>Stabilité du système</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-informatique" role="dialog" aria-modal="true" aria-labelledby="kah-modal-informatique-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/code-svgrepo-com.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Conception</p>
+          <h2 id="kah-modal-informatique-title">Informatique récepteur</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">J’ai travaillé sur le programme du récepteur, qui analyse la trame infrarouge envoyée par l’émetteur. Le programme vérifie d’abord que la trame est valide pour éviter une mauvaise réaction du KART. Il extrait ensuite les informations utiles : numéro d’équipe, klaxon, direction et vitesse. Ces données permettent de piloter le servomoteur et le moteur.</p>
+      <section class="kah-code-section" aria-labelledby="kah-modal-informatique-code-title">
+        <h3 id="kah-modal-informatique-code-title">Fonction de traitement récepteur</h3>
+        <pre class="kah-code-block"><code><span class="code-comment">// Definition des fonctions de traitement</span>
+
+<span class="code-keyword">bool</span> <span class="code-function">Securite</span>(<span class="code-keyword">int8_t</span> <span class="code-variable">ValeurErreur</span>) {  <span class="code-comment">// Retourne : 0 (état de la trame invalide), 1 (état de la trame valide)</span>
+  <span class="code-return">return</span> !<span class="code-variable">ValeurErreur</span>;
+}
+
+<span class="code-keyword">uint8_t</span> <span class="code-function">ExtraireNumeroEquipe</span>(<span class="code-keyword">uint8_t</span> <span class="code-variable">Adresse</span>) { <span class="code-comment">// Retourne la valeur du numéro d'équipe extraite de l'octet Adresse</span>
+  <span class="code-return">return</span> (<span class="code-variable">Adresse</span> &amp; <span class="code-number">0b01111111</span>);
+}
+
+<span class="code-keyword">uint8_t</span> <span class="code-function">CalculerDirectionServomoteur</span>(<span class="code-keyword">uint8_t</span> <span class="code-variable">Donnee</span>) { <span class="code-comment">// Retourne une valeur : [ 0 ; 180 ]</span>
+  <span class="code-return">return</span> ((<span class="code-variable">Donnee</span> &amp; <span class="code-number">0b00011111</span>) * <span class="code-number">180.0</span> / <span class="code-number">30</span>);  <span class="code-comment">// Retourne la valeur de la direction convertie en angle</span>
+}
+
+<span class="code-keyword">uint8_t</span> <span class="code-function">CalculerVitesseMoteur</span>(<span class="code-keyword">uint8_t</span> <span class="code-variable">Donnee</span>) { <span class="code-comment">// retourne une valeur : [ 0 ; 180 ]</span>
+  <span class="code-return">return</span> ((<span class="code-variable">Donnee</span> &gt;&gt; <span class="code-number">5</span>) * <span class="code-number">180.0</span> / <span class="code-number">7</span>);  <span class="code-comment">// retourne une valeur de signal PWM à partir de la valeur vitesse extraite dans l'octet Donnée</span>
+}
+
+<span class="code-keyword">uint8_t</span> <span class="code-function">ExtraireEtatBuzzer</span>(<span class="code-keyword">uint8_t</span> <span class="code-variable">Adresse</span>) { <span class="code-comment">// retourne : 0 (inactif), 1 (actif)</span>
+  <span class="code-return">return</span> (<span class="code-variable">Adresse</span> &gt;&gt;<span class="code-number">7</span>);
+}</code></pre>
+      </section>
+      <section class="kah-modal-tools" aria-labelledby="kah-modal-informatique-tools">
+        <h3 id="kah-modal-informatique-tools">Outils</h3>
+        <div class="kah-modal-tool-grid">
+          <span class="skill-tool"><img src="../assets/icone svg/arduino.svg" alt="Logo Arduino">Arduino IDE</span>
+          <span class="skill-tool"><img src="../assets/icone svg/visual-studio-code-svgrepo-com.svg" alt="Logo VS Code">VS Code</span>
+        </div>
+      </section>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-informatique-mobilisation">
+        <h3 id="kah-modal-informatique-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Décodage de trame</li>
+          <li>Validation des données</li>
+          <li>Opérations sur les bits</li>
+          <li>Commande moteur et servomoteur</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-routage" role="dialog" aria-modal="true" aria-labelledby="kah-modal-routage-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/tools-svgrepo-com.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Conception</p>
+          <h2 id="kah-modal-routage-title">Schéma final et routage</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">Après la conception des différents blocs, nous avons regroupé les éléments dans le schéma électrique final sur Proteus ISIS. Cette étape a permis de vérifier la cohérence du montage de la carte émetteur avant fabrication. Le routage a ensuite été réalisé sur Proteus ARES afin de placer les composants et de créer les pistes du circuit imprimé.</p>
+      <div class="kah-media-grid kah-media-grid-duo kah-modal-media-grid">
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-schematic">
+            <img src="../assets/image KAH/isis KAH.PNG" alt="Schéma final de la carte émetteur">
+          </div>
+          <figcaption>Schéma final</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-schematic">
+            <img src="../assets/image KAH/ares KAH.jpg" alt="Routage ARES du projet KART à hélice">
+          </div>
+          <figcaption>Routage ARES</figcaption>
+        </figure>
+      </div>
+      <section class="kah-modal-tools" aria-labelledby="kah-modal-routage-tools">
+        <h3 id="kah-modal-routage-tools">Outils</h3>
+        <div class="kah-modal-tool-grid">
+          <span class="skill-tool"><img src="../assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+        </div>
+      </section>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-routage-mobilisation">
+        <h3 id="kah-modal-routage-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Proteus ISIS</li>
+          <li>Proteus ARES</li>
+          <li>Schéma électrique</li>
+          <li>Routage PCB</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-carte-emetteur" role="dialog" aria-modal="true" aria-labelledby="kah-modal-carte-emetteur-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/controller-svgrepo-com.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Fabrication</p>
+          <h2 id="kah-modal-carte-emetteur-title">Carte émetteur</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">Après la validation du schéma et du routage, nous avons fabriqué la carte émetteur. Les étapes principales ont été l’impression du typon, l’insolation, la gravure, le nettoyage, le perçage et la soudure. Un contrôle à l’ohmmètre a permis de vérifier la continuité des pistes, puis un contrôle final a validé le sens des composants, leurs valeurs et la qualité des connexions.</p>
+      <div class="kah-media-grid kah-fabrication-grid kah-modal-media-grid">
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-board">
+            <img src="../assets/image KAH/typon dessus.PNG" alt="Typon dessus de la carte émetteur">
+          </div>
+          <figcaption>Typon dessus émetteur</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-board">
+            <img src="../assets/image KAH/typon dessous.PNG" alt="Typon dessous de la carte émetteur">
+          </div>
+          <figcaption>Typon dessous émetteur</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-board">
+            <img src="../assets/image KAH/carte emtt dessus.png" alt="Carte émetteur réelle vue de dessus">
+          </div>
+          <figcaption>Carte émetteur réelle dessus</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-board kah-image-align-top kah-image-align-higher">
+            <img src="../assets/image KAH/carte emtt dessous.png" alt="Carte émetteur réelle vue de dessous">
+          </div>
+          <figcaption>Carte émetteur réelle dessous</figcaption>
+        </figure>
+      </div>
+      <section class="kah-modal-tools" aria-labelledby="kah-modal-carte-emetteur-tools">
+        <h3 id="kah-modal-carte-emetteur-tools">Outils</h3>
+        <div class="kah-modal-tool-grid">
+          <span class="skill-tool"><img src="../assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+        </div>
+      </section>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-carte-emetteur-mobilisation">
+        <h3 id="kah-modal-carte-emetteur-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Typon</li>
+          <li>Insolation</li>
+          <li>Gravure</li>
+          <li>Perçage</li>
+          <li>Soudure</li>
+          <li>Contrôle à l’ohmmètre</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-carte-recepteur" role="dialog" aria-modal="true" aria-labelledby="kah-modal-carte-recepteur-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/antenna-svgrepo-com.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Fabrication</p>
+          <h2 id="kah-modal-carte-recepteur-title">Carte récepteur</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">La carte récepteur a suivi les mêmes grandes étapes de fabrication que la carte émetteur. Le typon a été imprimé, puis la plaque a été insolée afin de transférer le tracé des pistes. Après la gravure et le nettoyage, la continuité a été vérifiée à l’ohmmètre. La carte a ensuite été percée, soudée, puis contrôlée pour valider le montage.</p>
+      <div class="kah-media-grid kah-fabrication-grid kah-modal-media-grid">
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-board">
+            <img src="../assets/image KAH/typon dessus rcpt.PNG" alt="Typon dessus de la carte récepteur">
+          </div>
+          <figcaption>Typon dessus récepteur</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame kah-image-frame-board">
+            <img src="../assets/image KAH/typon dessous rcpt.PNG" alt="Typon dessous de la carte récepteur">
+          </div>
+          <figcaption>Typon dessous récepteur</figcaption>
+        </figure>
+        <figure class="kah-figure kah-figure-centered">
+          <div class="kah-image-frame kah-image-frame-board kah-image-align-top">
+            <img src="../assets/image KAH/carte rcpt.png" alt="Carte récepteur réelle">
+          </div>
+          <figcaption>Carte récepteur réelle</figcaption>
+        </figure>
+      </div>
+      <section class="kah-modal-tools" aria-labelledby="kah-modal-carte-recepteur-tools">
+        <h3 id="kah-modal-carte-recepteur-tools">Outils</h3>
+        <div class="kah-modal-tool-grid">
+          <span class="skill-tool"><img src="../assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+        </div>
+      </section>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-carte-recepteur-mobilisation">
+        <h3 id="kah-modal-carte-recepteur-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Typon</li>
+          <li>Insolation</li>
+          <li>Gravure</li>
+          <li>Continuité des pistes</li>
+          <li>Soudure</li>
+          <li>Contrôle final</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-verif-traitement" role="dialog" aria-modal="true" aria-labelledby="kah-modal-verif-traitement-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/technology-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Vérification</p>
+          <h2 id="kah-modal-verif-traitement-title">Traitement récepteur</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">Après la fabrication de la carte récepteur, nous avons vérifié les fonctions de traitement. Le récepteur devait réagir uniquement lorsqu’une trame valide était reçue : dans ce cas, la LED de connexion bleue indiquait que la trame était correcte. Nous avons aussi contrôlé que les informations de la donnée NEC étaient bien interprétées pour piloter les commandes principales : vitesse du moteur, direction du servomoteur et klaxon.</p>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-verif-traitement-mobilisation">
+        <h3 id="kah-modal-verif-traitement-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Trame valide</li>
+          <li>Oscilloscope</li>
+          <li>Test des commandes</li>
+          <li>LED de connexion</li>
+          <li>Klaxon</li>
+          <li>Servomoteur</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal kah-modal" id="kah-modal-verif-energie" role="dialog" aria-modal="true" aria-labelledby="kah-modal-verif-energie-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal kah-modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header kah-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="../assets/icone svg/spark-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Vérification</p>
+          <h2 id="kah-modal-verif-energie-title">Énergie récepteur</h2>
+        </div>
+      </div>
+      <p class="kah-modal-intro">Pour la partie énergie du récepteur, l’objectif était de vérifier que le KART respectait l’autonomie minimale demandée. Le cahier des charges imposait au moins 15 minutes avec une batterie LiPo 2S. Une alimentation de laboratoire a été utilisée pour simuler la batterie, puis la consommation a été mesurée avec le moteur à mi-puissance. L’autonomie estimée était d’environ 40 minutes.</p>
+      <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-verif-energie-mobilisation">
+        <h3 id="kah-modal-verif-energie-mobilisation">Mobilisation</h3>
+        <ul>
+          <li>Autonomie</li>
+          <li>Batterie LiPo 2S</li>
+          <li>Alimentation de laboratoire</li>
+          <li>Mesure de consommation</li>
+          <li>Estimation d’autonomie</li>
+        </ul>
+      </section>
+    </div>
+  </div>
 
   <script src="../js/main.js"></script>
 </body>
