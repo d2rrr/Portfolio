@@ -2875,6 +2875,23 @@ ul {
     max-width: 100%;
   }
 
+  .js-enabled.home-page .hero-section .hero-content > .eyebrow,
+  .js-enabled.home-page .hero-section .hero-name,
+  .js-enabled.home-page .hero-section .hero-title,
+  .js-enabled.home-page .hero-section .hero-tagline,
+  .js-enabled.home-page .hero-section .hero-actions,
+  .js-enabled.home-page .hero-section .hero-visual,
+  .js-enabled.home-page.animations-ready .hero-section .hero-content > .eyebrow,
+  .js-enabled.home-page.animations-ready .hero-section .hero-name,
+  .js-enabled.home-page.animations-ready .hero-section .hero-title,
+  .js-enabled.home-page.animations-ready .hero-section .hero-tagline,
+  .js-enabled.home-page.animations-ready .hero-section .hero-actions,
+  .js-enabled.home-page.animations-ready .hero-section .hero-visual {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
   .home-page .hero-content .eyebrow {
     margin-bottom: 12px;
   }
