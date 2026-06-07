@@ -9169,6 +9169,16 @@ ul {
     mix-blend-mode: normal !important;
   }
 
+  .home-page .hero-animate .hero-content > .anim-item,
+  .home-page .hero-animate .hero-content > .anim-item span,
+  .home-page .hero-animate .hero-content > .hero-actions.anim-item,
+  .home-page .hero-animate .hero-content > .hero-actions.anim-item .btn {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
   .home-page .hero-content > .eyebrow,
   .home-page .hero-name,
   .home-page .hero-title,
@@ -9192,6 +9202,14 @@ ul {
     display: flex !important;
     position: relative !important;
     z-index: 9 !important;
+  }
+
+  .home-page .hero-content {
+    order: 1 !important;
+  }
+
+  .home-page .hero-section .hero-visual {
+    order: 2 !important;
   }
 
   .home-page .hero-section::before,
