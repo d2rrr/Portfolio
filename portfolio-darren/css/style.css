@@ -9125,3 +9125,86 @@ ul {
     justify-content: center;
   }
 }
+
+/* Mobile home hero emergency visibility override. */
+@media (max-width: 640px) {
+  .home-page .hero-section {
+    min-height: auto !important;
+    padding-top: 88px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .home-page .hero-grid {
+    position: relative !important;
+    z-index: 6 !important;
+    min-height: 0 !important;
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+  }
+
+  .home-page .hero-content,
+  .home-page .hero-content.reveal {
+    display: block !important;
+    position: relative !important;
+    z-index: 8 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    color: var(--text) !important;
+  }
+
+  .home-page .hero-content > .eyebrow,
+  .home-page .hero-name,
+  .home-page .hero-name span,
+  .home-page .hero-title,
+  .home-page .hero-title span,
+  .home-page .hero-tagline,
+  .home-page .hero-actions,
+  .home-page .hero-actions .btn {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    clip-path: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .home-page .hero-content > .eyebrow,
+  .home-page .hero-name,
+  .home-page .hero-title,
+  .home-page .hero-tagline {
+    display: block !important;
+    position: relative !important;
+    z-index: 9 !important;
+  }
+
+  .home-page .hero-name span:first-child,
+  .home-page .hero-title,
+  .home-page .hero-tagline {
+    color: var(--text) !important;
+  }
+
+  .home-page .hero-name span:last-child {
+    color: rgba(255, 255, 255, 0.86) !important;
+  }
+
+  .home-page .hero-actions {
+    display: flex !important;
+    position: relative !important;
+    z-index: 9 !important;
+  }
+
+  .home-page .hero-section::before,
+  .home-page .hero-section::after,
+  .home-page .hero-section .hero-visual,
+  .home-page .hero-section .hero-photo,
+  .home-page .hero-section .hero-photo::after {
+    z-index: 0 !important;
+  }
+
+  .home-page .hero-section .hero-visual {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
