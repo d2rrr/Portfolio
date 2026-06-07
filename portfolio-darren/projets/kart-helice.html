@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="kart-project-page">
   <div class="ambient-bg" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -25,90 +25,420 @@
       <a href="../index.html">Accueil</a>
       <a href="../a-propos.html">À propos</a>
       <a href="../index.html#competences">Compétences</a>
-      <a href="../projets.html">Projets</a>
+      <a href="../index.html#projets">Projets</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="../index.html#contact">Me contacter</a>
   </header>
 
   <main class="page-main">
-    <section class="section page-hero project-detail-hero">
-      <div class="section-container">
-        <a class="back-link reveal" href="../projets.html">Retour aux projets</a>
+    <section class="kart-hero" aria-labelledby="kart-title">
+      <div class="section-container kart-hero-content">
+        <a class="back-link reveal" href="../index.html#projets">&larr; Retour aux projets</a>
         <p class="eyebrow reveal">Projet BUT GEII</p>
-        <h1 class="reveal">KART à hélice</h1>
-        <p class="project-subtitle reveal">Projet réalisé en première année de BUT Génie électrique et informatique industrielle.</p>
+        <h1 class="reveal" id="kart-title">KART à hélice</h1>
+        <p class="project-subtitle reveal">Un projet technique autour de la réalisation électronique d’un KART à hélice, de la conception aux tests de fonctionnement.</p>
+      </div>
+      <div class="kart-hero-media">
+        <img src="../assets/image KAH/Icone Projet KAH.png" alt="Image principale du projet KART à hélice">
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-container detail-grid">
-        <article class="detail-content reveal">
-          <h2>Présentation du projet</h2>
-          <p>L’objectif du projet était de travailler sur la partie électronique d’un KART à hélice dont la structure mécanique était déjà réalisée. Le système reposait sur deux cartes électroniques : une carte émetteur et une carte récepteur.</p>
-
-          <h2>Objectif</h2>
-          <p>La carte émetteur avait pour rôle d’envoyer des informations à partir d’un microcontrôleur, notamment sous forme de TRAME NEC. Ces données étaient ensuite transmises à la carte récepteur, qui les interprétait afin de permettre le pilotage du KART à hélice.</p>
-
-          <h2>Mon rôle</h2>
-          <p>Dans ce projet, je me suis principalement occupé de la carte émetteur, en particulier des parties traitement et énergie.</p>
-          <p>Pour la partie traitement, j’ai étudié le fonctionnement du microcontrôleur ATmega328P, ses différents ports, ainsi que les montages associés. J’ai également appris à mieux comprendre le rôle des liaisons RX/TX dans la communication entre les composants.</p>
-          <p>Pour la partie énergie, j’ai travaillé sur le dimensionnement d’une batterie LiPo 2S. J’ai réalisé des calculs afin de déterminer si l’utilisation d’un régulateur linéaire 5 V était nécessaire pour alimenter correctement la carte.</p>
-          <p>J’ai aussi participé à la partie informatique liée à la carte récepteur, notamment en concevant une partie du code permettant de traiter les informations reçues, à l’aide des bibliothèques NEC mises à disposition.</p>
-
-          <h2>Principe du projet</h2>
-          <p>Le système fonctionnait avec une carte émetteur et une carte récepteur. La carte émetteur transmettait des informations sous forme de TRAME NEC, tandis que la carte récepteur interprétait ces informations afin de piloter le KART à hélice.</p>
-
-          <h2>Résultat final</h2>
-          <p>À la fin du projet, une petite course a été organisée dans le cadre du BUT GEII afin de tester les différents KART à hélice réalisés. Après vérification des exigences du projet, notre KART a bien fonctionné durant la course.</p>
-          <p>Pendant la phase de vérification, nous avons rencontré certains problèmes techniques, notamment au niveau du code de la carte émetteur. Ces difficultés nous ont permis d’analyser les erreurs, de mieux comprendre le fonctionnement de la communication entre les cartes et d’améliorer progressivement le système.</p>
+    <section class="section kah-section" aria-labelledby="presentation-title">
+      <div class="section-container">
+        <article class="kah-panel kah-presentation-card reveal">
+          <div class="kah-section-heading">
+            <p class="eyebrow">Présentation</p>
+            <h2 id="presentation-title">⚙️ Présentation du projet</h2>
+          </div>
+          <div class="kah-presentation-layout">
+            <figure class="kah-figure kah-main-figure">
+              <div class="kah-image-frame kah-image-frame-main">
+                <img src="../assets/image KAH/Icone Projet KAH.png" alt="Image principale du projet KART à hélice">
+              </div>
+              <figcaption>Image principale du projet</figcaption>
+            </figure>
+            <div class="kah-text-flow">
+              <p>Le projet KAH a pour objectif de concevoir l’électronique d’un KART à hélice piloté à distance.</p>
+              <p>À partir du cahier des charges de Toy Corporation, le système est organisé autour de deux cartes : une carte récepteur installée sur le KART et une carte émetteur intégrée à la manette.</p>
+              <div class="kah-soft-grid">
+                <article class="kah-soft-block">
+                  <h3>📡 Carte récepteur</h3>
+                  <p>Installée sur le KART, elle reçoit les commandes de l’utilisateur puis les transforme en actions concrètes comme l’avancement, la direction et l’activation du klaxon.</p>
+                </article>
+                <article class="kah-soft-block">
+                  <h3>🎮 Carte émetteur</h3>
+                  <p>Intégrée à la manette, elle joue le rôle d’interface homme-machine et permet de piloter le KART simplement grâce aux commandes disponibles.</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </article>
+      </div>
+    </section>
 
-        <aside class="detail-sidebar">
-          <section class="glass-card reveal">
-            <h2>Outils, logiciels et composants utilisés</h2>
-            <div class="tag-list">
-              <span>Arduino IDE</span>
-              <span>Oscilloscope</span>
-              <span>Multimètre</span>
-              <span>Fer à souder</span>
-              <span>Proteus ISIS</span>
-              <span>Proteus ARES</span>
-              <span>Microcontrôleur ATmega328P</span>
-              <span>Batterie LiPo 2S</span>
-              <span>Régulateur linéaire 5 V étudié selon les besoins de la carte</span>
+    <section class="section kah-section" aria-labelledby="organisation-title">
+      <div class="section-container">
+        <article class="kah-panel kah-organisation-card reveal">
+          <div class="kah-section-heading">
+            <p class="eyebrow">Organisation</p>
+            <h2 id="organisation-title">🧩 Organisation du projet</h2>
+          </div>
+          <div class="kah-organisation-layout">
+            <div class="kah-text-flow">
+              <p>Ce projet a été réalisé en équipe de huit personnes.</p>
+              <p>Pour organiser le travail de manière efficace, nous avons été répartis en deux groupes de quatre. Un premier groupe s’est concentré sur la partie émetteur, tandis que l’autre groupe a travaillé sur la partie récepteur.</p>
+              <p>Cette répartition nous a permis d’avancer en parallèle sur les deux grandes parties du système. Chaque groupe avait des objectifs précis à respecter, depuis la conception jusqu’aux vérifications finales.</p>
+              <p>Le projet intégrait également une partie informatique, avec de la programmation à réaliser sur les cartes électroniques. Cette organisation a donc été importante pour répartir les tâches, suivre l’avancement du projet et assurer la cohérence entre les différentes étapes.</p>
+              <div class="kah-facts" aria-label="Synthèse de l'organisation">
+                <span>👥 Équipe : 8 personnes</span>
+                <span>🔀 Répartition : 2 groupes de 4</span>
+                <span>📡 Groupe émetteur</span>
+                <span>🏎️ Groupe récepteur</span>
+                <span>💻 Partie informatique</span>
+              </div>
             </div>
-          </section>
+            <figure class="kah-figure kah-synoptic-figure">
+              <div class="kah-image-frame kah-image-frame-synoptic">
+                <img src="../assets/image KAH/synoptique emmeteur.PNG" alt="Synoptique émetteur du projet KART à hélice">
+              </div>
+              <figcaption>Synoptique émetteur</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
 
-          <section class="glass-card reveal">
-            <h2>Compétences développées</h2>
-            <ul class="clean-list">
-              <li>Compréhension d’un système électronique composé de cartes émetteur et récepteur</li>
-              <li>Étude d’un microcontrôleur ATmega328P</li>
-              <li>Utilisation des liaisons RX/TX</li>
-              <li>Dimensionnement d’une alimentation avec batterie LiPo 2S</li>
-              <li>Réflexion sur l’utilisation d’un régulateur 5 V</li>
-              <li>Réalisation de schémas électriques</li>
-              <li>Routage d’une carte électronique</li>
-              <li>Programmation d’une carte récepteur</li>
-              <li>Traitement de TRAMES NEC</li>
-            </ul>
-          </section>
+    <section class="section kah-section" aria-labelledby="role-title">
+      <div class="section-container">
+        <article class="kah-panel kah-role-card reveal">
+          <p class="eyebrow">Contribution</p>
+          <h2 id="role-title">👨‍💻 Mon rôle dans le projet</h2>
+          <div class="kah-text-flow">
+            <p>J’ai contribué aux différentes phases de réalisation du projet, de la conception jusqu’aux vérifications finales.</p>
+            <p>Lors de la phase de conception, j’ai travaillé sur la carte émetteur en prenant en charge les fonctions liées au traitement de l’information et à la gestion de l’énergie. Cette étape avait pour objectif d’assurer le bon fonctionnement de la carte et la transmission des commandes.</p>
+            <p>Pour la partie informatique, je suis intervenu sur la carte récepteur afin d’intégrer les fonctions permettant d’acquérir et de traiter la trame infrarouge envoyée par l’émetteur.</p>
+            <p>Lors de la phase de fabrication, j’ai participé à la réalisation des deux cartes électroniques du système.</p>
+            <p>Enfin, pendant la phase de vérification électronique, j’ai contribué aux tests des fonctions traitement et énergie de la carte récepteur. Ces vérifications avaient pour objectif de contrôler la bonne réception des informations et le bon fonctionnement des différentes parties de la carte.</p>
+          </div>
+          <div class="kah-tags" aria-label="Contributions à compléter">
+            <span>Carte émetteur</span>
+            <span>Traitement</span>
+            <span>Énergie</span>
+            <span>Informatique récepteur</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-          <section class="glass-card reveal">
-            <h2>Visuels à ajouter plus tard</h2>
-            <div class="placeholder-grid small">
-              <span>Schémas Proteus ISIS</span>
-              <span>Routage ARES</span>
-              <span>Photos des cartes électroniques</span>
-              <span>Captures du code Arduino</span>
-              <span>Photos du KART</span>
-              <span>Vidéo de la course</span>
-              <span>Synoptique carte émetteur</span>
-              <span>Synoptique carte récepteur</span>
+    <section class="section kah-section" aria-labelledby="conception-title">
+      <div class="section-container">
+        <div class="kah-section-heading reveal">
+          <p class="eyebrow">Étape technique</p>
+          <h2 id="conception-title">Conception</h2>
+        </div>
+
+        <div class="project-slider kah-conception-slider" data-project-slider>
+          <button class="slider-arrow slider-prev" type="button" aria-label="Carte précédente">
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+          <div class="slider-viewport">
+            <div class="slider-track">
+          <article class="kah-panel kah-step-card reveal">
+            <h3>⚡ Bloc énergie</h3>
+            <div class="kah-text-flow">
+              <p>Le bloc énergie avait pour objectif d’assurer l’alimentation de la carte émetteur en respectant le cahier des charges.</p>
+              <p>L’exigence principale était de garantir au minimum 1 heure d’autonomie. Pour cela, j’ai étudié la consommation de la carte en ajoutant une marge de sécurité.</p>
+              <p>Avec le plus petit accumulateur disponible, l’autonomie estimée était d’environ 5 heures, ce qui répondait largement au besoin du projet.</p>
+              <p>Nous avons aussi ajouté un système de régulation afin de fournir une alimentation stable aux composants, ainsi qu’un interrupteur permettant de mettre la carte sous tension ou de l’arrêter simplement.</p>
+              <p>Cette conception a permis d’obtenir une alimentation fiable, stable et adaptée à l’émetteur.</p>
             </div>
-          </section>
-        </aside>
+            <figure class="kah-figure">
+              <div class="kah-image-frame kah-image-frame-energy">
+                <img src="../assets/image KAH/bloc energie.PNG" alt="Bloc énergie de la carte émetteur">
+              </div>
+              <figcaption>Bloc énergie</figcaption>
+            </figure>
+          </article>
+
+          <article class="kah-panel kah-step-card reveal">
+            <h3>🧠 Bloc traitement</h3>
+            <div class="kah-text-flow">
+              <p>Le bloc traitement correspond à la partie de la carte émetteur qui permet de gérer les informations provenant de l’interface homme-machine.</p>
+              <p>Dans cette partie, nous avons intégré un microcontrôleur. Son rôle est de récupérer les actions de l’utilisateur sur la manette, comme les commandes liées au déplacement ou aux fonctions du KART, puis de préparer ces informations pour qu’elles puissent être envoyées au récepteur.</p>
+              <p>Pour assurer son bon fonctionnement, nous avons ajouté les éléments nécessaires autour du microcontrôleur. Certains permettent au système de fonctionner de manière stable, d’autres assurent un démarrage fiable de la carte, et d’autres encore servent à stabiliser son alimentation.</p>
+              <p>Nous avons aussi prévu des connecteurs permettant de transférer le programme vers le microcontrôleur. Cette partie est importante, car elle permet de mettre à jour le programme de la carte et de tester son fonctionnement pendant le développement.</p>
+              <p>Ce travail de conception a permis de construire une base électronique fiable pour traiter les commandes de l’utilisateur avant leur transmission par infrarouge.</p>
+            </div>
+            <figure class="kah-figure">
+              <div class="kah-image-frame kah-image-frame-treatment">
+                <img src="../assets/image KAH/bloc traitement.PNG" alt="Bloc traitement de la carte émetteur">
+              </div>
+              <figcaption>Bloc traitement</figcaption>
+            </figure>
+          </article>
+
+          <article class="kah-panel kah-step-card reveal">
+            <h3>💻 Informatique récepteur</h3>
+            <div class="kah-text-flow">
+              <p>Pour la partie informatique du récepteur, j’ai travaillé sur les fonctions de traitement permettant d’analyser les informations reçues par le KART.</p>
+              <p>Le récepteur reçoit une trame infrarouge, c’est-à-dire un message envoyé par l’émetteur. Avant d’utiliser ce message, le programme doit vérifier qu’il est bien valide. J’ai donc intégré une fonction de sécurité permettant de contrôler la trame reçue afin d’éviter que le KART réagisse à une mauvaise information.</p>
+              <p>Une fois la trame validée, le programme doit récupérer les différentes informations qu’elle contient. Certaines données permettent d’identifier le numéro d’équipe afin de s’assurer que le KART répond uniquement à la bonne commande. Une autre information indique l’état du klaxon.</p>
+              <p>La trame contient aussi les données nécessaires pour piloter le KART. Le programme extrait donc l’information liée à la direction pour commander le servomoteur, ainsi que l’information liée à la vitesse pour contrôler le moteur.</p>
+              <p>Pour réaliser ce traitement, j’ai utilisé des opérations sur les bits afin d’isoler chaque information présente dans la trame. Cette partie m’a permis de mieux comprendre comment un message infrarouge peut être décodé puis transformé en actions concrètes sur un système embarqué.</p>
+            </div>
+            <div class="kah-placeholder kah-placeholder-compact">
+              <span>Schéma à ajouter</span>
+            </div>
+          </article>
+
+          <article class="kah-panel kah-step-card reveal">
+            <h3>🛠️ Schéma final et routage</h3>
+            <div class="kah-text-flow">
+              <p>Après la phase de conception, chaque membre de l’équipe a travaillé sur les exigences qui lui étaient attribuées. Les différents blocs étudiés ont ensuite été regroupés afin de construire le schéma électrique final sur Proteus ISIS.</p>
+              <p>Pour notre partie, nous avons finalisé le schéma de la carte émetteur en intégrant les différents éléments nécessaires à son fonctionnement. Cette étape permettait de vérifier la cohérence du montage avant de passer à la réalisation de la carte.</p>
+              <p>Une fois le schéma validé, nous avons réalisé le routage de la carte sous Proteus ARES. Le routage consistait à organiser les composants sur la carte et à créer les connexions entre eux afin d’obtenir un circuit prêt à être fabriqué.</p>
+              <p>Cette étape a permis de passer de la conception théorique à une carte électronique concrète, prête pour la phase de fabrication.</p>
+            </div>
+            <div class="kah-media-grid kah-media-grid-duo">
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-schematic">
+                  <img src="../assets/image KAH/isis KAH.PNG" alt="Schéma final de la carte émetteur">
+                </div>
+                <figcaption>Schéma final</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-schematic">
+                  <img src="../assets/image KAH/ares KAH.jpg" alt="Routage ARES du projet KART à hélice">
+                </div>
+                <figcaption>Routage ARES</figcaption>
+              </figure>
+            </div>
+          </article>
+            </div>
+          </div>
+          <button class="slider-arrow slider-next" type="button" aria-label="Carte suivante">
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+
+        <article class="kah-document-card reveal">
+          <h3>Dossier de conception</h3>
+          <div class="kah-placeholder kah-placeholder-document">
+            <span>PDF du dossier de conception à ajouter</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section kah-section" aria-labelledby="fabrication-title">
+      <div class="section-container">
+        <div class="kah-section-heading reveal">
+          <p class="eyebrow">Réalisation</p>
+          <h2 id="fabrication-title">Fabrication</h2>
+        </div>
+
+        <div class="project-slider kah-fabrication-slider" data-project-slider>
+          <button class="slider-arrow slider-prev" type="button" aria-label="Carte précédente">
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+          <div class="slider-viewport">
+            <div class="slider-track">
+          <article class="kah-panel kah-step-card reveal">
+            <h3>🏗️ Carte émetteur</h3>
+            <div class="kah-text-flow">
+              <p>Après la finalisation du schéma et du routage sous Proteus ARES, nous sommes passés à la fabrication de la carte émetteur.</p>
+              <p>La première étape a consisté à imprimer le typon et les différents plans nécessaires à la réalisation de la carte. Nous avons ensuite préparé le circuit imprimé avant de passer à la phase d’insolation, qui permet de faire apparaître le tracé des pistes sur la plaque.</p>
+              <p>Une fois cette étape réalisée, la carte a été gravée afin de retirer le cuivre inutile et de conserver uniquement les pistes du circuit. Après le nettoyage, nous avons vérifié la continuité des pistes à l’aide d’un ohmmètre pour nous assurer qu’il n’y avait pas de coupure ou de court-circuit.</p>
+              <p>Nous avons ensuite percé la carte afin de pouvoir y placer les composants. La dernière étape a été la soudure, suivie d’un contrôle final pour vérifier le sens des composants, leurs valeurs et la qualité des connexions.</p>
+              <p>Cette fabrication a permis d’obtenir une carte émetteur prête à être testée et intégrée dans la manette de commande.</p>
+            </div>
+            <div class="kah-media-grid kah-fabrication-grid">
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-board">
+                  <img src="../assets/image KAH/typon dessus.PNG" alt="Typon dessus de la carte émetteur">
+                </div>
+                <figcaption>Typon dessus émetteur</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-board">
+                  <img src="../assets/image KAH/typon dessous.PNG" alt="Typon dessous de la carte émetteur">
+                </div>
+                <figcaption>Typon dessous émetteur</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-board">
+                  <img src="../assets/image KAH/carte emtt dessus.png" alt="Carte émetteur réelle vue de dessus">
+                </div>
+                <figcaption>Carte émetteur réelle — dessus</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-board kah-image-align-top kah-image-align-higher">
+                  <img src="../assets/image KAH/carte emtt dessous.png" alt="Carte émetteur réelle vue de dessous">
+                </div>
+                <figcaption>Carte émetteur réelle — dessous</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="kah-panel kah-step-card reveal">
+            <h3>🏗️ Carte récepteur</h3>
+            <div class="kah-text-flow">
+              <p>La fabrication de la carte récepteur a suivi les mêmes grandes étapes, mais avec une attention particulière portée à son rôle dans le fonctionnement du KART.</p>
+              <p>À partir du routage réalisé sur Proteus ARES, nous avons imprimé le typon de la carte afin de préparer la réalisation du circuit imprimé. La plaque a ensuite été insolée pour transférer le tracé des pistes sur le cuivre.</p>
+              <p>Après cette étape, nous avons procédé à la gravure de la carte. Cette phase permet de retirer les zones de cuivre non utilisées et de conserver uniquement les liaisons nécessaires au circuit. La carte a ensuite été nettoyée puis contrôlée à l’ohmmètre afin de vérifier que les pistes étaient correctement réalisées.</p>
+              <p>Une fois les vérifications effectuées, nous avons percé la carte pour pouvoir insérer les composants. Nous avons ensuite réalisé les soudures avant d’effectuer un contrôle final sur l’implantation, le sens des composants et la qualité du montage.</p>
+              <p>Cette étape a permis de transformer le schéma du récepteur en une carte physique fonctionnelle, prête à être utilisée dans le KART.</p>
+            </div>
+            <div class="kah-media-grid kah-fabrication-grid">
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-board">
+                  <img src="../assets/image KAH/typon dessus rcpt.PNG" alt="Typon dessus de la carte récepteur">
+                </div>
+                <figcaption>Typon dessus récepteur</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-image-frame kah-image-frame-board">
+                  <img src="../assets/image KAH/typon dessous rcpt.PNG" alt="Typon dessous de la carte récepteur">
+                </div>
+                <figcaption>Typon dessous récepteur</figcaption>
+              </figure>
+              <figure class="kah-figure kah-figure-centered">
+                <div class="kah-image-frame kah-image-frame-board kah-image-align-top">
+                  <img src="../assets/image KAH/carte rcpt.png" alt="Carte récepteur réelle">
+                </div>
+                <figcaption>Carte récepteur réelle</figcaption>
+              </figure>
+            </div>
+          </article>
+            </div>
+          </div>
+          <button class="slider-arrow slider-next" type="button" aria-label="Carte suivante">
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+
+        <article class="kah-document-card reveal">
+          <h3>Dossier de fabrication</h3>
+          <div class="kah-placeholder kah-placeholder-document">
+            <span>PDF du dossier de fabrication à ajouter</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section kah-section" aria-labelledby="verification-title">
+      <div class="section-container">
+        <div class="kah-section-heading reveal">
+          <p class="eyebrow">Tests</p>
+          <h2 id="verification-title">Vérification</h2>
+        </div>
+
+        <div class="project-slider kah-verification-slider" data-project-slider>
+          <button class="slider-arrow slider-prev" type="button" aria-label="Carte précédente">
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+          <div class="slider-viewport">
+            <div class="slider-track">
+          <article class="kah-panel kah-step-card reveal">
+            <h3>✅ Traitement récepteur</h3>
+            <div class="kah-text-flow">
+              <p>Après la fabrication de la carte récepteur, nous avons vérifié que les fonctions de traitement respectaient bien les exigences du cahier des charges.</p>
+              <p>Nous avons d’abord testé la sécurité de la communication. Le récepteur devait réagir uniquement lorsqu’il recevait une trame valide. En cas de mauvaise trame, aucune action ne devait être déclenchée.</p>
+              <p>Nous avons ensuite vérifié les principales commandes du KART : la vitesse du moteur, la direction du servomoteur, le fonctionnement du klaxon et l’allumage de la LED de connexion.</p>
+              <p>Pour cela, nous avons utilisé une alimentation de laboratoire et un oscilloscope afin d’observer les signaux envoyés aux différents éléments du KART.</p>
+              <p>Cette étape a permis de confirmer que le récepteur interprétait correctement les informations reçues et que les actions du KART correspondaient aux commandes envoyées.</p>
+            </div>
+            <div class="kah-media-grid kah-verification-grid">
+              <figure class="kah-figure">
+                <div class="kah-placeholder kah-placeholder-media"></div>
+                <figcaption>Photo test 1 à ajouter</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-placeholder kah-placeholder-media"></div>
+                <figcaption>Photo test 2 à ajouter</figcaption>
+              </figure>
+              <figure class="kah-figure kah-figure-centered">
+                <div class="kah-placeholder kah-placeholder-media"></div>
+                <figcaption>Mesure / capture à ajouter</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="kah-panel kah-step-card reveal">
+            <h3>🔋 Énergie récepteur</h3>
+            <div class="kah-text-flow">
+              <p>Pour la partie énergie du récepteur, l’objectif était de vérifier que le KART respectait l’autonomie minimale demandée par le cahier des charges.</p>
+              <p>L’exigence imposait un fonctionnement d’au moins 15 minutes avec une batterie de type LiPo 2S.</p>
+              <p>Pour réaliser cette vérification, nous avons utilisé une alimentation de laboratoire afin de simuler la batterie du KART. Nous avons ensuite mesuré la consommation du système lorsque le moteur fonctionnait à mi-puissance.</p>
+              <p>À partir de cette mesure, nous avons pu estimer l’autonomie réelle du KART. Le résultat obtenu était d’environ 40 minutes, ce qui est largement supérieur aux 15 minutes demandées.</p>
+              <p>Cette vérification a donc permis de valider la partie énergie du récepteur par rapport aux exigences du cahier des charges.</p>
+            </div>
+            <div class="kah-media-grid kah-verification-grid">
+              <figure class="kah-figure">
+                <div class="kah-placeholder kah-placeholder-media"></div>
+                <figcaption>Photo test 1 à ajouter</figcaption>
+              </figure>
+              <figure class="kah-figure">
+                <div class="kah-placeholder kah-placeholder-media"></div>
+                <figcaption>Photo test 2 à ajouter</figcaption>
+              </figure>
+              <figure class="kah-figure kah-figure-centered">
+                <div class="kah-placeholder kah-placeholder-media"></div>
+                <figcaption>Mesure / capture à ajouter</figcaption>
+              </figure>
+            </div>
+          </article>
+            </div>
+          </div>
+          <button class="slider-arrow slider-next" type="button" aria-label="Carte suivante">
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+
+        <article class="kah-document-card reveal">
+          <h3>Dossier de vérification</h3>
+          <div class="kah-placeholder kah-placeholder-document">
+            <span>PDF du dossier de vérification à ajouter</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section kah-section" aria-labelledby="resultat-title">
+      <div class="section-container">
+        <div class="kah-result-layout">
+          <article class="kah-panel kah-result-copy reveal">
+            <p class="eyebrow">Final</p>
+            <h2 id="resultat-title">🏁 Résultat final</h2>
+            <div class="kah-text-flow">
+              <p>Ce projet nous a permis de relier l’électronique et l’informatique autour d’un système embarqué concret.</p>
+              <p>À travers la conception, la fabrication, la programmation et les vérifications, nous avons compris comment une carte émetteur peut envoyer des commandes et comment une carte récepteur peut les traiter pour piloter un système réel.</p>
+              <p>Après le travail réalisé par les huit membres du groupe, nous avons obtenu un KART fonctionnel, accompagné de son émetteur de commande, répondant aux exigences du cahier des charges.</p>
+              <p>Le KART a ensuite pu être testé lors d’une course organisée dans le cadre du projet, ce qui a permis de valider le fonctionnement global du système dans une situation concrète.</p>
+            </div>
+          </article>
+
+          <div class="kah-result-media">
+            <article class="kah-panel reveal">
+              <div class="kah-placeholder kah-placeholder-video">
+                <span>Vidéo de la course à ajouter</span>
+              </div>
+            </article>
+            <article class="kah-panel reveal">
+              <div class="kah-placeholder kah-placeholder-photo">
+                <span>Photo finale du KART à ajouter</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section kart-nav-section">
+      <div class="section-container kart-bottom-nav reveal">
+        <a class="btn btn-secondary" href="../index.html#projets">Retour aux projets</a>
+        <a class="btn btn-primary" href="thermometre-bain.html">Projet suivant</a>
       </div>
     </section>
   </main>
@@ -117,7 +447,7 @@
     <div class="section-container footer-inner">
       <strong>Darren DE OLIVEIRA -- DA SILVA</strong>
       <nav aria-label="Navigation secondaire">
-        <a href="../projets.html">Tous les projets</a>
+        <a href="../index.html#projets">Tous les projets</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
     </div>

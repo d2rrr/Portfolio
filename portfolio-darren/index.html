@@ -27,7 +27,7 @@
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos</a>
       <a href="#competences">Compétences</a>
-      <a href="projets.html">Projets</a>
+      <a href="#projets">Projets</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#contact">Me contacter</a>
@@ -54,7 +54,7 @@
 
         <div class="hero-visual reveal anim-item">
           <div class="hero-photo">
-            <span>Photo ou visuel personnel à ajouter</span>
+            <img src="assets/image a propos/photo darren .png" alt="Photo professionnelle de Darren DE OLIVEIRA -- DA SILVA">
           </div>
           <div class="floating-chip">
             <span></span>
@@ -81,45 +81,81 @@
 
     <section class="section skills-section reveal-section" id="competences">
       <div class="section-container">
-        <div class="section-heading reveal">
+        <div class="section-heading skills-main-heading reveal">
           <p class="eyebrow">Compétences</p>
-          <h2>Compétences</h2>
-          <p>Des compétences techniques et personnelles que je développe au fil de ma formation et de mes projets.</p>
+          <h2>Mes compétences en pratique avec des outils adaptés</h2>
+          <p>Un aperçu de mes compétences et des outils que j’utilise pour progresser.</p>
         </div>
 
         <div class="skills-block reveal">
-          <h3>Compétences BUT GEII</h3>
-          <div class="card-grid two-columns">
-            <article class="info-card reveal-card">
-              <span class="card-index">GEII</span>
-              <h4>Concevoir</h4>
-              <p>Concevoir des solutions techniques en lien avec l’électricité, l’électronique et l’informatique industrielle.</p>
-              <p>Cette compétence regroupe la capacité à analyser un besoin, proposer une solution adaptée, choisir des composants, réaliser des schémas et participer à la conception d’un système technique.</p>
-            </article>
-            <article class="info-card reveal-card">
-              <span class="card-index">GEII</span>
-              <h4>Vérifier</h4>
-              <p>Vérifier le bon fonctionnement d’un système ou d’une carte électronique.</p>
-              <p>Cette compétence consiste à réaliser des mesures, tester des composants, contrôler le fonctionnement d’un montage et valider que le système respecte les exigences attendues.</p>
-            </article>
+          <div class="skills-group skills-group-personal">
+            <div class="skills-card-grid">
+              <article class="info-card skill-card reveal-card">
+                <span class="skill-icon" aria-hidden="true"><img src="assets/icone svg/technology-icon.svg" alt=""></span>
+                <h3>Électronique</h3>
+                <p>Concevoir, développer, réaliser et programmer des systèmes électroniques adaptés à différents projets techniques.</p>
+                <div class="skill-tags" aria-label="Notions associées à Électronique">
+                  <span>Prototypage</span>
+                  <span>Schéma</span>
+                  <span>Routage</span>
+                  <span>Mesures</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-programmation">En savoir plus</button>
+              </article>
+
+              <article class="info-card skill-card reveal-card">
+                <span class="skill-icon skill-icon-electrotech" aria-hidden="true"><img src="assets/icone svg/spark-icon.svg" alt=""></span>
+                <h3>Électrotechnique</h3>
+                <p>Comprendre, câbler et vérifier des systèmes électriques en tenant compte de la sécurité, des mesures et du fonctionnement des équipements.</p>
+                <div class="skill-tags" aria-label="Notions associées à Électrotechnique">
+                  <span>Câblage</span>
+                  <span>Puissance</span>
+                  <span>Mesures</span>
+                  <span>Sécurité</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-electrotechnique">En savoir plus</button>
+              </article>
+
+              <article class="info-card skill-card reveal-card">
+                <span class="skill-icon" aria-hidden="true"><img src="assets/icone svg/mechanical-arm-assembly-icon.svg" alt=""></span>
+                <h3>Automatisation</h3>
+                <p>Comprendre, organiser et programmer des systèmes automatisés pour piloter des actions, traiter des informations et suivre un fonctionnement logique.</p>
+                <div class="skill-tags" aria-label="Notions associées à Automatisation">
+                  <span>Grafcet</span>
+                  <span>Automate</span>
+                  <span>Capteurs</span>
+                  <span>Commande</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-automatisation">En savoir plus</button>
+              </article>
+
+              <article class="info-card skill-card reveal-card">
+                <span class="skill-icon" aria-hidden="true">O</span>
+                <h3>Outils logiciels</h3>
+                <p>Utiliser des logiciels techniques et bureautiques pour concevoir, simuler, organiser, documenter et présenter mes projets.</p>
+                <div class="skill-tags" aria-label="Outils associés aux logiciels">
+                  <span>TIA Portal</span>
+                  <span>Proteus</span>
+                  <span>Fusion 360</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-outils">En savoir plus</button>
+              </article>
+            </div>
           </div>
-        </div>
 
-        <div class="skills-block reveal">
-          <h3>Compétences techniques personnelles</h3>
-          <div class="card-grid two-columns compact-grid">
-            <article class="info-card centered-card reveal-card">
-              <span class="card-index">Tech</span>
-              <h4>Programmation</h4>
-              <p>J’utilise différents langages et environnements de programmation pour développer des solutions techniques adaptées aux projets.</p>
-              <button class="btn btn-secondary" type="button" data-modal-target="modal-programmation">En savoir plus</button>
-            </article>
-            <article class="info-card centered-card reveal-card">
-              <span class="card-index">Tech</span>
-              <h4>Outils logiciels</h4>
-              <p>J’utilise plusieurs logiciels techniques pour concevoir, simuler, modéliser et documenter mes projets.</p>
-              <button class="btn btn-secondary" type="button" data-modal-target="modal-outils">En savoir plus</button>
-            </article>
+          <div class="skills-group">
+            <div class="skills-group-heading">
+              <h3>Compétences GEII</h3>
+              <p>Compétences techniques acquises au cours de ma formation en BUT GEII.</p>
+            </div>
+
+            <button class="geii-callout reveal-card" type="button" data-modal-target="modal-geii">
+              <span class="geii-callout-icon" aria-hidden="true"><img src="assets/image a propos/logo carre geii.png" alt=""></span>
+              <span class="geii-callout-arrow" aria-hidden="true">↗</span>
+              <span class="geii-callout-content">
+                <strong>Découvrir mes compétences GEII en détail</strong>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -132,7 +168,6 @@
             <p class="eyebrow">Projets</p>
             <h2>Mes projets</h2>
           </div>
-          <a class="btn btn-secondary" href="projets.html">Voir tous les projets</a>
         </div>
         <p class="section-intro reveal">Chaque projet présente une idée, une démarche technique et une réalisation qui reflète mon évolution.</p>
 
@@ -142,11 +177,10 @@
               <img src="assets/image KAH/Icone Projet KAH.png" alt="Projet KART à hélice">
             </div>
             <div class="project-body">
-              <span class="project-number">Projet 01</span>
-              <h3>KART à hélice</h3>
               <p class="project-type">Projet BUT GEII</p>
+              <h3>KART à hélice</h3>
               <p>Conception et étude de la partie électronique d’un KART à hélice, avec une carte émetteur, une carte récepteur et une communication par TRAME NEC.</p>
-              <a class="btn btn-secondary btn-small" href="projets/kart-helice.html">Voir le projet</a>
+              <a class="btn btn-secondary btn-small" href="projets/kart-helice.html">En savoir plus</a>
             </div>
           </article>
 
@@ -155,22 +189,22 @@
               <img src="assets/image TDB/Icone Projet TDB.png" alt="Projet thermomètre de bain pour bébé">
             </div>
             <div class="project-body">
-              <span class="project-number">Projet 02</span>
-              <h3>Thermomètre de bain pour bébé</h3>
               <p class="project-type">Projet BUT GEII</p>
+              <h3>Thermomètre de bain pour bébé</h3>
               <p>Conception d’une carte électronique permettant d’indiquer si la température de l’eau d’un bain pour bébé est froide, idéale ou chaude à l’aide de LEDs.</p>
-              <a class="btn btn-secondary btn-small" href="projets/thermometre-bain.html">Voir le projet</a>
+              <a class="btn btn-secondary btn-small" href="projets/thermometre-bain.html">En savoir plus</a>
             </div>
           </article>
 
           <article class="project-card reveal reveal-card">
-            <div class="project-media"><span>Image à ajouter</span></div>
+            <div class="project-image">
+              <img src="assets/image PROTHESE/Prothese de main .png" alt="Projet prothèse de main">
+            </div>
             <div class="project-body">
-              <span class="project-number">Projet 03</span>
-              <h3>Prothèse de main</h3>
               <p class="project-type">Projet DU TSS</p>
+              <h3>Prothèse de main</h3>
               <p>Projet de commande d’une prothèse de main à partir de capteurs EMG, permettant de faire bouger différents doigts selon les contractions musculaires détectées.</p>
-              <a class="btn btn-secondary btn-small" href="projets/prothese-main.html">Voir le projet</a>
+              <a class="btn btn-secondary btn-small" href="projets/prothese-main.html">En savoir plus</a>
             </div>
           </article>
 
@@ -179,11 +213,10 @@
               <img src="assets/image PYROGUARD/Icone Projet Pyroguard.png" alt="Projet PyroGuard">
             </div>
             <div class="project-body">
-              <span class="project-number">Projet 04</span>
-              <h3>PyroGuard</h3>
               <p class="project-type">Projet DU TSS</p>
+              <h3>PyroGuard</h3>
               <p>Projet en cours visant à détecter les départs de feu en forêt grâce à des boîtiers connectés, des capteurs environnementaux, un serveur MQTT et une interface dashboard.</p>
-              <a class="btn btn-secondary btn-small" href="projets/pyroguard.html">Voir le projet</a>
+              <a class="btn btn-secondary btn-small" href="projets/pyroguard.html">En savoir plus</a>
             </div>
           </article>
         </div>
@@ -247,7 +280,7 @@
       </div>
       <nav aria-label="Navigation secondaire">
         <a href="a-propos.html">À propos</a>
-        <a href="projets.html">Projets</a>
+        <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -258,40 +291,197 @@
   </footer>
 
   <div class="modal" id="modal-programmation" role="dialog" aria-modal="true" aria-labelledby="modal-programmation-title" hidden>
-    <div class="modal-panel">
+    <div class="modal-panel skill-modal-wide skill-detail-modal">
       <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
-      <p class="eyebrow">Compétence</p>
-      <h2 id="modal-programmation-title">Programmation</h2>
-      <div class="badge-grid programming-grid">
-        <span class="skill-badge"><img src="assets/icone competences/logo arduino.png" alt="Logo Arduino IDE">Arduino IDE</span>
-        <span class="skill-badge"><img src="assets/icone competences/logo python.png" alt="Logo Python">Python</span>
-        <span class="skill-badge"><img src="assets/icone competences/logo Vscode.png" alt="Logo VS Code">VS Code</span>
-        <!-- Icône transparente STM32 à ajouter plus tard. -->
-        <span>STM32</span>
-        <!-- Icône transparente Grafcet à ajouter plus tard. -->
-        <span>Grafcet</span>
-        <!-- Icône transparente Ladder à ajouter plus tard. -->
-        <span>Ladder</span>
-        <!-- Icône transparente SCL à ajouter plus tard. -->
-        <span>SCL</span>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="assets/icone svg/technology-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Compétence technique</p>
+          <h2 id="modal-programmation-title">ÉLECTRONIQUE</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Je travaille sur la conception de circuits, le dimensionnement de composants, le routage de PCB et la programmation de cartes électroniques. Cette compétence me permet de passer d’un besoin technique à une solution concrète, en reliant la conception, la fabrication et les tests d’un système.</p>
+
+      <section class="skill-detail-section" aria-labelledby="programming-tools-title">
+        <h3 id="programming-tools-title">OUTILS</h3>
+        <div class="skill-tool-grid">
+          <span class="skill-tool"><img src="assets/icone svg/arduino.svg" alt="Logo Arduino">Arduino</span>
+          <span class="skill-tool"><img src="assets/icone svg/visual-studio-code-svgrepo-com.svg" alt="Logo VS Code">VS Code</span>
+          <span class="skill-tool"><img src="assets/icone svg/stmicroelectronics.svg" alt="Logo STM32">STM32</span>
+          <span class="skill-tool"><img src="assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+          <span class="skill-tool"><img src="assets/icone svg/kicad.svg" alt="Logo KiCad">KiCad</span>
+        </div>
+      </section>
+
+      <section class="skill-detail-section" aria-labelledby="programming-notions-title">
+        <h3 id="programming-notions-title">MOBILISATION</h3>
+        <ul class="skill-notion-list">
+          <li>Schéma électronique</li>
+          <li>Calculs de dimensionnement</li>
+          <li>Routage de PCB</li>
+          <li>Programmation sur systèmes embarqués</li>
+          <li>Mesures électroniques</li>
+          <li>Prototypage de cartes</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-electrotechnique" role="dialog" aria-modal="true" aria-labelledby="modal-electrotechnique-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="assets/icone svg/spark-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Compétence technique</p>
+          <h2 id="modal-electrotechnique-title">ÉLECTROTECHNIQUE</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Je travaille sur l’analyse, le câblage et la vérification de systèmes électriques. Cette compétence me permet de comprendre le fonctionnement d’une installation, de préparer des montages et de contrôler les grandeurs électriques en respectant les règles de sécurité.</p>
+
+      <section class="skill-detail-section" aria-labelledby="electrotechnique-tools-title">
+        <h3 id="electrotechnique-tools-title">OUTILS</h3>
+        <div class="skill-tool-grid skill-tool-grid-duo">
+          <span class="skill-tool"><img src="assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+          <span class="skill-tool"><img src="assets/icone svg/logo-WinRelais.svg" alt="Logo WinRelais">WinRelais</span>
+        </div>
+      </section>
+
+      <section class="skill-detail-section" aria-labelledby="electrotechnique-notions-title">
+        <h3 id="electrotechnique-notions-title">MOBILISATION</h3>
+        <ul class="skill-notion-list">
+          <li>Analyse de schémas</li>
+          <li>Relevés de grandeurs</li>
+          <li>Réalisation de montages</li>
+          <li>Simulation de circuits</li>
+          <li>Habilitation et sécurité</li>
+          <li>Diagnostic de fonctionnement</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-automatisation" role="dialog" aria-modal="true" aria-labelledby="modal-automatisation-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="assets/icone svg/mechanical-arm-assembly-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Compétence technique</p>
+          <h2 id="modal-automatisation-title">AUTOMATISATION</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Je travaille sur la programmation et la compréhension de systèmes automatisés. Cette compétence me permet d’organiser une logique de fonctionnement, de piloter des actions et de relier les capteurs, les actionneurs et l’automate dans un même système.</p>
+
+      <section class="skill-detail-section" aria-labelledby="automatisation-tools-title">
+        <h3 id="automatisation-tools-title">OUTILS</h3>
+        <div class="skill-tool-grid skill-tool-grid-single">
+          <span class="skill-tool"><img src="assets/icone svg/siemens.svg" alt="Logo TIA Portal">TIA Portal</span>
+        </div>
+      </section>
+
+      <section class="skill-detail-section" aria-labelledby="automatisation-notions-title">
+        <h3 id="automatisation-notions-title">MOBILISATION</h3>
+        <ul class="skill-notion-list">
+          <li>Logique de commande</li>
+          <li>Programmation d’automates (Grafcet, Ladder, SCL)</li>
+          <li>Grafcet</li>
+          <li>Capteurs et actionneurs</li>
+          <li>Tests de fonctionnement</li>
+          <li>Suivi d’un cycle automatisé</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-geii" role="dialog" aria-modal="true" aria-labelledby="modal-geii-title" hidden>
+    <div class="modal-panel skill-modal-wide geii-modal">
+      <button class="modal-close geii-modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="geii-modal-content">
+        <p class="eyebrow">Compétences</p>
+        <h2 id="modal-geii-title">Compétences GEII</h2>
+        <div class="geii-modal-body">
+          <p class="geii-modal-intro">Cette synthèse présente l’évolution des compétences du BUT GEII sur les trois années de formation.</p>
+
+          <div class="geii-chart-scroll" aria-label="Synthèse des compétences GEII sur trois années">
+            <div class="geii-chart">
+              <div class="geii-axis" aria-hidden="true">
+                <div class="geii-year">
+                  <span>1re<br>année</span>
+                  <i></i>
+                </div>
+                <div class="geii-year">
+                  <span>2e<br>année</span>
+                  <i></i>
+                </div>
+                <div class="geii-year">
+                  <span>3e<br>année</span>
+                  <i></i>
+                </div>
+              </div>
+
+              <div class="geii-column-title geii-concevoir">Concevoir</div>
+              <div class="geii-column-title geii-verifier">Vérifier</div>
+              <div class="geii-column-title geii-maintenir">Maintenir</div>
+
+              <article class="geii-level-card geii-concevoir geii-level-1 geii-col-1 geii-row-1">
+                <strong>Niveau 1</strong>
+                <p>Mener une conception partielle intégrant une démarche projet</p>
+              </article>
+
+              <article class="geii-level-card geii-verifier geii-level-1 geii-col-2 geii-row-1">
+                <strong>Niveau 1</strong>
+                <p>Effectuer les tests et mesures nécessaires à une vérification d’un système</p>
+              </article>
+
+              <div class="geii-level-placeholder geii-col-3 geii-row-1" aria-hidden="true"></div>
+
+              <article class="geii-level-card geii-concevoir geii-level-2 geii-col-1 geii-row-2">
+                <strong>Niveau 2</strong>
+                <p>Concevoir un système en finalisant les solutions proposées</p>
+              </article>
+
+              <article class="geii-level-card geii-verifier geii-level-2 geii-col-2 geii-row-2">
+                <strong>Niveau 2</strong>
+                <p>Mettre en place un protocole de tests pour valider le fonctionnement d’un système</p>
+              </article>
+
+              <article class="geii-level-card geii-maintenir geii-level-2 geii-col-3 geii-row-2">
+                <strong>Niveau 2</strong>
+                <p>Intervenir sur un système pour effectuer une opération de maintenance</p>
+              </article>
+
+              <article class="geii-level-card geii-concevoir geii-level-3 geii-col-1 geii-row-3">
+                <strong>Niveau 3</strong>
+                <p>Concevoir un système en adoptant une approche sélective dans ses choix technologiques</p>
+              </article>
+
+              <article class="geii-level-card geii-verifier geii-level-3 geii-col-2 geii-row-3">
+                <strong>Niveau 3</strong>
+                <p>Élaborer une procédure intégrant une démarche qualité pour valider le fonctionnement d’un système</p>
+              </article>
+
+              <article class="geii-level-card geii-maintenir geii-level-3 geii-col-3 geii-row-3">
+                <strong>Niveau 3</strong>
+                <p>Mettre en place une stratégie de maintenance pour garantir un fonctionnement optimal</p>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="modal" id="modal-outils" role="dialog" aria-modal="true" aria-labelledby="modal-outils-title" hidden>
-    <div class="modal-panel">
+    <div class="modal-panel skill-modal-wide">
       <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
       <p class="eyebrow">Compétence</p>
       <h2 id="modal-outils-title">Outils logiciels</h2>
       <div class="badge-grid">
-        <span class="skill-badge"><img src="assets/icone competences/logo isis.png" alt="Logo Proteus ISIS">Proteus ISIS</span>
-        <span class="skill-badge"><img class="skill-icon-scale-lg" src="assets/icone competences/logo ares.png" alt="Logo Proteus ARES">Proteus ARES</span>
-        <span class="skill-badge"><img src="assets/icone competences/logo WinRelais.png" alt="Logo WinRelais">WinRelais</span>
-        <span class="skill-badge"><img src="assets/icone competences/logo Fusion360.png" alt="Logo Fusion 360">Fusion 360</span>
-        <span class="skill-badge"><img src="assets/icone competences/logo word.png" alt="Logo Word">Word</span>
-        <span class="skill-badge"><img class="skill-icon-scale-md" src="assets/icone competences/logo excel.png" alt="Logo Excel">Excel</span>
-        <span class="skill-badge"><img src="assets/icone competences/logo powerpoint.png" alt="Logo PowerPoint">PowerPoint</span>
-        <span class="skill-badge"><img class="skill-icon-scale-lg" src="assets/icone competences/logo tia-portal.png" alt="Logo TIA Portal">TIA Portal</span>
+        <span class="skill-badge"><img src="assets/icone svg/siemens.svg" alt="Logo TIA Portal">TIA Portal</span>
+        <span class="skill-badge"><img src="assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+        <span class="skill-badge"><img src="assets/icone svg/autodesk.svg" alt="Logo Fusion 360">Fusion 360</span>
+        <span class="skill-badge"><img src="assets/icone svg/kicad.svg" alt="Logo KiCad">KiCad</span>
       </div>
     </div>
   </div>

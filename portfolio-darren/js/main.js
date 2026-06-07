@@ -194,6 +194,120 @@ if (contactForm) {
     }
   });
 }
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const frame = carousel.closest(".kart-carousel-frame") || carousel.closest(".kart-section");
+  const previousButton = frame ? frame.querySelector("[data-carousel-prev]") : null;
+  const nextButton = frame ? frame.querySelector("[data-carousel-next]") : null;
+  const dots = frame ? Array.from(frame.querySelectorAll(".kart-carousel-dots span")) : [];
+
+  const getScrollAmount = () => {
+    const firstCard = carousel.querySelector(".kart-step-card, .kart-intro-slide");
+    if (!firstCard) return Math.max(carousel.clientWidth * 0.85, 280);
+
+    const styles = window.getComputedStyle(carousel);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
+    return firstCard.getBoundingClientRect().width + gap;
+  };
+
+  const updateDots = () => {
+    if (!dots.length) return;
+
+    const amount = getScrollAmount();
+    const activeIndex = Math.round(carousel.scrollLeft / amount);
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === Math.max(0, Math.min(activeIndex, dots.length - 1)));
+    });
+  };
+
+  if (previousButton) {
+    previousButton.addEventListener("click", () => {
+      carousel.scrollBy({
+        left: -getScrollAmount(),
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      carousel.scrollBy({
+        left: getScrollAmount(),
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  }
+
+  carousel.addEventListener("scroll", () => {
+    window.requestAnimationFrame(updateDots);
+  }, { passive: true });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      carousel.scrollTo({
+        left: getScrollAmount() * index,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  });
+
+  updateDots();
+});
+
+document.querySelectorAll("[data-project-slider]").forEach((slider) => {
+  const track = slider.querySelector(".slider-track");
+  const slides = track ? Array.from(track.children) : [];
+  const previousButton = slider.querySelector(".slider-prev");
+  const nextButton = slider.querySelector(".slider-next");
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  if (!track || slides.length === 0) return;
+
+  const updateSlider = () => {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    slides.forEach((slide, index) => {
+      slide.setAttribute("aria-hidden", String(index !== currentIndex));
+    });
+
+    if (previousButton) previousButton.disabled = currentIndex === 0;
+    if (nextButton) nextButton.disabled = currentIndex === slides.length - 1;
+  };
+
+  const goToSlide = (nextIndex) => {
+    currentIndex = Math.max(0, Math.min(nextIndex, slides.length - 1));
+    updateSlider();
+  };
+
+  if (previousButton) {
+    previousButton.addEventListener("click", () => {
+      goToSlide(currentIndex - 1);
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      goToSlide(currentIndex + 1);
+    });
+  }
+
+  slider.addEventListener("touchstart", (event) => {
+    touchStartX = event.touches[0].clientX;
+  }, { passive: true });
+
+  slider.addEventListener("touchend", (event) => {
+    const touchEndX = event.changedTouches[0].clientX;
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < 42) return;
+
+    goToSlide(currentIndex + (swipeDistance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  updateSlider();
+});
 } catch (error) {
   document.body.classList.remove("js-enabled", "animations-ready");
   console.error("Portfolio animations failed to initialize.", error);
