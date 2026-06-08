@@ -3155,38 +3155,46 @@ ul {
 }
 
 .home-page .skills-section .skills-primary-grid {
-  grid-template-columns: repeat(3, minmax(0, 280px));
-  gap: 28px;
-  margin-bottom: 34px;
+  grid-template-columns: repeat(3, 286px);
+  gap: 30px;
+  align-items: stretch;
+  margin-bottom: 38px;
 }
 
 .home-page .skills-section .skill-card-primary {
-  width: 280px;
-  height: 500px;
+  width: 286px;
+  height: 520px;
   padding: 34px 26px 26px;
 }
 
+.home-page .skills-section .skill-card-primary .skill-icon {
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
 .home-page .skills-section .skill-card-primary h3 {
-  margin-top: 34px;
-  margin-bottom: 22px;
+  min-height: 28px;
+  margin-top: 36px;
+  margin-bottom: 24px;
   font-size: 1.18rem;
 }
 
 .home-page .skills-section .skill-card-primary p {
-  margin-bottom: 34px;
+  min-height: 118px;
+  margin-bottom: 30px;
   line-height: 1.72;
 }
 
 .home-page .skills-section .skill-card-primary .skill-tags {
+  min-height: 78px;
   gap: 9px;
-}
-
-.home-page .skills-section .skill-card-primary .skill-tags span {
-  min-height: 32px;
+  align-content: flex-start;
+  margin-top: 0;
 }
 
 .home-page .skills-section .skill-card-primary .btn {
-  margin-top: 30px;
+  width: fit-content;
+  margin-top: auto;
 }
 
 .home-page .skills-section .geii-callout {
@@ -3671,7 +3679,7 @@ ul {
 
 @media (max-width: 900px) {
   .home-page .skills-section .skills-primary-grid {
-    grid-template-columns: repeat(2, minmax(0, 280px));
+    grid-template-columns: repeat(2, 286px);
   }
 }
 
@@ -3683,8 +3691,8 @@ ul {
   }
 
   .home-page .skills-section .skills-primary-grid {
-    grid-template-columns: minmax(0, 280px);
-    margin-bottom: 20px;
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 24px;
   }
 
   .home-page .skills-section .skills-group + .skills-group {
@@ -3699,15 +3707,24 @@ ul {
   }
 
   .home-page .skills-section .skill-card-primary {
-    width: min(100%, 280px);
-    height: auto;
-    min-height: 470px;
-    padding: 28px 22px 22px;
+    width: min(100%, 286px);
+    height: 520px;
+    min-height: 0;
+    padding: 30px 22px 22px;
   }
 
   .home-page .skills-section .skill-card-primary h3 {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 32px;
+    margin-bottom: 22px;
+  }
+
+  .home-page .skills-section .skill-card-primary p {
+    min-height: 128px;
+    margin-bottom: 28px;
+  }
+
+  .home-page .skills-section .skill-card-primary .skill-tags {
+    min-height: 84px;
   }
 
   .home-page .skills-section .skill-card h3 {
