@@ -3391,6 +3391,17 @@ ul {
   margin-top: 26px;
 }
 
+.home-page .skills-section .skill-card-primary .skill-tags {
+  min-height: 84px;
+  align-content: flex-start;
+  margin-top: 0;
+}
+
+.home-page .skills-section .skill-card-primary .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 .home-page .skills-section .skill-card:hover {
   border-color: rgba(125, 240, 196, 0.48);
   background:
