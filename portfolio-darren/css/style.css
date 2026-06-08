@@ -3155,12 +3155,38 @@ ul {
 }
 
 .home-page .skills-section .skills-primary-grid {
-  grid-template-columns: repeat(3, 250px);
-  margin-bottom: 30px;
+  grid-template-columns: repeat(3, minmax(0, 280px));
+  gap: 28px;
+  margin-bottom: 34px;
 }
 
 .home-page .skills-section .skill-card-primary {
-  height: 430px;
+  width: 280px;
+  height: 500px;
+  padding: 34px 26px 26px;
+}
+
+.home-page .skills-section .skill-card-primary h3 {
+  margin-top: 34px;
+  margin-bottom: 22px;
+  font-size: 1.18rem;
+}
+
+.home-page .skills-section .skill-card-primary p {
+  margin-bottom: 34px;
+  line-height: 1.72;
+}
+
+.home-page .skills-section .skill-card-primary .skill-tags {
+  gap: 9px;
+}
+
+.home-page .skills-section .skill-card-primary .skill-tags span {
+  min-height: 32px;
+}
+
+.home-page .skills-section .skill-card-primary .btn {
+  margin-top: 30px;
 }
 
 .home-page .skills-section .geii-callout {
@@ -3378,27 +3404,36 @@ ul {
   align-items: center;
 }
 
+.geii-subskill-section {
+  padding-top: 34px;
+}
+
 .geii-subskill-list {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .geii-subskill-item {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 16px;
-  align-items: start;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.028)),
     rgba(8, 10, 13, 0.58);
-  padding: 16px;
+  color: inherit;
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
 }
 
 .geii-subskill-item strong {
   display: grid;
-  min-height: 42px;
+  min-height: 46px;
   place-items: center;
   border: 1px solid rgba(125, 240, 196, 0.28);
   border-radius: var(--radius);
@@ -3408,20 +3443,21 @@ ul {
   font-size: 0.95rem;
 }
 
-.geii-subskill-item p,
-.geii-proof-box p {
+.geii-subskill-item p {
   margin: 0;
   color: var(--muted);
   line-height: 1.68;
 }
 
-.geii-proof-box {
-  border: 1px solid rgba(125, 240, 196, 0.16);
-  border-radius: var(--radius);
+.geii-subskill-item:hover,
+.geii-subskill-item:focus-visible {
+  outline: none;
+  border-color: rgba(125, 240, 196, 0.44);
   background:
-    linear-gradient(145deg, rgba(125, 240, 196, 0.06), rgba(156, 188, 255, 0.035)),
-    rgba(8, 10, 13, 0.52);
-  padding: 22px;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.04)),
+    rgba(8, 10, 13, 0.66);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+  transform: translateY(-2px);
 }
 
 .geii-modal {
@@ -3635,7 +3671,7 @@ ul {
 
 @media (max-width: 900px) {
   .home-page .skills-section .skills-primary-grid {
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(2, minmax(0, 280px));
   }
 }
 
@@ -3663,8 +3699,15 @@ ul {
   }
 
   .home-page .skills-section .skill-card-primary {
+    width: min(100%, 280px);
     height: auto;
-    min-height: 430px;
+    min-height: 470px;
+    padding: 28px 22px 22px;
+  }
+
+  .home-page .skills-section .skill-card-primary h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .home-page .skills-section .skill-card h3 {
@@ -3688,14 +3731,11 @@ ul {
   .geii-subskill-item {
     grid-template-columns: 1fr;
     gap: 12px;
+    padding: 16px;
   }
 
   .geii-subskill-item strong {
     width: 48px;
-  }
-
-  .geii-proof-box {
-    padding: 18px;
   }
 }
 
