@@ -42,7 +42,7 @@
     <nav class="main-nav" id="main-nav">
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos</a>
-      <a href="competences.html">Compétences</a>
+      <a href="#competences">Compétences</a>
       <a href="#projets">Projets</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -105,6 +105,47 @@
 
         <div class="skills-block reveal">
           <div class="skills-group skills-group-personal">
+            <div class="skills-card-grid skills-primary-grid" aria-label="Compétences principales du BUT GEII">
+              <article class="info-card skill-card skill-card-primary reveal-card">
+                <span class="skill-icon" aria-hidden="true">C</span>
+                <h3>Concevoir</h3>
+                <p>Analyser un besoin, proposer une solution technique et préparer les documents nécessaires à la réalisation d’un système.</p>
+                <div class="skill-tags" aria-label="Notions associées à Concevoir">
+                  <span>Cahier des charges</span>
+                  <span>Solution technique</span>
+                  <span>Maquettage</span>
+                  <span>Dossier technique</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-concevoir">En savoir plus</button>
+              </article>
+
+              <article class="info-card skill-card skill-card-primary reveal-card">
+                <span class="skill-icon" aria-hidden="true">V</span>
+                <h3>Vérifier</h3>
+                <p>Mettre en place des essais, contrôler un prototype et vérifier la conformité d’un système technique.</p>
+                <div class="skill-tags" aria-label="Notions associées à Vérifier">
+                  <span>Essais</span>
+                  <span>Mesures</span>
+                  <span>Prototype</span>
+                  <span>Conformité</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-verifier">En savoir plus</button>
+              </article>
+
+              <article class="info-card skill-card skill-card-primary reveal-card">
+                <span class="skill-icon" aria-hidden="true">M</span>
+                <h3>Maintenir</h3>
+                <p>Réaliser ou préparer une opération de maintenance afin d’assurer le bon fonctionnement d’un système.</p>
+                <div class="skill-tags" aria-label="Notions associées à Maintenir">
+                  <span>Maintenance</span>
+                  <span>Diagnostic</span>
+                  <span>Procédure</span>
+                  <span>Fonctionnement</span>
+                </div>
+                <button class="btn btn-secondary btn-small" type="button" data-modal-target="modal-maintenir">En savoir plus</button>
+              </article>
+            </div>
+
             <div class="skills-card-grid">
               <article class="info-card skill-card reveal-card">
                 <span class="skill-icon" aria-hidden="true"><img src="assets/icone svg/technology-icon.svg" alt=""></span>
@@ -305,6 +346,113 @@
       <span>Portfolio étudiant.</span>
     </div>
   </footer>
+
+  <div class="modal" id="modal-concevoir" role="dialog" aria-modal="true" aria-labelledby="modal-concevoir-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal geii-skill-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true">C</span>
+        <div>
+          <p class="eyebrow">Compétence GEII</p>
+          <h2 id="modal-concevoir-title">Compétence Concevoir</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Cette compétence regroupe les étapes liées à l’analyse d’un besoin, à la recherche de solutions techniques et à la préparation des documents nécessaires à la réalisation d’un système.</p>
+
+      <section class="skill-detail-section" aria-labelledby="concevoir-subskills-title">
+        <h3 id="concevoir-subskills-title">Sous-compétences</h3>
+        <div class="geii-subskill-list">
+          <article class="geii-subskill-item">
+            <strong>C1</strong>
+            <p>J’identifie les fonctions demandées à la lecture du cahier des charges, à partir d’une architecture fonctionnelle, sans solution technique.</p>
+          </article>
+          <article class="geii-subskill-item">
+            <strong>C2</strong>
+            <p>Je propose une solution technique pour répondre à une fonction.</p>
+          </article>
+          <article class="geii-subskill-item">
+            <strong>C3</strong>
+            <p>J’affine une solution technique en m’appuyant sur un maquettage numérique et/ou matériel.</p>
+          </article>
+          <article class="geii-subskill-item">
+            <strong>C4</strong>
+            <p>Je rédige un dossier de conception et de fabrication.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="skill-detail-section geii-proof-box" aria-labelledby="concevoir-proofs-title">
+        <h3 id="concevoir-proofs-title">Preuves associées</h3>
+        <p>Les preuves associées à cette compétence seront ajoutées ensuite à partir de mes projets.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-verifier" role="dialog" aria-modal="true" aria-labelledby="modal-verifier-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal geii-skill-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true">V</span>
+        <div>
+          <p class="eyebrow">Compétence GEII</p>
+          <h2 id="modal-verifier-title">Compétence Vérifier</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Cette compétence concerne les tests, les mesures et les contrôles permettant de valider le bon fonctionnement d’un système ou d’un prototype.</p>
+
+      <section class="skill-detail-section" aria-labelledby="verifier-subskills-title">
+        <h3 id="verifier-subskills-title">Sous-compétences</h3>
+        <div class="geii-subskill-list">
+          <article class="geii-subskill-item">
+            <strong>V1</strong>
+            <p>J’applique, j’élabore et je rédige une procédure d’essais.</p>
+          </article>
+          <article class="geii-subskill-item">
+            <strong>V2</strong>
+            <p>J’identifie et je corrige les non-conformités d’un prototype.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="skill-detail-section geii-proof-box" aria-labelledby="verifier-proofs-title">
+        <h3 id="verifier-proofs-title">Preuves associées</h3>
+        <p>Les preuves associées à cette compétence seront ajoutées ensuite à partir de mes projets.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-maintenir" role="dialog" aria-modal="true" aria-labelledby="modal-maintenir-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal geii-skill-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true">M</span>
+        <div>
+          <p class="eyebrow">Compétence GEII</p>
+          <h2 id="modal-maintenir-title">Compétence Maintenir</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Cette compétence concerne les opérations de maintenance permettant de garantir ou de rétablir le fonctionnement correct d’un système.</p>
+
+      <section class="skill-detail-section" aria-labelledby="maintenir-subskills-title">
+        <h3 id="maintenir-subskills-title">Sous-compétences</h3>
+        <div class="geii-subskill-list">
+          <article class="geii-subskill-item">
+            <strong>M1</strong>
+            <p>J’applique une opération de maintenance préventive, corrective ou améliorative à un système.</p>
+          </article>
+          <article class="geii-subskill-item">
+            <strong>M2</strong>
+            <p>Je rédige la procédure de maintenance préventive, corrective ou améliorative d’un système.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="skill-detail-section geii-proof-box" aria-labelledby="maintenir-proofs-title">
+        <h3 id="maintenir-proofs-title">Preuves associées</h3>
+        <p>Les preuves associées à cette compétence seront ajoutées ensuite à partir de mes projets.</p>
+      </section>
+    </div>
+  </div>
 
   <div class="modal" id="modal-programmation" role="dialog" aria-modal="true" aria-labelledby="modal-programmation-title" hidden>
     <div class="modal-panel skill-modal-wide skill-detail-modal">
