@@ -1405,6 +1405,91 @@ ul {
   color: var(--text);
 }
 
+.competences-page .main-nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.competences-hero {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+.competences-hero::before {
+  content: "";
+  position: absolute;
+  inset: 112px auto auto 50%;
+  width: min(760px, 78vw);
+  height: 320px;
+  border: 1px solid rgba(125, 240, 196, 0.14);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(125, 240, 196, 0.12), transparent 58%),
+    rgba(255, 255, 255, 0.025);
+  transform: translateX(-50%) rotate(-2deg);
+  pointer-events: none;
+}
+
+.competences-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.competences-hero h1 {
+  max-width: 980px;
+  margin: 12px 0 18px;
+}
+
+.competences-lead {
+  max-width: 780px;
+  color: var(--text);
+  font-size: clamp(1.06rem, 2vw, 1.3rem);
+}
+
+.competences-intro-section {
+  padding-top: 0;
+}
+
+.competences-intro-card,
+.competence-placeholder-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035)),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.competences-intro-card {
+  padding: clamp(26px, 4vw, 42px);
+}
+
+.competences-intro-card h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.competences-content-section {
+  padding-top: 28px;
+}
+
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.competence-placeholder-card {
+  min-height: 240px;
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.competence-placeholder-card h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+}
+
 .about-hero-section {
   padding-top: 154px;
   padding-bottom: 86px;
@@ -2261,7 +2346,8 @@ ul {
   .formation-heading,
   .choice-steps,
   .double-degree-grid,
-  .interest-grid {
+  .interest-grid,
+  .competences-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2542,6 +2628,21 @@ ul {
 
   .page-hero {
     padding-top: 128px;
+  }
+
+  .competences-hero {
+    padding-top: 128px;
+    padding-bottom: 58px;
+  }
+
+  .competences-hero::before {
+    top: 96px;
+    width: calc(100% - 32px);
+    height: 280px;
+  }
+
+  .competence-placeholder-card {
+    min-height: 0;
   }
 
   .about-hero-section {
