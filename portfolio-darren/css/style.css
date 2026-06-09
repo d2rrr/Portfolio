@@ -11876,3 +11876,7 @@ a.contact-mini-card {
     white-space: normal;
   }
 }
+
+.about-page .interest-card.modal-card .interest-more {
+  margin-top: 18px;
+}
