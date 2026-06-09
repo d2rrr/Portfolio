@@ -10432,3 +10432,80 @@ body.motion-ready .modal:not([hidden]) .modal-panel {
     background: rgba(5, 5, 5, 0.54) !important;
   }
 }
+
+/* Absolute no-animation mode and final home hero framing. */
+html {
+  scroll-behavior: auto !important;
+}
+
+*,
+*::before,
+*::after {
+  animation: none !important;
+  animation-delay: 0ms !important;
+  animation-duration: 0ms !important;
+  animation-iteration-count: 1 !important;
+  transition: none !important;
+  transition-delay: 0ms !important;
+  transition-duration: 0ms !important;
+}
+
+.reveal,
+.reveal-section,
+.reveal-card,
+.about-page .reveal,
+.about-timeline,
+.about-timeline-item,
+.home-page .hero-animate .anim-item,
+.js-enabled .reveal,
+.js-enabled.home-page .reveal,
+.js-enabled.home-page .reveal-section,
+.js-enabled.home-page .reveal-card {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.nav-cta:hover,
+.nav-cta:focus-visible,
+.info-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.interest-card:hover,
+.modal-card:hover,
+.modal-card:focus-visible,
+.geii-callout:hover,
+.geii-callout:focus-visible,
+.card-action-arrow,
+.modal-card:hover .card-action-arrow,
+.modal-card:focus-visible .card-action-arrow,
+.home-page .skills-section .geii-callout:hover .geii-callout-arrow,
+.home-page .skills-section .geii-callout:focus-visible .geii-callout-arrow {
+  transform: none !important;
+}
+
+.typewriter::after {
+  animation: none !important;
+}
+
+@media (min-width: 981px) {
+  .home-page .hero-section .hero-visual {
+    left: clamp(430px, 39vw, 630px);
+  }
+
+  .home-page .hero-section .hero-photo img {
+    width: 108%;
+    min-width: 108%;
+    object-position: 55% center;
+  }
+}
+
+.modal,
+.modal-panel,
+.modal:not([hidden]),
+.modal:not([hidden]) .modal-panel {
+  animation: none !important;
+  transition: none !important;
+}
