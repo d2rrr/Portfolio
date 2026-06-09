@@ -11661,3 +11661,218 @@ a.contact-mini-card {
     font-size: 0.72rem;
   }
 }
+
+/* Mobile home hero must fill the first viewport before the about section appears. */
+@media (max-width: 768px) {
+  .home-page .hero-section {
+    min-height: 100vh !important;
+    min-height: 100svh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 104px !important;
+    padding-bottom: 38px !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(90deg, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.66)),
+      linear-gradient(180deg, rgba(5, 5, 5, 0.58) 0%, rgba(5, 5, 5, 0.2) 46%, rgba(5, 5, 5, 0.88) 100%),
+      url("../assets/image a propos/photo darren .png") center 44px / auto 112% no-repeat !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .home-page .hero-grid {
+    min-height: calc(100vh - 142px) !important;
+    min-height: calc(100svh - 142px) !important;
+    min-height: calc(100dvh - 142px) !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .home-page .hero-content {
+    width: 100%;
+  }
+
+  .home-page .hero-section .hero-visual,
+  .home-page .hero-section .hero-photo,
+  .home-page .hero-section .hero-photo img {
+    display: none !important;
+  }
+
+  .home-page .hero-section .floating-chip {
+    display: inline-flex !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    z-index: 4;
+    font-size: 0.78rem;
+    padding: 10px 13px;
+    background: rgba(5, 5, 5, 0.72) !important;
+  }
+}
+
+/* Align the home about paragraph to the same visual text block as the lead. */
+.home-page .about-preview-copy > p:not(.eyebrow):not(.lead) {
+  width: min(100%, 720px);
+}
+
+/* Cleaner mobilisation layout inside the three about curiosity modals. */
+.about-curiosity-modal .skill-notion-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 620px);
+  max-width: 620px;
+  gap: 12px;
+}
+
+.about-curiosity-modal .skill-notion-list li {
+  max-width: none;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 12px 14px 12px 34px;
+}
+
+.about-curiosity-modal .skill-notion-list li::before {
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 640px) {
+  .about-curiosity-modal .skill-notion-list {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+}
+
+/* Strict final requested fixes: mobile hero badge and about paragraph alignment. */
+.home-page .hero-mobile-chip {
+  display: none !important;
+}
+
+.home-page .about-preview-lead,
+.home-page .about-preview-description {
+  width: min(100%, 640px);
+  max-width: 640px;
+}
+
+.home-page .about-preview-copy > .about-preview-description {
+  width: min(100%, 640px) !important;
+  max-width: 640px !important;
+}
+
+.home-page .about-preview-description {
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+@media (min-width: 981px) {
+  .home-page .about-preview-lead {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .hero-content {
+    position: relative;
+    padding-bottom: 58px;
+  }
+
+  .home-page .hero-section .hero-mobile-chip {
+    display: inline-flex !important;
+    position: absolute;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 5;
+    font-size: 0.78rem;
+    padding: 10px 13px;
+    border-color: rgba(125, 240, 196, 0.36);
+    background: rgba(5, 5, 5, 0.74) !important;
+  }
+
+  .home-page .hero-section .hero-visual .floating-chip {
+    display: none !important;
+  }
+}
+
+/* Desktop-only centering for selected about curiosity modal tools. */
+@media (min-width: 769px) {
+  #about-modal-electrotechnique .about-curiosity-tool-grid,
+  #about-modal-automatisation .about-curiosity-tool-grid {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #about-modal-electrotechnique .about-curiosity-tool-grid .skill-tool,
+  #about-modal-automatisation .about-curiosity-tool-grid .skill-tool {
+    flex: 0 1 190px;
+  }
+}
+
+/* Home about text group: desktop subtitle stays on one line, description aligns below it. */
+.home-page .about-home-text-group {
+  width: max-content;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home-page .about-home-subtitle {
+  width: auto !important;
+  max-width: none !important;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+.home-page .about-home-description {
+  width: 0 !important;
+  min-width: 100%;
+  max-width: none !important;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+@media (min-width: 981px) {
+  .home-page .about-home-subtitle {
+    white-space: nowrap !important;
+    font-size: clamp(0.96rem, 1.22vw, 1.06rem);
+  }
+
+  .home-page .about-home-text-group {
+    width: max-content;
+  }
+
+  .home-page .about-home-description span {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .about-home-text-group {
+    width: 100%;
+  }
+
+  .home-page .about-home-description {
+    width: 100% !important;
+  }
+
+  .home-page .about-home-subtitle {
+    max-width: 640px !important;
+    margin-right: auto;
+    margin-left: auto;
+    white-space: normal !important;
+  }
+
+  .home-page .about-home-description span {
+    white-space: normal;
+  }
+}
