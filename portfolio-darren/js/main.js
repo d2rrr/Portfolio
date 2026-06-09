@@ -90,6 +90,12 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeModal();
 });
 
+document.querySelectorAll(".reveal, .reveal-section, .reveal-card, .about-timeline").forEach((element) => {
+  element.classList.add("is-visible");
+  element.style.removeProperty("--reveal-delay");
+  element.style.transitionDelay = "0ms";
+});
+
 const revealElements = document.querySelectorAll(".reveal");
 const revealDelayStep = isSmallScreen ? 45 : 80;
 
@@ -119,7 +125,6 @@ if (prefersReducedMotion) {
 }
 
 const homeAnimationElements = document.querySelectorAll(".reveal-section, .reveal-card");
-console.log("Animations accueil chargées :", homeAnimationElements.length);
 
 if (homeAnimationElements.length) {
   if (prefersReducedMotion) {
@@ -129,7 +134,6 @@ if (homeAnimationElements.length) {
       (entries, observerInstance) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("Animation déclenchée :", entry.target);
             entry.target.classList.add("is-visible");
             observerInstance.unobserve(entry.target);
           }
@@ -152,6 +156,11 @@ if (homeAnimationElements.length) {
     homeAnimationElements.forEach((element) => element.classList.add("is-visible"));
   }
 }
+
+document.querySelectorAll(".reveal, .reveal-section, .reveal-card, .about-timeline").forEach((element) => {
+  element.classList.add("is-visible");
+  element.style.transitionDelay = "0ms";
+});
 
 const typewriter = document.querySelector("[data-typewriter]");
 
@@ -289,7 +298,7 @@ document.querySelectorAll("[data-project-slider]").forEach((slider) => {
   updateSlider();
 });
 } catch (error) {
-  document.body.classList.remove("js-enabled", "animations-ready");
+  document.body.classList.remove("js-enabled", "animations-ready", "motion-ready");
   console.error("Portfolio animations failed to initialize.", error);
 }
 }
