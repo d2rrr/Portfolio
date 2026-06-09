@@ -181,6 +181,52 @@
       </div>
     </section>
 
+    <section class="section about-section about-curiosity-section">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Curiosité technique</p>
+          <h2>Ma curiosité portée à certains domaines</h2>
+        </div>
+        <div class="skills-card-grid about-curiosity-grid">
+          <article class="info-card skill-card reveal-card">
+            <span class="skill-icon" aria-hidden="true"><img src="assets/icone svg/technology-icon.svg" alt=""></span>
+            <h3>Électronique</h3>
+            <p>J’apporte ma curiosité à la conception de circuits, au choix des composants et au passage d’un schéma vers une carte électronique concrète.</p>
+            <div class="skill-tags" aria-label="Notions associées à Électronique">
+              <span>Circuits</span>
+              <span>Composants</span>
+              <span>Routage</span>
+            </div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="about-modal-electronique">En savoir plus</button>
+          </article>
+
+          <article class="info-card skill-card reveal-card">
+            <span class="skill-icon skill-icon-electrotech" aria-hidden="true"><img src="assets/icone svg/spark-icon.svg" alt=""></span>
+            <h3>Électrotechnique</h3>
+            <p>Ce domaine m’attire par son lien avec les systèmes électriques réels, les mesures, le câblage et la sécurité des installations.</p>
+            <div class="skill-tags" aria-label="Notions associées à Électrotechnique">
+              <span>Câblage</span>
+              <span>Mesures</span>
+              <span>Sécurité</span>
+            </div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="about-modal-electrotechnique">En savoir plus</button>
+          </article>
+
+          <article class="info-card skill-card reveal-card">
+            <span class="skill-icon" aria-hidden="true"><img src="assets/icone svg/mechanical-arm-assembly-icon.svg" alt=""></span>
+            <h3>Automatisation</h3>
+            <p>Je cherche à mieux comprendre comment un système peut être commandé à l’aide de capteurs, d’actionneurs et d’une logique programmée.</p>
+            <div class="skill-tags" aria-label="Notions associées à Automatisation">
+              <span>Capteurs</span>
+              <span>Commande</span>
+              <span>Automate</span>
+            </div>
+            <button class="btn btn-secondary btn-small" type="button" data-modal-target="about-modal-automatisation">En savoir plus</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section about-section">
       <div class="section-container">
         <div class="section-heading reveal">
@@ -227,6 +273,107 @@
       </div>
     </section>
   </main>
+
+  <div class="modal" id="about-modal-electronique" role="dialog" aria-modal="true" aria-labelledby="about-modal-electronique-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal about-curiosity-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="assets/icone svg/technology-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Curiosité technique</p>
+          <h2 id="about-modal-electronique-title">Électronique</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">J’apporte ma curiosité à l’électronique car elle permet de transformer une idée technique en circuit réel. À travers mes projets, je découvre le rôle des composants, la conception de schémas, le routage PCB et les vérifications nécessaires au bon fonctionnement d’une carte.</p>
+
+      <section class="skill-detail-section" aria-labelledby="about-electronique-tools-title">
+        <h3 id="about-electronique-tools-title">OUTILS</h3>
+        <div class="skill-tool-grid about-curiosity-tool-grid">
+          <span class="skill-tool"><img src="assets/icone svg/proteus.svg" alt="Logo Proteus">Proteus</span>
+          <span class="skill-tool"><img src="assets/icone svg/kicad.svg" alt="Logo KiCad">KiCad</span>
+          <span class="skill-tool"><img src="assets/icone svg/arduino.svg" alt="Logo Arduino">Arduino IDE</span>
+          <span class="skill-tool"><img src="assets/icone svg/stmicroelectronics.svg" alt="Logo STM32">STM32</span>
+        </div>
+      </section>
+
+      <section class="skill-detail-section" aria-labelledby="about-electronique-interest-title">
+        <h3 id="about-electronique-interest-title">Ce qui m’intéresse</h3>
+        <ul class="skill-notion-list">
+          <li>Conception de circuits</li>
+          <li>Routage PCB</li>
+          <li>Choix des composants</li>
+          <li>Tests de fonctionnement</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="about-modal-electrotechnique" role="dialog" aria-modal="true" aria-labelledby="about-modal-electrotechnique-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal about-curiosity-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="assets/icone svg/spark-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Curiosité technique</p>
+          <h2 id="about-modal-electrotechnique-title">Électrotechnique</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Ce domaine m’attire parce qu’il relie directement la théorie électrique aux systèmes réels. Je découvre progressivement le câblage, les mesures, la sécurité et le fonctionnement d’équipements utilisés dans des installations concrètes.</p>
+
+      <section class="skill-detail-section" aria-labelledby="about-electrotechnique-tools-title">
+        <h3 id="about-electrotechnique-tools-title">OUTILS</h3>
+        <div class="skill-tool-grid about-curiosity-tool-grid about-curiosity-tool-grid-three">
+          <span class="skill-tool">Multimètre</span>
+          <span class="skill-tool">Alimentation de laboratoire</span>
+          <span class="skill-tool"><img src="assets/icone svg/logo-WinRelais.svg" alt="Logo WinRelais">WinRelais</span>
+        </div>
+      </section>
+
+      <section class="skill-detail-section" aria-labelledby="about-electrotechnique-interest-title">
+        <h3 id="about-electrotechnique-interest-title">Ce qui m’intéresse</h3>
+        <ul class="skill-notion-list">
+          <li>Câblage</li>
+          <li>Mesures électriques</li>
+          <li>Sécurité</li>
+          <li>Fonctionnement des équipements</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="about-modal-automatisation" role="dialog" aria-modal="true" aria-labelledby="about-modal-automatisation-title" hidden>
+    <div class="modal-panel skill-modal-wide skill-detail-modal about-curiosity-modal">
+      <button class="modal-close" type="button" aria-label="Fermer la pop-up">×</button>
+      <div class="skill-detail-header">
+        <span class="skill-detail-icon" aria-hidden="true"><img src="assets/icone svg/mechanical-arm-assembly-icon.svg" alt=""></span>
+        <div>
+          <p class="eyebrow">Curiosité technique</p>
+          <h2 id="about-modal-automatisation-title">Automatisation</h2>
+        </div>
+      </div>
+      <p class="skill-detail-intro">Je cherche à mieux comprendre l’automatisation, car elle montre comment un système peut réagir à des informations et être piloté de manière logique. Cette approche m’aide à relier capteurs, actionneurs et programmes dans un même fonctionnement.</p>
+
+      <section class="skill-detail-section" aria-labelledby="about-automatisation-tools-title">
+        <h3 id="about-automatisation-tools-title">OUTILS</h3>
+        <div class="skill-tool-grid about-curiosity-tool-grid">
+          <span class="skill-tool"><img src="assets/icone svg/siemens.svg" alt="Logo TIA Portal">TIA Portal</span>
+          <span class="skill-tool">Grafcet</span>
+          <span class="skill-tool">Ladder</span>
+          <span class="skill-tool">SCL</span>
+        </div>
+      </section>
+
+      <section class="skill-detail-section" aria-labelledby="about-automatisation-interest-title">
+        <h3 id="about-automatisation-interest-title">Ce qui m’intéresse</h3>
+        <ul class="skill-notion-list">
+          <li>Logique de commande</li>
+          <li>Capteurs</li>
+          <li>Actionneurs</li>
+          <li>Automates programmables</li>
+        </ul>
+      </section>
+    </div>
+  </div>
 
   <div class="modal travel-modal" id="travel-modal" hidden role="dialog" aria-modal="true" aria-labelledby="travel-modal-title">
     <div class="modal-panel travel-modal-panel">
