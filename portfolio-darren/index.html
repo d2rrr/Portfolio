@@ -83,12 +83,14 @@
     <section class="section about-preview-section reveal-section" id="a-propos">
       <div class="section-container about-preview-grid">
         <div class="about-visual reveal">
-          <div class="visual-placeholder">Visuels à ajouter plus tard</div>
+          <div class="about-preview-photo">
+            <img src="assets/image a propos/photo darren .png" alt="Portrait de Darren">
+          </div>
         </div>
         <div class="about-preview-copy reveal">
           <p class="eyebrow">À propos</p>
           <h2>À propos</h2>
-          <p class="lead">Un parcours en construction porté par la curiosité et l’envie de progresser.</p>
+          <p class="lead about-preview-lead">Un parcours en construction porté par la curiosité et l’envie de progresser.</p>
           <p>Étudiant en BUT GEII à l’IUT de Bordeaux, je développe mes compétences à travers des projets techniques concrets. Le football et les voyages font aussi partie de ce qui me construit au quotidien.</p>
           <a class="btn btn-primary" href="a-propos.html">En savoir plus</a>
         </div>
@@ -226,69 +228,42 @@
     </section>
 
     <section class="section contact-section reveal-section" id="contact">
-      <div class="section-container contact-grid">
+      <div class="section-container contact-grid contact-card-layout">
         <div class="contact-copy reveal">
           <p class="eyebrow">Contact</p>
           <h2>Me contacter</h2>
           <p>Vous pouvez me contacter pour échanger autour de mes projets, de ma formation ou de mon parcours.</p>
-          <div class="contact-list">
-            <p class="reveal-card">
-              <img class="contact-icon" src="assets/icone contact/logo geolocalisation.png" alt="" aria-hidden="true">
-              <strong>Localisation</strong>
-              <span>Bordeaux, France</span>
-            </p>
-            <p class="reveal-card">
-              <img class="contact-icon" src="assets/icone contact/logo email.png" alt="" aria-hidden="true">
-              <strong>Mail personnel</strong>
-              <a href="mailto:dasilvadarren@outlook.fr">dasilvadarren@outlook.fr</a>
-            </p>
-            <p class="reveal-card">
-              <img class="contact-icon" src="assets/icone contact/logo email.png" alt="" aria-hidden="true">
-              <strong>Mail universitaire</strong>
-              <a href="mailto:darren.de-oliveira-da-silva@etu.u-bordeaux.fr">darren.de-oliveira-da-silva@etu.u-bordeaux.fr</a>
-            </p>
-            <div class="contact-socials reveal-card">
-              <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn à compléter">
-                <img src="assets/icone contact/logo likenkedin.png" alt="LinkedIn">
-              </a>
-              <a href="https://github.com/d2rrr" class="social-icon" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
-                <img src="assets/icone contact/logo github.png" alt="GitHub">
-              </a>
-            </div>
+        </div>
+        <div class="contact-card-grid reveal">
+          <a class="contact-mini-card reveal-card" href="mailto:darren.de-oliveira-da-silva@etu.u-bordeaux.fr">
+            <img class="contact-icon" src="assets/icone contact/logo email.png" alt="" aria-hidden="true">
+            <strong>Mail</strong>
+            <span>darren.de-oliveira-da-silva@etu.u-bordeaux.fr</span>
+          </a>
+          <a class="contact-mini-card reveal-card" href="https://linkedin.com/in/darren-de-oliveira-da-silva-9b4b7139a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img class="contact-icon" src="assets/icone contact/logo likenkedin.png" alt="" aria-hidden="true">
+            <strong>LinkedIn</strong>
+            <span>Darren DE OLIVEIRA -- DA SILVA</span>
+          </a>
+          <a class="contact-mini-card reveal-card" href="https://github.com/d2rrr" target="_blank" rel="noopener noreferrer">
+            <img class="contact-icon" src="assets/icone contact/logo github.png" alt="" aria-hidden="true">
+            <strong>GitHub</strong>
+            <span>github.com/d2rrr</span>
+          </a>
+          <div class="contact-mini-card reveal-card">
+            <img class="contact-icon" src="assets/icone contact/logo geolocalisation.png" alt="" aria-hidden="true">
+            <strong>Localisation</strong>
+            <span>Bordeaux, France</span>
           </div>
         </div>
-
-        <form class="contact-form reveal" action="#" method="post">
-          <label for="name">Nom</label>
-          <input id="name" name="name" type="text" placeholder="Votre nom">
-          <label for="email">Adresse mail</label>
-          <input id="email" name="email" type="email" placeholder="votre.mail@exemple.fr">
-          <label for="subject">Sujet</label>
-          <input id="subject" name="subject" type="text" placeholder="Sujet du message">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Votre message"></textarea>
-          <button class="btn btn-primary" type="submit">Envoyer</button>
-          <p class="form-note" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="section-container footer-inner">
-      <div>
-        <strong>Darren DE OLIVEIRA -- DA SILVA</strong>
-        <p>Étudiant en BUT GEII · Bordeaux, France</p>
-      </div>
-      <nav aria-label="Navigation secondaire">
-        <a href="a-propos.html">À propos</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-    <div class="section-container footer-bottom">
-      <span>© 2026 Darren DE OLIVEIRA -- DA SILVA.</span>
-      <span>Portfolio étudiant.</span>
+    <div class="section-container footer-bottom footer-simple">
+      <span>© 2026 Darren DE OLIVEIRA -- DA SILVA</span>
+      <span>Portfolio</span>
     </div>
   </footer>
 
