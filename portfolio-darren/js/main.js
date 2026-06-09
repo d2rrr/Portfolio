@@ -1,6 +1,4 @@
 function initPortfolio() {
-document.body.classList.add("js-enabled");
-
 try {
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
@@ -146,40 +144,13 @@ if (homeAnimationElements.length) {
   }
 }
 
-window.requestAnimationFrame(() => {
-  window.requestAnimationFrame(() => {
-    document.body.classList.add("animations-ready");
-  });
-});
-
 const typewriter = document.querySelector("[data-typewriter]");
 
 if (typewriter) {
   const typewriterText = typewriter.dataset.typewriter || typewriter.textContent.trim();
   const target = typewriter.querySelector("span") || typewriter;
   typewriter.setAttribute("aria-label", typewriterText);
-
-  if (prefersReducedMotion) {
-    target.textContent = typewriterText;
-  } else {
-    target.textContent = "";
-
-    let characterIndex = 0;
-    const typewriterSpeed = isSmallScreen ? 34 : 42;
-    const typewriterStartDelay = isSmallScreen ? 620 : 940;
-    const typeNextCharacter = () => {
-      target.textContent = typewriterText.slice(0, characterIndex + 1);
-      characterIndex += 1;
-
-      if (characterIndex < typewriterText.length) {
-        window.setTimeout(typeNextCharacter, typewriterSpeed);
-      }
-    };
-
-    window.requestAnimationFrame(() => {
-      window.setTimeout(typeNextCharacter, typewriterStartDelay);
-    });
-  }
+  target.textContent = typewriterText;
 }
 
 const contactForm = document.querySelector(".contact-form");
