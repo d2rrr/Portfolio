@@ -10108,7 +10108,6 @@ ul {
 }
 
 .modal-panel {
-  transform: none !important;
   transition: opacity 180ms ease, transform 180ms ease !important;
 }
 
@@ -10133,5 +10132,173 @@ ul {
     visibility: visible !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+.modal-card {
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-card:focus-visible {
+  border-color: rgba(125, 240, 196, 0.68) !important;
+  box-shadow:
+    0 0 0 3px rgba(125, 240, 196, 0.18),
+    0 24px 70px rgba(0, 0, 0, 0.42) !important;
+}
+
+.card-action-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(125, 240, 196, 0.3);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(125, 240, 196, 0.12), rgba(125, 240, 196, 0.045)),
+    rgba(255, 255, 255, 0.035);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.modal-card:hover .card-action-arrow,
+.modal-card:focus-visible .card-action-arrow {
+  border-color: rgba(125, 240, 196, 0.62);
+  background: rgba(125, 240, 196, 0.16);
+  box-shadow: 0 0 24px rgba(125, 240, 196, 0.18);
+  transform: translate(3px, -3px);
+}
+
+.home-page .skills-section .modal-card,
+.about-curiosity-section .modal-card,
+.kart-project-page .kah-project-card.modal-card {
+  padding-bottom: 78px;
+}
+
+.home-page .skills-section .modal-card .skill-tags,
+.about-curiosity-section .modal-card .skill-tags,
+.kart-project-page .kah-project-card.modal-card .skill-tags {
+  margin-bottom: 0;
+}
+
+.interest-card.modal-card .interest-body {
+  position: relative;
+  padding-bottom: 58px;
+}
+
+.interest-card.modal-card .card-action-arrow {
+  right: 22px;
+  bottom: 22px;
+}
+
+@keyframes stableFadeDown {
+  from {
+    opacity: 0.01;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stableFadeUp {
+  from {
+    opacity: 0.01;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.motion-ready .site-header {
+  animation: stableFadeDown 420ms ease-out both;
+}
+
+body.motion-ready .hero-content,
+body.motion-ready .hero-visual,
+body.motion-ready .reveal.is-visible,
+body.motion-ready .reveal-section.is-visible,
+body.motion-ready .reveal-card.is-visible {
+  animation: stableFadeUp 460ms ease-out both !important;
+}
+
+body.motion-ready.home-page .hero-animate .hero-content > .anim-item,
+body.motion-ready.home-page .hero-animate > .hero-visual.anim-item {
+  animation: stableFadeUp 460ms ease-out both !important;
+}
+
+body.motion-ready .modal:not([hidden]) {
+  animation: stableModalFade 160ms ease-out both;
+}
+
+body.motion-ready .modal:not([hidden]) .modal-panel {
+  animation: stableModalPanel 180ms ease-out both;
+}
+
+@keyframes stableModalFade {
+  from {
+    opacity: 0.01;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stableModalPanel {
+  from {
+    opacity: 0.01;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .card-action-arrow {
+    right: 18px;
+    bottom: 18px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .home-page .skills-section .modal-card,
+  .about-curiosity-section .modal-card,
+  .kart-project-page .kah-project-card.modal-card {
+    padding-bottom: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.motion-ready .site-header,
+  body.motion-ready .hero-content,
+  body.motion-ready .hero-visual,
+  body.motion-ready .reveal.is-visible,
+  body.motion-ready .reveal-section.is-visible,
+  body.motion-ready .reveal-card.is-visible,
+  body.motion-ready .modal:not([hidden]),
+  body.motion-ready .modal:not([hidden]) .modal-panel {
+    animation: none !important;
+  }
+
+  .card-action-arrow {
+    transition: none !important;
   }
 }

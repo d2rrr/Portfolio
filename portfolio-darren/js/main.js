@@ -1,5 +1,6 @@
 function initPortfolio() {
 try {
+document.body.classList.add("motion-ready");
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -65,6 +66,14 @@ function closeModal(modal = activeModal) {
 
 modalButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    openModal(document.getElementById(button.dataset.modalTarget));
+  });
+
+  button.addEventListener("keydown", (event) => {
+    if (button.tagName === "BUTTON") return;
+    if (event.key !== "Enter" && event.key !== " ") return;
+
+    event.preventDefault();
     openModal(document.getElementById(button.dataset.modalTarget));
   });
 });
