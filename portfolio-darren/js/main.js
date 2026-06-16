@@ -1,5 +1,8 @@
 function initPortfolio() {
 try {
+document.documentElement.classList.add("js");
+document.body.classList.add("js-enabled", "motion-ready");
+
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
@@ -87,19 +90,76 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeModal();
 });
 
-document.querySelectorAll(".reveal, .reveal-section, .reveal-card, .about-timeline").forEach((element) => {
-  element.classList.add("is-visible");
-  element.style.removeProperty("--reveal-delay");
-  element.style.transitionDelay = "0ms";
-});
+const urlParams = new URLSearchParams(window.location.search);
+const requestedPopup = urlParams.get("popup");
+const requestedTarget = urlParams.get("target") || window.location.hash.slice(1);
+
+if (requestedPopup === "concevoir") {
+  const competencesSection = requestedTarget === "competences" ? document.getElementById("competences") : null;
+  const concevoirModal = document.getElementById("modal-concevoir");
+
+  const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+  document.documentElement.style.scrollBehavior = "auto";
+
+  if (concevoirModal) {
+    openModal(concevoirModal);
+  }
+
+  if (competencesSection) {
+    const targetTop = competencesSection.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo(0, targetTop);
+  }
+
+  document.documentElement.style.scrollBehavior = previousScrollBehavior;
+}
+
+const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const animatedElements = document.querySelectorAll(".scroll-reveal");
+
+if ("IntersectionObserver" in window && !motionQuery.matches) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -8% 0px",
+  });
+
+  animatedElements.forEach((element) => revealObserver.observe(element));
+} else {
+  animatedElements.forEach((element) => element.classList.add("is-visible"));
+}
 
 const typewriter = document.querySelector("[data-typewriter]");
 
 if (typewriter) {
   const typewriterText = typewriter.dataset.typewriter || typewriter.textContent.trim();
   const target = typewriter.querySelector("span") || typewriter;
+  typewriter.classList.add("typewriter-ready");
   typewriter.setAttribute("aria-label", typewriterText);
   target.textContent = typewriterText;
+
+  if (!motionQuery.matches) {
+    const characters = Array.from(typewriterText);
+    let index = 0;
+    target.textContent = "";
+
+    const typeNextCharacter = () => {
+      index += 1;
+      target.textContent = characters.slice(0, index).join("");
+
+      if (index < characters.length) {
+        window.setTimeout(typeNextCharacter, 36);
+      } else {
+        target.textContent = typewriterText;
+      }
+    };
+
+    window.setTimeout(typeNextCharacter, 260);
+  }
 }
 
 const contactForm = document.querySelector(".contact-form");
@@ -110,7 +170,7 @@ if (contactForm) {
 
     const note = contactForm.querySelector(".form-note");
     if (note) {
-      note.textContent = "Formulaire statique pour lâ€™instant : aucun message nâ€™est envoyÃ©.";
+      note.textContent = "Formulaire statique pour l’instant : aucun message n’est envoyé.";
     }
   });
 }
@@ -219,8 +279,36 @@ document.querySelectorAll("[data-project-slider]").forEach((slider) => {
 
   updateSlider();
 });
+
+document.querySelectorAll("[data-c1-tabs]").forEach((tabsRoot) => {
+  const tabs = Array.from(tabsRoot.querySelectorAll("[data-c1-tab]"));
+  const panels = Array.from(tabsRoot.querySelectorAll("[data-c1-panel]"));
+
+  if (!tabs.length || !panels.length) return;
+
+  const activateTab = (targetId) => {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.c1Tab === targetId;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    panels.forEach((panel) => {
+      const isActive = panel.dataset.c1Panel === targetId;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = !isActive;
+    });
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activateTab(tab.dataset.c1Tab));
+  });
+
+  activateTab(tabs.find((tab) => tab.classList.contains("is-active"))?.dataset.c1Tab || tabs[0].dataset.c1Tab);
+});
 } catch (error) {
-  document.body.classList.remove("js-enabled");
+  document.documentElement.classList.remove("js");
+  document.body.classList.remove("js-enabled", "motion-ready");
   console.error("Portfolio scripts failed to initialize.", error);
 }
 }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css?v=anim-fix-2">
 </head>
 <body class="kart-project-page">
   <div class="ambient-bg" aria-hidden="true"></div>
@@ -65,7 +65,7 @@
         <article class="kah-panel kah-presentation-card reveal">
           <div class="kah-section-heading">
             <p class="eyebrow">Présentation</p>
-            <h2 id="presentation-title">⚙ï¸ Présentation du projet</h2>
+            <h2 id="presentation-title">?? Présentation du projet</h2>
           </div>
           <div class="kah-presentation-layout">
             <figure class="kah-figure kah-main-figure">
@@ -74,16 +74,24 @@
               </div>
               <figcaption>Image principale du projet</figcaption>
             </figure>
-            <div class="kah-text-flow">
-              <p>Le projet KAH consiste à concevoir l’électronique d’un KART à hélice piloté à distance.</p>
-              <p>À partir du cahier des charges de Toy Corporation, le système repose sur deux cartes : une carte récepteur installée sur le KART et une carte émetteur intégrée à la manette.</p>
+            <div class="kah-text-flow kah-presentation-copy">
+              <p class="kah-presentation-intro">Le projet KAH consiste à concevoir l’électronique d’un KART à hélice piloté à distance.</p>
+              <div class="kah-info-block">
+                <h3>Objectif du projet</h3>
+                <p>Réaliser un système capable de recevoir des commandes depuis une manette et de piloter les actions principales du KART : avancement, direction et klaxon.</p>
+              </div>
+              <div class="kah-info-block">
+                <h3>Architecture du système</h3>
+                <p>Le système repose sur deux cartes électroniques complémentaires : une carte émetteur intégrée à la manette et une carte récepteur installée sur le KART.</p>
+              </div>
+              <h3 class="kah-subheading">Cartes électroniques</h3>
               <div class="kah-soft-grid">
                 <article class="kah-soft-block">
-                  <h3>📡 Carte récepteur</h3>
+                  <h3>?? Carte récepteur</h3>
                   <p>Installée sur le KART, elle reçoit les commandes et les transforme en actions : avancement, direction et klaxon.</p>
                 </article>
                 <article class="kah-soft-block">
-                  <h3>🎮 Carte émetteur</h3>
+                  <h3>?? Carte émetteur</h3>
                   <p>Intégrée à la manette, elle sert d’interface homme-machine pour piloter simplement le KART.</p>
                 </article>
               </div>
@@ -98,19 +106,29 @@
         <article class="kah-panel kah-organisation-card reveal">
           <div class="kah-section-heading">
             <p class="eyebrow">Organisation</p>
-            <h2 id="organisation-title">🧩 Organisation du projet</h2>
+            <h2 id="organisation-title">?? Organisation du projet</h2>
           </div>
           <div class="kah-organisation-layout">
-            <div class="kah-text-flow">
-              <p>Ce projet a été réalisé en équipe de huit personnes, réparties en deux groupes de quatre.</p>
-              <p>Un groupe s’est concentré sur la carte émetteur, l’autre sur la carte récepteur. Cette organisation nous a permis d’avancer en parallèle, de la conception aux vérifications finales.</p>
-              <p>Le projet intégrait aussi une partie informatique avec de la programmation sur les cartes électroniques. La répartition des tâches a donc été essentielle pour suivre l’avancement et garder une bonne cohérence entre les étapes.</p>
+            <div class="kah-text-flow kah-organisation-copy">
+              <p class="kah-presentation-intro">Le projet a été réalisé en équipe de huit personnes, avec deux groupes de quatre.</p>
+              <div class="kah-info-block">
+                <h3>Répartition de l’équipe</h3>
+                <p>Deux cartes ont structuré le travail : la <strong>carte émetteur</strong> dans la manette et la <strong>carte récepteur</strong> sur le KART.</p>
+              </div>
+              <div class="kah-info-block">
+                <h3>Mon implication</h3>
+                <p>Mon groupe s’est concentré sur la <strong>carte émetteur</strong> : <strong>traitement</strong>, alimentation et <strong>transmission infrarouge</strong>.</p>
+              </div>
+              <div class="kah-info-block">
+                <h3>Coordination du projet</h3>
+                <p>La compétence C1, avec l’analyse fonctionnelle, a aidé à garder une cohérence entre conception, fabrication et vérifications.</p>
+              </div>
               <div class="kah-facts" aria-label="Synthèse de l'organisation">
-                <span>👥 Équipe : 8 personnes</span>
-                <span>🔀 Répartition : 2 groupes de 4</span>
-                <span>📡 Groupe émetteur</span>
-                <span>🏎ï¸ Groupe récepteur</span>
-                <span>💻 Partie informatique</span>
+                <span>?? Équipe : 8 personnes</span>
+                <span>?? Répartition : 2 groupes de 4</span>
+                <span>?? Groupe émetteur</span>
+                <span>?? Groupe récepteur</span>
+                <span>?? Partie informatique</span>
               </div>
             </div>
             <figure class="kah-figure kah-synoptic-figure">
@@ -128,18 +146,34 @@
       <div class="section-container">
         <article class="kah-panel kah-role-card reveal">
           <p class="eyebrow">Contribution</p>
-          <h2 id="role-title">👨‍💻 Mon rôle dans le projet</h2>
-          <div class="kah-text-flow">
-            <p>J’ai participé aux différentes phases du projet, de la conception jusqu’aux vérifications finales.</p>
-            <p>En conception, j’ai travaillé sur la carte émetteur, notamment sur le traitement de l’information et la gestion de l’énergie afin d’assurer la transmission des commandes.</p>
-            <p>Pour la partie informatique, je suis intervenu sur la carte récepteur afin d’acquérir et traiter la trame infrarouge envoyée par l’émetteur.</p>
-            <p>J’ai aussi participé à la fabrication des deux cartes électroniques, puis aux tests des fonctions traitement et énergie du récepteur.</p>
+          <h2 id="role-title">????? Mon rôle dans le projet</h2>
+          <div class="kah-text-flow kah-role-copy">
+            <p class="kah-presentation-intro">J’ai participé à plusieurs étapes du projet KART à hélice, depuis la conception jusqu’aux vérifications finales.</p>
+            <h3 class="kah-subheading">Mes principales interventions</h3>
+            <div class="kah-role-grid">
+              <article class="kah-role-block">
+                <h3>Conception</h3>
+                <p>Carte émetteur, bloc traitement et bloc énergie pour assurer l’envoi correct des commandes.</p>
+              </article>
+              <article class="kah-role-block">
+                <h3>Programmation</h3>
+                <p>Traitement de la trame infrarouge côté récepteur pour commander les actions du KART.</p>
+              </article>
+              <article class="kah-role-block">
+                <h3>Fabrication</h3>
+                <p>Participation à la réalisation des cartes électroniques du système.</p>
+              </article>
+              <article class="kah-role-block">
+                <h3>Vérification</h3>
+                <p>Tests des fonctions traitement et énergie de la carte récepteur pour valider le bon fonctionnement.</p>
+              </article>
+            </div>
           </div>
           <div class="kah-tags" aria-label="Contributions à compléter">
-            <span>Carte émetteur</span>
-            <span>Traitement</span>
-            <span>Énergie</span>
-            <span>Informatique récepteur</span>
+            <span>Conception émetteur</span>
+            <span>Programmation récepteur</span>
+            <span>Fabrication des cartes</span>
+            <span>Vérification récepteur</span>
           </div>
         </article>
       </div>
@@ -158,7 +192,7 @@
             <h3>Bloc énergie</h3>
             <p>Alimentation de la carte émetteur, autonomie estimée et régulation stable.</p>
             <div class="skill-tags kah-tags"><span>Autonomie</span><span>Régulation</span><span>Émetteur</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
 
           <article class="info-card skill-card kah-project-card reveal modal-card" data-modal-target="kah-modal-traitement" role="button" tabindex="0" aria-label="Ouvrir le détail Bloc traitement">
@@ -166,7 +200,7 @@
             <h3>Bloc traitement</h3>
             <p>Gestion des commandes de la manette avant leur transmission au récepteur.</p>
             <div class="skill-tags kah-tags"><span>Microcontrôleur</span><span>IHM</span><span>Émetteur</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
 
           <article class="info-card skill-card kah-project-card reveal modal-card" data-modal-target="kah-modal-informatique" role="button" tabindex="0" aria-label="Ouvrir le détail Informatique récepteur">
@@ -174,7 +208,7 @@
             <h3 class="kah-title-nowrap">Informatique récepteur</h3>
             <p>Décodage de la trame infrarouge pour piloter les actions du KART.</p>
             <div class="skill-tags kah-tags"><span>Trame infrarouge</span><span>Bits</span><span>Programmation</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
 
           <article class="info-card skill-card kah-project-card reveal modal-card" data-modal-target="kah-modal-routage" role="button" tabindex="0" aria-label="Ouvrir le détail Schéma final et routage">
@@ -182,7 +216,7 @@
             <h3 class="kah-title-nowrap">Schéma final et routage</h3>
             <p>Regroupement des blocs, schéma sous ISIS puis routage sous ARES.</p>
             <div class="skill-tags kah-tags"><span>Proteus</span><span>PCB</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
         </div>
       </div>
@@ -201,7 +235,7 @@
             <h3>Carte émetteur</h3>
             <p>Fabrication du PCB émetteur à partir du schéma et du routage validés.</p>
             <div class="skill-tags kah-tags"><span>Typon</span><span>Gravure</span><span>Soudure</span><span>Contrôle</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
 
           <article class="info-card skill-card kah-project-card reveal modal-card" data-modal-target="kah-modal-carte-recepteur" role="button" tabindex="0" aria-label="Ouvrir le détail Carte récepteur">
@@ -209,7 +243,7 @@
             <h3>Carte récepteur</h3>
             <p>Réalisation de la carte installée sur le KART, avec contrôle des pistes et du montage.</p>
             <div class="skill-tags kah-tags"><span>Typon</span><span>Gravure</span><span>Soudure</span><span>Continuité</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
         </div>
       </div>
@@ -228,7 +262,7 @@
             <h3>Traitement récepteur</h3>
             <p>Validation de la communication, des commandes et des signaux envoyés au KART.</p>
             <div class="skill-tags kah-tags"><span>Trame valide</span><span>Commandes</span><span>Oscilloscope</span><span>Signaux</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
 
           <article class="info-card skill-card kah-project-card reveal modal-card" data-modal-target="kah-modal-verif-energie" role="button" tabindex="0" aria-label="Ouvrir le détail Énergie récepteur">
@@ -236,7 +270,7 @@
             <h3>Énergie récepteur</h3>
             <p>Mesure de consommation et estimation de l’autonomie avec une batterie LiPo 2S.</p>
             <div class="skill-tags kah-tags"><span>Autonomie</span><span>LiPo 2S</span><span>Consommation</span><span>Mesure</span></div>
-            <span class="card-action-arrow" aria-hidden="true">↗</span>
+            <span class="card-action-arrow" aria-hidden="true">?</span>
           </article>
         </div>
       </div>
@@ -247,7 +281,7 @@
         <div class="kah-result-layout">
           <article class="kah-panel kah-result-copy reveal">
             <p class="eyebrow">Final</p>
-            <h2 id="resultat-title">🏁 Résultat final</h2>
+            <h2 id="resultat-title">?? Résultat final</h2>
             <div class="kah-text-flow">
               <p>Le projet a permis de relier électronique et informatique autour d’un système embarqué concret.</p>
               <p>La conception, la fabrication, la programmation et les vérifications nous ont montré comment une carte émetteur envoie des commandes et comment une carte récepteur les traite pour piloter un système réel.</p>
@@ -258,14 +292,23 @@
 
           <div class="kah-result-media">
             <article class="kah-panel reveal">
-              <div class="kah-placeholder kah-placeholder-video">
-                <span>Vidéo de la course à ajouter</span>
-              </div>
+              <figure class="kah-figure kah-result-figure">
+                <div class="kah-video-frame">
+                  <video controls preload="auto" playsinline aria-label="Vidéo finale de la course du KART à hélice">
+                    <source src="../assets/image KAH/Vidéo course KAH.mp4?v=2" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la lecture vidéo.
+                  </video>
+                </div>
+                <figcaption>Vidéo finale de la course</figcaption>
+              </figure>
             </article>
             <article class="kah-panel reveal">
-              <div class="kah-placeholder kah-placeholder-photo">
-                <span>Photo finale du KART à ajouter</span>
-              </div>
+              <figure class="kah-figure kah-result-figure">
+                <div class="kah-image-frame kah-result-photo-frame">
+                  <img src="../assets/image KAH/photo final KAH.png" alt="Photo finale du KART à hélice">
+                </div>
+                <figcaption>Photo finale du KART</figcaption>
+              </figure>
             </article>
           </div>
         </div>
@@ -618,6 +661,6 @@
     </div>
   </div>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=anim-fix-2"></script>
 </body>
 </html>
