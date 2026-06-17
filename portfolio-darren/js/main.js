@@ -262,6 +262,65 @@ document.querySelectorAll("[data-c1-tabs]").forEach((tabsRoot) => {
 
   activateTab(tabs.find((tab) => tab.classList.contains("is-active"))?.dataset.c1Tab || tabs[0].dataset.c1Tab);
 });
+
+const competenceImages = Array.from(document.querySelectorAll("body.c1-page main img"))
+  .filter((image) => !image.closest("a, button, .brand, .main-nav, .site-header"));
+
+if (competenceImages.length) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "image-lightbox";
+  lightbox.hidden = true;
+  lightbox.innerHTML = `
+    <button class="image-lightbox-close" type="button" aria-label="Fermer l'image agrandie">&times;</button>
+    <img class="image-lightbox-picture" src="" alt="">
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImage = lightbox.querySelector(".image-lightbox-picture");
+  const lightboxClose = lightbox.querySelector(".image-lightbox-close");
+
+  const closeImageLightbox = () => {
+    lightbox.hidden = true;
+    lightboxImage.removeAttribute("src");
+    lightboxImage.alt = "";
+    document.body.classList.remove("image-lightbox-open");
+  };
+
+  competenceImages.forEach((image) => {
+    image.classList.add("competence-zoomable-image");
+    image.setAttribute("tabindex", "0");
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `${image.alt || "Image"} - agrandir l'image`);
+
+    const openImage = () => {
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || "";
+      lightbox.hidden = false;
+      document.body.classList.add("image-lightbox-open");
+      lightboxClose.focus();
+    };
+
+    image.addEventListener("click", openImage);
+    image.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      event.preventDefault();
+      openImage();
+    });
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox || event.target === lightboxClose) {
+      closeImageLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !lightbox.hidden) {
+      closeImageLightbox();
+    }
+  });
+}
 } catch (error) {
   document.body.classList.remove("js-enabled");
   console.error("Portfolio scripts failed to initialize.", error);

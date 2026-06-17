@@ -417,14 +417,6 @@
         </div>
       </div>
       <p class="kah-modal-intro">J’ai travaillé sur le programme du récepteur, qui analyse la trame infrarouge envoyée par l’émetteur. Le programme vérifie d’abord que la trame est valide pour éviter une mauvaise réaction du KART. Il extrait ensuite les informations utiles : numéro d’équipe, klaxon, direction et vitesse. Ces données permettent de piloter le servomoteur et le moteur.</p>
-      <div class="kah-media-grid kah-modal-media-grid kah-modal-media-single">
-        <figure class="kah-figure">
-          <div class="kah-image-frame kah-image-frame-board kah-image-align-top">
-            <img src="../assets/image KAH/carte rcpt.png" alt="Carte récepteur du KART à hélice">
-          </div>
-          <figcaption>Carte récepteur</figcaption>
-        </figure>
-      </div>
       <section class="kah-code-section" aria-labelledby="kah-modal-informatique-code-title">
         <h3 id="kah-modal-informatique-code-title">Fonction de traitement récepteur</h3>
         <pre class="kah-code-block"><code><span class="code-comment">// Definition des fonctions de traitement</span>
@@ -630,6 +622,38 @@
         </div>
       </div>
       <p class="kah-modal-intro">Après la fabrication de la carte récepteur, nous avons vérifié les fonctions de traitement. Le récepteur devait réagir uniquement lorsqu’une trame valide était reçue : dans ce cas, la LED de connexion bleue indiquait que la trame était correcte. Nous avons aussi contrôlé que les informations de la donnée NEC étaient bien interprétées pour piloter les commandes principales : vitesse du moteur, direction du servomoteur et klaxon.</p>
+      <div class="kah-media-grid kah-modal-media-grid kah-verification-treatment-grid">
+        <figure class="kah-figure">
+          <div class="kah-image-frame">
+            <img src="../assets/image KAH/verification connexion.png" alt="Vérification de la connexion du récepteur">
+          </div>
+          <figcaption>Vérification de la connexion</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame">
+            <img src="../assets/image KAH/verification moteur.png" alt="Vérification du signal moteur">
+          </div>
+          <figcaption>Vérification du signal moteur</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame">
+            <img src="../assets/image KAH/verification Servomoteur.png" alt="Vérification du signal servomoteur">
+          </div>
+          <figcaption>Vérification du signal servomoteur</figcaption>
+        </figure>
+        <figure class="kah-figure">
+          <div class="kah-image-frame">
+            <img src="../assets/image KAH/verification klaxon.png" alt="Vérification du klaxon">
+          </div>
+          <figcaption>Vérification du klaxon</figcaption>
+        </figure>
+        <figure class="kah-figure kah-verification-treatment-main">
+          <div class="kah-image-frame">
+            <img src="../assets/image KAH/verification traitement.png" alt="Vérification globale du traitement">
+          </div>
+          <figcaption>Vérification globale du traitement</figcaption>
+        </figure>
+      </div>
       <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-verif-traitement-mobilisation">
         <h3 id="kah-modal-verif-traitement-mobilisation">Mobilisation</h3>
         <ul>
@@ -655,6 +679,14 @@
         </div>
       </div>
       <p class="kah-modal-intro">Pour la partie énergie du récepteur, l’objectif était de vérifier que le KART respectait l’autonomie minimale demandée. Le cahier des charges imposait au moins 15 minutes avec une batterie LiPo 2S. Une alimentation de laboratoire a été utilisée pour simuler la batterie, puis la consommation a été mesurée avec le moteur à mi-puissance. L’autonomie estimée était d’environ 40 minutes.</p>
+      <div class="kah-media-grid kah-modal-media-grid kah-modal-media-single kah-verification-energy-grid">
+        <figure class="kah-figure">
+          <div class="kah-image-frame">
+            <img src="../assets/image KAH/verification energie.png" alt="Vérification énergie du récepteur">
+          </div>
+          <figcaption>Vérification énergie</figcaption>
+        </figure>
+      </div>
       <section class="kah-modal-mobilisation" aria-labelledby="kah-modal-verif-energie-mobilisation">
         <h3 id="kah-modal-verif-energie-mobilisation">Mobilisation</h3>
         <ul>
