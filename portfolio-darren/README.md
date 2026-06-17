@@ -21,7 +21,6 @@ portfolio-darren/
 │   └── main.js
 ├── projets/
 │   ├── kart-helice.html
-│   ├── thermometre-bain.html
 │   ├── prothese-main.html
 │   └── pyroguard.html
 ├── assets/

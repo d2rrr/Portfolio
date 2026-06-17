@@ -8,18 +8,18 @@
   <meta property="og:url" content="https://darren-dasilva.vercel.app/competences/c3.html">
   <meta property="og:site_name" content="Portfolio Darren DE OLIVEIRA--DA SILVA">
   <meta property="og:title" content="Compétence C3 - Darren DE OLIVEIRA--DA SILVA">
-  <meta property="og:description" content="Présentation de la compétence C3 et des preuves liées aux projets KART à hélice et Thermomètre de bain.">
+  <meta property="og:description" content="Présentation de la compétence C3 et des preuves liées au projet KART à hélice.">
   <meta property="og:image" content="https://darren-dasilva.vercel.app/assets/image%20a%20propos/photo%20darren%20.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Compétence C3 - Darren DE OLIVEIRA--DA SILVA">
-  <meta name="twitter:description" content="Présentation de la compétence C3 et des preuves liées aux projets KART à hélice et Thermomètre de bain.">
+  <meta name="twitter:description" content="Présentation de la compétence C3 et des preuves liées au projet KART à hélice.">
   <meta name="twitter:image" content="https://darren-dasilva.vercel.app/assets/image%20a%20propos/photo%20darren%20.png">
   <link rel="canonical" href="https://darren-dasilva.vercel.app/competences/c3.html">
   <title>Compétence C3 - Darren DE OLIVEIRA--DA SILVA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=anim-fix-2">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="c1-page c3-page">
   <div class="ambient-bg" aria-hidden="true"></div>
@@ -109,41 +109,43 @@
         </div>
 
         <div class="c1-tabs c3-axis-tabs" role="tablist" aria-label="Projets associés à l'axe dérisquage de la compétence C3">
-          <button class="c1-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="c3-risk-panel-thermometre" id="c3-risk-tab-thermometre" data-c1-tab="thermometre">Thermomètre de bain</button>
+          <button class="c1-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="c3-risk-panel-kart" id="c3-risk-tab-kart" data-c1-tab="kart">KART à hélice</button>
         </div>
 
-        <article class="c1-project-panel c3-axis-panel c3-tdb-risk-panel is-active" id="c3-risk-panel-thermometre" role="tabpanel" aria-labelledby="c3-risk-tab-thermometre" data-c1-panel="thermometre">
-          <div class="c1-project-copy c3-tdb-risk-copy">
+        <article class="c1-project-panel c3-axis-panel c3-kart-risk-panel is-active" id="c3-risk-panel-kart" role="tabpanel" aria-labelledby="c3-risk-tab-kart" data-c1-panel="kart">
+          <div class="c1-project-copy c3-kart-risk-copy">
             <p class="eyebrow">Projet</p>
-            <h2>Thermomètre de bain</h2>
+            <h2>KART à hélice</h2>
             <div class="project-info-block">
               <h3>Contexte</h3>
-              <p>Dans le cadre du projet Thermomètre de bain, j’ai participé au dérisquage du bloc traitement avant la fabrication.</p>
+              <p>Le microcontrôleur de la carte émetteur doit démarrer correctement pour lire les commandes et créer la trame infrarouge.</p>
             </div>
             <div class="project-info-block">
               <h3>Mon travail</h3>
-              <p>J’ai simulé le montage sous ISIS Proteus afin de vérifier la logique des sorties selon la température mesurée.</p>
+              <p>J’ai dérisqué le circuit RESET avec une simulation sous ISIS Proteus.</p>
             </div>
             <div class="project-highlight-block">
-              <h3>Réalisation / vérification</h3>
-              <ul class="c1-evidence-list c3-tdb-risk-list">
-                <li>simuler le montage sous ISIS Proteus ;</li>
-                <li><strong>Eau froide</strong> : température inférieure à 36 °C ;</li>
-                <li><strong>Eau tiède</strong> : température entre 36 °C et 39 °C ;</li>
-                <li><strong>Eau chaude</strong> : température supérieure à 39 °C ;</li>
-                <li>vérifier qu’un seul voyant s’active pour chaque cas.</li>
+              <h3>Réalisation</h3>
+              <ul class="c1-evidence-list c3-kart-risk-list">
+                <li>La résistance maintient le RESET dans le bon état.</li>
+                <li>Le condensateur crée un court délai au démarrage.</li>
+                <li>La simulation montre que le RESET est validé après environ 4,94 µs.</li>
               </ul>
+            </div>
+            <div class="project-info-block">
+              <h3>Intérêt du dérisquage</h3>
+              <p>Ce délai permet au microcontrôleur de démarrer proprement avant de traiter les commandes.</p>
             </div>
             <div class="project-skill-block">
               <h3>Compétence mobilisée</h3>
-              <p>Ce travail montre ma capacité à dérisquer une solution technique par simulation avant fabrication.</p>
+              <p>Ce travail montre ma capacité à dérisquer une solution technique par CAO avant fabrication.</p>
             </div>
           </div>
           <figure class="c1-proof-placeholder">
-            <div class="c1-proof-frame">
-              <img src="../assets/image TDB/derisquage traitement.png" alt="Dérisquage du bloc traitement du Thermomètre de bain">
+            <div class="c1-proof-frame c3-reset-proof-frame">
+              <img src="../assets/image KAH/derisquage circuit reset.png" alt="Simulation du circuit RESET sous ISIS Proteus">
             </div>
-            <figcaption>Dérisquage du bloc traitement du Thermomètre de bain.</figcaption>
+            <figcaption>Simulation du circuit RESET sous ISIS Proteus</figcaption>
           </figure>
         </article>
       </div>
@@ -157,6 +159,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=anim-fix-2"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

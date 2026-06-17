@@ -1,7 +1,6 @@
 function initPortfolio() {
 try {
-document.documentElement.classList.add("js");
-document.body.classList.add("js-enabled", "motion-ready");
+document.body.classList.add("js-enabled");
 
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
@@ -94,15 +93,15 @@ const urlParams = new URLSearchParams(window.location.search);
 const requestedPopup = urlParams.get("popup");
 const requestedTarget = urlParams.get("target") || window.location.hash.slice(1);
 
-if (requestedPopup === "concevoir") {
+if (requestedPopup === "concevoir" || requestedPopup === "verifier") {
   const competencesSection = requestedTarget === "competences" ? document.getElementById("competences") : null;
-  const concevoirModal = document.getElementById("modal-concevoir");
+  const requestedModal = document.getElementById(`modal-${requestedPopup}`);
 
   const previousScrollBehavior = document.documentElement.style.scrollBehavior;
   document.documentElement.style.scrollBehavior = "auto";
 
-  if (concevoirModal) {
-    openModal(concevoirModal);
+  if (requestedModal) {
+    openModal(requestedModal);
   }
 
   if (competencesSection) {
@@ -113,54 +112,11 @@ if (requestedPopup === "concevoir") {
   document.documentElement.style.scrollBehavior = previousScrollBehavior;
 }
 
-const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const animatedElements = document.querySelectorAll(".scroll-reveal");
-
-if ("IntersectionObserver" in window && !motionQuery.matches) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -8% 0px",
-  });
-
-  animatedElements.forEach((element) => revealObserver.observe(element));
-} else {
-  animatedElements.forEach((element) => element.classList.add("is-visible"));
-}
-
-const typewriter = document.querySelector("[data-typewriter]");
-
-if (typewriter) {
-  const typewriterText = typewriter.dataset.typewriter || typewriter.textContent.trim();
-  const target = typewriter.querySelector("span") || typewriter;
-  typewriter.classList.add("typewriter-ready");
-  typewriter.setAttribute("aria-label", typewriterText);
-  target.textContent = typewriterText;
-
-  if (!motionQuery.matches) {
-    const characters = Array.from(typewriterText);
-    let index = 0;
-    target.textContent = "";
-
-    const typeNextCharacter = () => {
-      index += 1;
-      target.textContent = characters.slice(0, index).join("");
-
-      if (index < characters.length) {
-        window.setTimeout(typeNextCharacter, 36);
-      } else {
-        target.textContent = typewriterText;
-      }
-    };
-
-    window.setTimeout(typeNextCharacter, 260);
-  }
-}
+document.querySelectorAll(".reveal, .reveal-section, .reveal-card, .about-timeline").forEach((element) => {
+  element.classList.add("is-visible");
+  element.style.removeProperty("--reveal-delay");
+  element.style.transitionDelay = "0ms";
+});
 
 const contactForm = document.querySelector(".contact-form");
 
@@ -307,8 +263,7 @@ document.querySelectorAll("[data-c1-tabs]").forEach((tabsRoot) => {
   activateTab(tabs.find((tab) => tab.classList.contains("is-active"))?.dataset.c1Tab || tabs[0].dataset.c1Tab);
 });
 } catch (error) {
-  document.documentElement.classList.remove("js");
-  document.body.classList.remove("js-enabled", "motion-ready");
+  document.body.classList.remove("js-enabled");
   console.error("Portfolio scripts failed to initialize.", error);
 }
 }

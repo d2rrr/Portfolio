@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=anim-fix-3">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="home-page">
   <div class="ambient-bg" aria-hidden="true"></div>
@@ -58,7 +58,7 @@
             <span>Darren</span>
             <span>DE OLIVEIRA -- DA SILVA</span>
           </h1>
-          <p class="hero-title typewriter anim-item" data-typewriter="Étudiant en BUT Génie électrique et informatique industrielle">
+          <p class="hero-title anim-item">
             <span>Étudiant en BUT Génie électrique et informatique industrielle</span>
           </p>
           <p class="hero-tagline anim-item">Transformer des idées techniques en projets concrets.</p>
@@ -84,7 +84,7 @@
       </div>
     </section>
 
-    <section class="section about-preview-section reveal-section scroll-reveal" id="a-propos">
+    <section class="section about-preview-section reveal-section" id="a-propos">
       <div class="section-container about-preview-grid">
         <div class="about-visual reveal">
           <div class="about-preview-photo">
@@ -103,7 +103,7 @@
       </div>
     </section>
 
-    <section class="section skills-section reveal-section scroll-reveal" id="competences">
+    <section class="section skills-section reveal-section" id="competences">
       <div class="section-container">
         <div class="section-heading skills-main-heading reveal">
           <p class="eyebrow">Compétences</p>
@@ -171,7 +171,7 @@
       </div>
     </section>
 
-    <section class="section projects-section reveal-section scroll-reveal" id="projets">
+    <section class="section projects-section reveal-section" id="projets">
       <div class="section-container">
         <div class="projects-heading reveal">
           <div>
@@ -191,18 +191,6 @@
               <h3>KART à hélice</h3>
               <p>Conception et étude de la partie électronique d’un KART à hélice, avec une carte émetteur, une carte récepteur et une communication par TRAME NEC.</p>
               <a class="btn btn-secondary btn-small" href="projets/kart-helice.html">En savoir plus</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal reveal-card">
-            <div class="project-image">
-              <img src="assets/image TDB/Icone Projet TDB.png" alt="Projet thermomètre de bain pour bébé">
-            </div>
-            <div class="project-body">
-              <p class="project-type">Projet BUT GEII</p>
-              <h3>Thermomètre de bain pour bébé</h3>
-              <p>Conception d’une carte électronique permettant d’indiquer si la température de l’eau d’un bain pour bébé est froide, idéale ou chaude à l’aide de LEDs.</p>
-              <a class="btn btn-secondary btn-small" href="projets/thermometre-bain.html">En savoir plus</a>
             </div>
           </article>
 
@@ -233,7 +221,7 @@
       </div>
     </section>
 
-    <section class="section contact-section reveal-section scroll-reveal" id="contact">
+    <section class="section contact-section reveal-section" id="contact">
       <div class="section-container contact-grid contact-card-layout">
         <div class="contact-copy reveal">
           <p class="eyebrow">Contact</p>
@@ -287,41 +275,22 @@
 
       <section class="skill-detail-section geii-subskill-section" aria-label="Compétences détaillées Concevoir">
         <div class="geii-subskill-list">
-          <h4 class="ac-year-title">1re année</h4>
-          <button class="geii-subskill-item geii-subskill-item-active" type="button">
-            <strong>AC11.01</strong>
-            <p>Produire une analyse fonctionnelle d’un système simple</p>
-          </button>
-          <button class="geii-subskill-item geii-subskill-item-active" type="button">
-            <strong>AC11.02</strong>
-            <p>Réaliser un prototype pour des solutions techniques matérielles et/ou logicielles</p>
-          </button>
-          <button class="geii-subskill-item geii-subskill-item-active" type="button">
-            <strong>AC11.03</strong>
-            <p>Rédiger un dossier de fabrication à partir d’un dossier de conception</p>
-          </button>
-          <h4 class="ac-year-title ac-year-future">2e année à venir</h4>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC21.01</strong>
-            <p>Proposer des solutions techniques liées à l’analyse fonctionnelle</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC21.02</strong>
-            <p>Dérisquer les solutions techniques retenues</p>
-          </div>
-          <h4 class="ac-year-title ac-year-future">3e année à venir</h4>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC31.01</strong>
-            <p>Contribuer à la rédaction d’un cahier des charges</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC31.02</strong>
-            <p>Prouver la pertinence de ses choix technologiques</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC31.03</strong>
-            <p>Rédiger un dossier de conception</p>
-          </div>
+          <a class="geii-subskill-item geii-subskill-item-active" href="competences/c1.html">
+            <strong>C1</strong>
+            <p>J’identifie les fonctions demandées à la lecture du cahier des charges.</p>
+          </a>
+          <a class="geii-subskill-item geii-subskill-item-active" href="competences/c2.html">
+            <strong>C2</strong>
+            <p>Je propose une solution technique pour répondre à une fonction.</p>
+          </a>
+          <a class="geii-subskill-item geii-subskill-item-active" href="competences/c3.html">
+            <strong>C3</strong>
+            <p>J’affine une solution technique en m’appuyant sur un maquettage numérique et/ou matériel.</p>
+          </a>
+          <a class="geii-subskill-item geii-subskill-item-active" href="competences/c4.html">
+            <strong>C4</strong>
+            <p>Je rédige un dossier de conception et de vérification.</p>
+          </a>
         </div>
       </section>
     </div>
@@ -341,41 +310,14 @@
 
       <section class="skill-detail-section geii-subskill-section" aria-label="Compétences détaillées Vérifier">
         <div class="geii-subskill-list">
-          <h4 class="ac-year-title">1re année</h4>
-          <button class="geii-subskill-item geii-subskill-item-active" type="button">
-            <strong>AC12.01</strong>
-            <p>Appliquer une procédure d’essai</p>
-          </button>
-          <button class="geii-subskill-item geii-subskill-item-active" type="button">
-            <strong>AC12.02</strong>
-            <p>Identifier un dysfonctionnement</p>
-          </button>
-          <button class="geii-subskill-item geii-subskill-item-active" type="button">
-            <strong>AC12.03</strong>
-            <p>Décrire un dysfonctionnement</p>
-          </button>
-          <h4 class="ac-year-title ac-year-future">2e année à venir</h4>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC22.01</strong>
-            <p>Identifier les tests et mesures à mettre en place pour valider le fonctionnement d’un système</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC22.02</strong>
-            <p>Certifier le fonctionnement d’un nouvel équipement industriel</p>
-          </div>
-          <h4 class="ac-year-title ac-year-future">3e année à venir</h4>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC32.01</strong>
-            <p>Évaluer la cause racine d’un dysfonctionnement</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC32.02</strong>
-            <p>Proposer une solution corrective à un dysfonctionnement</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC32.03</strong>
-            <p>Produire une procédure d’essais pour valider la conformité d’un système</p>
-          </div>
+          <a class="geii-subskill-item geii-subskill-item-active" href="competences/v1.html">
+            <strong>V1</strong>
+            <p>J’applique, j’élabore et je rédige une procédure d’essai.</p>
+          </a>
+          <a class="geii-subskill-item geii-subskill-item-active" href="competences/v2.html">
+            <strong>V2</strong>
+            <p>J’identifie et je corrige les non-conformités d’un prototypage.</p>
+          </a>
         </div>
       </section>
     </div>
@@ -395,39 +337,13 @@
 
       <section class="skill-detail-section geii-subskill-section" aria-label="Compétences détaillées Maintenir">
         <div class="geii-subskill-list">
-          <h4 class="ac-year-title ac-year-future">2e année à venir</h4>
           <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC23.01</strong>
-            <p>Exécuter l’entretien et le contrôle d’un système en respectant une procédure</p>
+            <strong>M1</strong>
+            <p>J’applique une opération de maintenance préventive, corrective ou améliorative à un système. <span>(À venir)</span></p>
           </div>
           <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC23.02</strong>
-            <p>Exécuter une opération de maintenance corrective, préventive ou améliorative</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC23.03</strong>
-            <p>Diagnostiquer un dysfonctionnement dans un système</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC23.04</strong>
-            <p>Identifier la cause racine du dysfonctionnement dans un système</p>
-          </div>
-          <h4 class="ac-year-title ac-year-future">3e année à venir</h4>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC33.01</strong>
-            <p>Proposer une solution de maintenance</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC33.02</strong>
-            <p>Évaluer les coûts d’indisponibilité et de maintenance d’un système</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC33.03</strong>
-            <p>Produire une procédure de maintenance</p>
-          </div>
-          <div class="geii-subskill-item geii-subskill-item-disabled" aria-disabled="true">
-            <strong>AC33.04</strong>
-            <p>Proposer un appui technique aux différents acteurs à l’échelle nationale et internationale</p>
+            <strong>M2</strong>
+            <p>Je rédige la procédure de maintenance préventive, corrective ou améliorative d’un système. <span>(À venir)</span></p>
           </div>
         </div>
       </section>
@@ -512,6 +428,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=anim-fix-3"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
